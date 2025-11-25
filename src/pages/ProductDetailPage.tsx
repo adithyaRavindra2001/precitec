@@ -11,14 +11,14 @@ export function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="container mx-auto flex min-h-[60vh] items-center justify-center px-6">
+      <div className="container mx-auto flex min-h-[60vh] items-center justify-center px-4 sm:px-6">
         <div className="text-center">
-          <h1 className="mb-6 text-3xl font-bold">Product Not Found</h1>
+          <h1 className="mb-6 text-2xl sm:text-3xl font-bold">Product Not Found</h1>
           <Link
             to="/products"
-            className="group inline-flex items-center gap-3 rounded-xl border-2 border-slate-200 bg-white px-6 py-3 font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
+            className="group inline-flex items-center gap-2 sm:gap-3 rounded-xl border-2 border-slate-200 bg-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
           >
-            <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:-translate-x-1" />
             <span>Back to Products</span>
           </Link>
         </div>
@@ -30,8 +30,8 @@ export function ProductDetailPage() {
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Breadcrumb */}
       <div className="border-b bg-white">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground overflow-x-auto">
             <Link to="/" className="hover:text-primary transition-colors">
               Home
             </Link>
@@ -47,12 +47,12 @@ export function ProductDetailPage() {
 
       {/* Hero Section */}
       <motion.section
-        className="container mx-auto px-6 py-12"
+        className="container mx-auto px-4 sm:px-6 py-8 sm:py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -79,18 +79,18 @@ export function ProductDetailPage() {
                 {product.series}
               </span>
             </div>
-            <h1 className="text-4xl font-bold text-foreground md:text-5xl">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground md:text-5xl">
               {product.name}
             </h1>
-            <p className="mt-2 text-xl text-muted-foreground">{product.fullName}</p>
+            <p className="mt-2 text-lg sm:text-xl text-muted-foreground">{product.fullName}</p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2">
-                <Mail className="h-5 w-5" />
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button size="lg" className="gap-2 text-sm sm:text-base">
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                 Request a Quote
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Download className="h-5 w-5" />
+              <Button size="lg" variant="outline" className="gap-2 text-sm sm:text-base">
+                <Download className="h-4 w-4 sm:h-5 sm:w-5" />
                 Download Brochure
               </Button>
             </div>

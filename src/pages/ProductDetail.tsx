@@ -63,14 +63,14 @@ export function ProductDetail() {
   }
 
   return (
-    <div className="container mx-auto flex min-h-[60vh] flex-col gap-8 px-6 py-16">
-      <div className="flex flex-col gap-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Product detail</p>
-        <h1 className="text-4xl font-bold text-foreground md:text-5xl">{product.title}</h1>
-        <p className="max-w-3xl text-lg text-muted-foreground">{product.summary}</p>
+    <div className="container mx-auto flex min-h-[60vh] flex-col gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+      <div className="flex flex-col gap-3 sm:gap-4">
+        <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">Product detail</p>
+        <h1 className="text-3xl sm:text-4xl font-bold text-foreground md:text-5xl">{product.title}</h1>
+        <p className="max-w-3xl text-base sm:text-lg text-muted-foreground">{product.summary}</p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {machines.map((machine) => (
           <Link key={machine.id} to={`/machine/${machine.id}`} className="group">
             <Card className="h-full transition-all hover:shadow-lg">
@@ -81,9 +81,9 @@ export function ProductDetail() {
                   className="h-full w-full object-cover transition-transform group-hover:scale-105"
                 />
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{machine.name}</CardTitle>
-                <CardDescription className="text-sm">{machine.description}</CardDescription>
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-lg sm:text-xl">{machine.name}</CardTitle>
+                <CardDescription className="text-xs sm:text-sm">{machine.description}</CardDescription>
               </CardHeader>
             </Card>
           </Link>

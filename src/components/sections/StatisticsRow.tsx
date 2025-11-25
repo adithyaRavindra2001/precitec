@@ -9,9 +9,9 @@ const stats = [
 
 export function StatisticsRow() {
   return (
-    <section className="bg-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+    <section className="bg-white py-8 sm:py-12">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-center md:grid-cols-4">
           {stats.map((stat, index) => (
             <CountUpStat
               key={stat.label}

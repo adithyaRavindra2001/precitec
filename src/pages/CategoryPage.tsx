@@ -57,8 +57,8 @@ export function CategoryPage() {
     <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white">
       {/* Breadcrumb */}
       <div className="border-b bg-white">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground overflow-x-auto">
             <Link to="/" className="hover:text-primary transition-colors">
               Home
             </Link>
@@ -91,7 +91,7 @@ export function CategoryPage() {
         transition={{ duration: 0.6 }}
       >
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="container relative mx-auto px-6 py-20">
+        <div className="container relative mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

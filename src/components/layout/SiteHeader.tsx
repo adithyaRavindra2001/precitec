@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { ChevronDown, Wrench, Cog, Zap } from "lucide-react"
+import { ChevronDown, Wrench, Cog, Zap, Menu, X } from "lucide-react"
 import { categories, getProductsByCategory } from "@/data/products"
 import { motion, AnimatePresence } from "framer-motion"
 import { Logo } from "@/components/ui/Logo"
@@ -21,13 +21,21 @@ const categoryIcons: Record<string, any> = {
 export function SiteHeader() {
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+    setIsMobileProductsOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-6">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Logo />
 
-        <nav className="flex items-center gap-8 text-[15px] font-medium text-muted-foreground">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-medium text-muted-foreground">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -38,7 +46,7 @@ export function SiteHeader() {
             </Link>
           ))}
 
-          {/* Products Mega Menu */}
+          {/* Desktop Products Mega Menu */}
           <div
             className="relative"
             onMouseEnter={() => setIsProductsOpen(true)}
@@ -264,6 +272,88 @@ export function SiteHeader() {
             </AnimatePresence>
           </div>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-16 left-0 right-0 bg-white border-b shadow-lg lg:hidden overflow-hidden"
+            >
+              <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={closeMobileMenu}
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+                {/* Mobile Products Accordion */}
+                <div className="border-t pt-4">
+                  <button
+                    onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                    className="flex items-center justify-between w-full text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    Products
+                    <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {isMobileProductsOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pl-4 pt-2 space-y-3">
+                          <Link
+                            to="/products"
+                            onClick={closeMobileMenu}
+                            className="block py-2 text-sm font-semibold text-primary hover:text-primary/80"
+                          >
+                            All Products →
+                          </Link>
+                          {categories.map((category) => {
+                            const Icon = categoryIcons[category.id] || Wrench
+                            return (
+                              <Link
+                                key={category.id}
+                                to={`/products/category/${category.id}`}
+                                onClick={closeMobileMenu}
+                                className="flex items-center gap-3 py-2 text-sm text-foreground hover:text-primary transition-colors"
+                              >
+                                <Icon className="h-4 w-4 flex-shrink-0" />
+                                <span>{category.name}</span>
+                              </Link>
+                            )
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   )

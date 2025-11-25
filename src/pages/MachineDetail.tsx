@@ -120,14 +120,14 @@ export function MachineDetail() {
 
   if (!machine) {
     return (
-      <div className="container mx-auto flex min-h-[60vh] items-center justify-center px-6">
+      <div className="container mx-auto flex min-h-[60vh] items-center justify-center px-4 sm:px-6">
         <div className="text-center">
-          <h1 className="mb-6 text-3xl font-bold">Machine Not Found</h1>
+          <h1 className="mb-6 text-2xl sm:text-3xl font-bold">Machine Not Found</h1>
           <Link
             to="/"
-            className="group inline-flex items-center gap-3 rounded-xl border-2 border-slate-200 bg-white px-6 py-3 font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
+            className="group inline-flex items-center gap-2 sm:gap-3 rounded-xl border-2 border-slate-200 bg-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
           >
-            <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:-translate-x-1" />
             <span>Return to Home</span>
           </Link>
         </div>
@@ -136,20 +136,20 @@ export function MachineDetail() {
   }
 
   return (
-    <div className="container mx-auto flex min-h-[60vh] flex-col gap-8 px-6 py-16">
-      <div className="flex flex-col gap-4">
+    <div className="container mx-auto flex min-h-[60vh] flex-col gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+      <div className="flex flex-col gap-3 sm:gap-4">
         <Link
           to="/"
-          className="group inline-flex w-fit items-center gap-3 rounded-xl border-2 border-slate-200 bg-white px-6 py-3 font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
+          className="group inline-flex w-fit items-center gap-2 sm:gap-3 rounded-xl border-2 border-slate-200 bg-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg"
         >
-          <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
+          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:-translate-x-1" />
           <span>Back to Products</span>
         </Link>
-        <h1 className="text-4xl font-bold text-foreground md:text-5xl">{machine.name}</h1>
-        <p className="max-w-3xl text-lg text-muted-foreground">{machine.description}</p>
+        <h1 className="text-3xl sm:text-4xl font-bold text-foreground md:text-5xl">{machine.name}</h1>
+        <p className="max-w-3xl text-base sm:text-lg text-muted-foreground">{machine.description}</p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
         <div className="overflow-hidden rounded-lg bg-muted">
           <img
             src={machine.image}
@@ -158,17 +158,17 @@ export function MachineDetail() {
           />
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-6">
           <Card>
-            <CardHeader>
-              <CardTitle>Technical Specifications</CardTitle>
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-lg sm:text-xl">Technical Specifications</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
+            <CardContent className="p-4 sm:p-6 pt-0">
+              <div className="space-y-2 sm:space-y-3">
                 {machine.specs.map((spec, index) => (
-                  <div key={index} className="flex justify-between border-b pb-2 last:border-0">
-                    <span className="font-medium text-muted-foreground">{spec.label}</span>
-                    <span className="font-semibold">{spec.value}</span>
+                  <div key={index} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0 border-b pb-2 last:border-0">
+                    <span className="text-sm font-medium text-muted-foreground">{spec.label}</span>
+                    <span className="text-sm sm:text-base font-semibold">{spec.value}</span>
                   </div>
                 ))}
               </div>
@@ -176,14 +176,14 @@ export function MachineDetail() {
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Key Features</CardTitle>
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-lg sm:text-xl">Key Features</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6 pt-0">
               <ul className="space-y-2">
                 {machine.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="mt-1 text-primary">✓</span>
+                  <li key={index} className="flex items-start gap-2 text-sm sm:text-base">
+                    <span className="mt-1 text-primary flex-shrink-0">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -191,11 +191,11 @@ export function MachineDetail() {
             </CardContent>
           </Card>
 
-          <div className="flex gap-4">
-            <Button size="lg" className="flex-1">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Button size="lg" className="flex-1 text-sm sm:text-base">
               Request a Quote
             </Button>
-            <Button size="lg" variant="outline" className="flex-1">
+            <Button size="lg" variant="outline" className="flex-1 text-sm sm:text-base">
               Download Specs
             </Button>
           </div>

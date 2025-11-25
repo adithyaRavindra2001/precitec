@@ -34,11 +34,11 @@ export function CountUpStat({ value, suffix = "+", label, delay = 0 }: CountUpSt
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
     >
-      <div className="mb-2 text-4xl font-extrabold text-primary md:text-5xl">
+      <div className="mb-1 sm:mb-2 text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary">
         <motion.span>{rounded}</motion.span>
         {suffix}
       </div>
-      <div className="text-sm uppercase tracking-wide text-muted-foreground">
+      <div className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground px-1">
         {label}
       </div>
     </motion.div>

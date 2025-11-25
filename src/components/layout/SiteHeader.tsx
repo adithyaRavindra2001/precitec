@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { ChevronDown, Wrench, Cog, Zap } from "lucide-react"
-import { categories } from "@/data/products"
+import { categories, getProductsByCategory } from "@/data/products"
 import { motion, AnimatePresence } from "framer-motion"
 import { Logo } from "@/components/ui/Logo"
 
@@ -184,8 +184,35 @@ export function SiteHeader() {
                                         ))}
                                       </div>
                                     ) : (
-                                      <div className="text-sm text-muted-foreground">
-                                        View all products in this category
+                                      <div className="space-y-2">
+                                        {getProductsByCategory(category.id).slice(0, 6).map((product, idx) => (
+                                          <motion.div
+                                            key={product.id}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.2, delay: idx * 0.05 }}
+                                          >
+                                            <Link
+                                              to={`/products/${product.id}`}
+                                              className="group block rounded-lg border-2 border-transparent p-3 transition-all hover:border-primary/30 hover:bg-primary/5 hover:shadow-sm"
+                                            >
+                                              <div className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                                                {product.name}
+                                              </div>
+                                              <div className="mt-1 text-xs text-muted-foreground">
+                                                {product.series}
+                                              </div>
+                                            </Link>
+                                          </motion.div>
+                                        ))}
+                                        {getProductsByCategory(category.id).length > 6 && (
+                                          <Link
+                                            to={`/products/category/${category.id}`}
+                                            className="block pt-2 text-center text-xs font-semibold text-primary hover:underline"
+                                          >
+                                            View all {getProductsByCategory(category.id).length} products →
+                                          </Link>
+                                        )}
                                       </div>
                                     )}
                                   </div>

@@ -23,6 +23,7 @@ export function SiteHeader() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+  const [menuCloseTimeout, setMenuCloseTimeout] = useState<number | null>(null)
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
@@ -49,10 +50,16 @@ export function SiteHeader() {
           {/* Desktop Products Mega Menu */}
           <div
             className="relative"
-            onMouseEnter={() => setIsProductsOpen(true)}
+            onMouseEnter={() => {
+              if (menuCloseTimeout) clearTimeout(menuCloseTimeout)
+              setIsProductsOpen(true)
+            }}
             onMouseLeave={() => {
-              setIsProductsOpen(false)
-              setHoveredCategory(null)
+              const timeout = setTimeout(() => {
+                setIsProductsOpen(false)
+                setHoveredCategory(null)
+              }, 300)
+              setMenuCloseTimeout(timeout)
             }}
           >
             <button

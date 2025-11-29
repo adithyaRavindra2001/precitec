@@ -2,7 +2,6 @@ import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { LandingPage } from "@/pages/LandingPage";
-import { MachineDetail } from "@/pages/MachineDetail";
 import { Products } from "@/pages/Products";
 import { ProductDetailPage } from "@/pages/ProductDetailPage";
 import { CategoryPage } from "@/pages/CategoryPage";
@@ -38,8 +37,6 @@ function App() {
             path="/products/category/:categoryId/:subcategoryId"
             element={<CategoryPage />}
           />
-          {/* Legacy Routes - Keep for backward compatibility */}
-          <Route path="/machine/:id" element={<MachineDetail />} />
         </Route>
       </Routes>
     </>

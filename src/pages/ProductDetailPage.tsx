@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getProductById } from "@/data/products"
+import { HeroImageCarousel } from "@/components/product/HeroImageCarousel"
 import { ArrowLeft, CheckCircle2, Download, Mail, Phone } from "lucide-react"
 
 export function ProductDetailPage() {
@@ -53,18 +54,13 @@ export function ProductDetailPage() {
         transition={{ duration: 0.6 }}
       >
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Image */}
+          {/* Hero Image Carousel */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="overflow-hidden rounded-xl bg-muted shadow-xl"
           >
-            <img
-              src={product.image}
-              alt={product.fullName}
-              className="h-full w-full object-cover"
-            />
+            <HeroImageCarousel images={product.images} productName={product.fullName} />
           </motion.div>
 
           {/* Product Info */}

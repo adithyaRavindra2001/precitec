@@ -110,8 +110,8 @@ export function Products() {
                           <Card className="h-full transition-all hover:shadow-lg">
                             <div className="aspect-video overflow-hidden rounded-t-lg bg-muted">
                               <img
-                                src={product.image}
-                                alt={product.name}
+                                src={product.images?.[0]?.url || "/images/placeholder.jpg"}
+                                alt={product.images?.[0]?.alt || product.name}
                                 className="h-full w-full object-cover transition-transform hover:scale-105"
                               />
                             </div>

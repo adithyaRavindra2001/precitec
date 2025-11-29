@@ -170,8 +170,8 @@ export function CategoryPage() {
                   <div className="overflow-hidden rounded-2xl border-2 border-white/20 bg-white shadow-2xl transition-transform duration-300 group-hover:scale-[1.02]">
                     <div className="aspect-video overflow-hidden bg-slate-100">
                       <img
-                        src={featuredProduct.image}
-                        alt={featuredProduct.name}
+                        src={featuredProduct.images?.[0]?.url || "/images/placeholder.jpg"}
+                        alt={featuredProduct.images?.[0]?.alt || featuredProduct.name}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
@@ -294,8 +294,8 @@ export function CategoryPage() {
                     <Link to={`/products/${product.id}`}>
                       <div className="relative aspect-video overflow-hidden bg-muted">
                         <img
-                          src={product.image}
-                          alt={product.name}
+                          src={product.images?.[0]?.url || "/images/placeholder.jpg"}
+                          alt={product.images?.[0]?.alt || product.name}
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -333,7 +333,7 @@ export function CategoryPage() {
                       </button>
 
                       <AnimatePresence>
-                        {isExpanded && (
+                        {isExpanded && Array.isArray(product.specifications) && (
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
@@ -342,7 +342,7 @@ export function CategoryPage() {
                             className="overflow-hidden"
                           >
                             <div className="mt-4 space-y-2 rounded-lg bg-slate-50 p-4">
-                              {product.specifications.slice(0, 4).map((spec, idx) => (
+                              {product.specifications.slice(0, 4).map((spec: any, idx: number) => (
                                 <div
                                   key={idx}
                                   className="flex items-start justify-between gap-2 text-xs"

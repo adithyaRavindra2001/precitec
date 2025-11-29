@@ -6,6 +6,15 @@ export interface SpecificationGroup {
   [key: string]: string | undefined
 }
 
+export interface ProductImage {
+  id: string
+  url: string
+  alt: string
+  caption?: string
+  isPrimary?: boolean
+  displayOrder?: number
+}
+
 export interface Product {
   id: string
   name: string
@@ -21,7 +30,7 @@ export interface Product {
   }[] | {
     [key: string]: SpecificationGroup[]
   }
-  image: string
+  images: ProductImage[]
 }
 
 export interface Category {
@@ -118,7 +127,14 @@ export const products: Product[] = [
       "Easy operation with minimal training required",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0891b2/fff?text=FC+40",
+    images: [
+      {
+        id: "fc-40-main",
+        url: "https://placehold.co/800x600/0891b2/fff?text=FC+40",
+        alt: "FC 40 Facing and Centering Machine",
+        caption: "Main view of FC 40",
+      },
+    ],
   },
   {
     id: "fcm-80",
@@ -138,7 +154,14 @@ export const products: Product[] = [
       "Integrated chip conveyor system",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/06b6d4/fff?text=FCM+80",
+    images: [
+      {
+        id: "fcm-80-main",
+        url: "https://placehold.co/800x600/06b6d4/fff?text=FCM+80",
+        alt: "FCM 80 Facing and Centering Machine",
+        caption: "FCM 80 Front View",
+      },
+    ],
   },
   {
     id: "fcm-100",
@@ -158,7 +181,14 @@ export const products: Product[] = [
       "Remote monitoring capability",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0284c7/fff?text=FCM+100",
+    images: [
+      {
+        id: "fcm-100-main",
+        url: "https://placehold.co/800x600/0284c7/fff?text=FCM+100",
+        alt: "FCM 100 Facing and Centering Machine",
+        caption: "FCM 100 - Large Capacity Model",
+      },
+    ],
   },
   {
     id: "fcm-150",
@@ -178,7 +208,14 @@ export const products: Product[] = [
       "Long-term reliability in harsh environments",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0369a1/fff?text=FCM+150",
+    images: [
+      {
+        id: "fcm-150-main",
+        url: "https://placehold.co/800x600/0369a1/fff?text=FCM+150",
+        alt: "FCM 150 Heavy-Duty Facing and Centering Machine",
+        caption: "FCM 150 - Heavy Duty Configuration",
+      },
+    ],
   },
   {
     id: "db-40",
@@ -198,7 +235,14 @@ export const products: Product[] = [
       "Low maintenance requirements",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0e7490/fff?text=DB+40",
+    images: [
+      {
+        id: "db-40-main",
+        url: "https://placehold.co/800x600/0e7490/fff?text=DB+40",
+        alt: "DB 40 Drilling and Boring Machine",
+        caption: "DB 40 - Compact Drilling Solution",
+      },
+    ],
   },
   {
     id: "db-50",
@@ -218,7 +262,14 @@ export const products: Product[] = [
       "Automation-ready design",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/155e75/fff?text=DB+50",
+    images: [
+      {
+        id: "db-50-main",
+        url: "https://placehold.co/800x600/155e75/fff?text=DB+50",
+        alt: "DB 50 Drilling and Boring Machine",
+        caption: "DB 50 - Enhanced Capacity Model",
+      },
+    ],
   },
 
   // Category 2: Vertical Turning and Turn Mill Solutions - Sadaa Chakra Series
@@ -339,7 +390,20 @@ export const products: Product[] = [
         }
       ]
     },
-    image: "/images/VTL/VTL-500 (1).jpg",
+    images: [
+      {
+        id: "sadaa-chakra-500-main",
+        url: "/images/VTL/VTL-500 (1).jpg",
+        alt: "Sadaa Chakra 500 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 500 - Front View",
+      },
+      {
+        id: "sadaa-chakra-500-side",
+        url: "/images/VTL/VTL-630.JPG",
+        alt: "Sadaa Chakra 500 Vertical Turning Lathe - Side View",
+        caption: "Sadaa Chakra 500 - Side View",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-630",
@@ -359,7 +423,14 @@ export const products: Product[] = [
       "Energy-efficient design",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+630",
+    images: [
+      {
+        id: "sadaa-chakra-630-main",
+        url: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+630",
+        alt: "Sadaa Chakra 630 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 630 - Medium Capacity",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-800",
@@ -436,7 +507,14 @@ export const products: Product[] = [
         }
       ]
     },
-    image: "/images/VTL/VTL-800.JPG",
+    images: [
+      {
+        id: "sadaa-chakra-800-main",
+        url: "/images/VTL/VTL-800.JPG",
+        alt: "Sadaa Chakra 800 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 800 - Large Capacity",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-1200",
@@ -554,7 +632,14 @@ export const products: Product[] = [
         }
       ]
     },
-    image: "/images/VTL/SADAA CHAKRA VTL 1200.jpg",
+    images: [
+      {
+        id: "sadaa-chakra-1200-main",
+        url: "/images/VTL/SADAA CHAKRA VTL 1200.jpg",
+        alt: "Sadaa Chakra 1200 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 1200 - Extra Large Capacity",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-1600",
@@ -574,7 +659,14 @@ export const products: Product[] = [
       "Comprehensive safety features",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+1600",
+    images: [
+      {
+        id: "sadaa-chakra-1600-main",
+        url: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+1600",
+        alt: "Sadaa Chakra 1600 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 1600 - High Performance",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-2000",
@@ -594,7 +686,14 @@ export const products: Product[] = [
       "24/7 production capability",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+2000",
+    images: [
+      {
+        id: "sadaa-chakra-2000-main",
+        url: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+2000",
+        alt: "Sadaa Chakra 2000 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 2000 - Massive Capacity",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-2500",
@@ -614,7 +713,14 @@ export const products: Product[] = [
       "Customizable automation solutions",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/4d7c0f/fff?text=Sadaa+Chakra+2500",
+    images: [
+      {
+        id: "sadaa-chakra-2500-main",
+        url: "https://placehold.co/800x600/4d7c0f/fff?text=Sadaa+Chakra+2500",
+        alt: "Sadaa Chakra 2500 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 2500 - Advanced Technology",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-3000",
@@ -634,7 +740,14 @@ export const products: Product[] = [
       "Worldwide service and support",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/365314/fff?text=Sadaa+Chakra+3000",
+    images: [
+      {
+        id: "sadaa-chakra-3000-main",
+        url: "https://placehold.co/800x600/365314/fff?text=Sadaa+Chakra+3000",
+        alt: "Sadaa Chakra 3000 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 3000 - Largest Applications",
+      },
+    ],
   },
   {
     id: "sadaa-chakra-4000",
@@ -654,7 +767,14 @@ export const products: Product[] = [
       "Engineering support and custom integration",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+4000",
+    images: [
+      {
+        id: "sadaa-chakra-4000-main",
+        url: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+4000",
+        alt: "Sadaa Chakra 4000 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 4000 - Ultimate Solution",
+      },
+    ],
   },
 
   // Category 3: In-Situ Machining Solutions
@@ -678,7 +798,14 @@ export const products: Product[] = [
       "Suitable for various flange standards including ANSI, DIN, and JIS",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/334155/fff?text=Rotaface+Mini+350",
+    images: [
+      {
+        id: "rotaface-mini-350-main",
+        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+Mini+350",
+        alt: "Rotaface Mini 350 Compact Flange Facer",
+        caption: "Rotaface Mini 350",
+      },
+    ],
   },
   {
     id: "rotaface-500",
@@ -699,7 +826,14 @@ export const products: Product[] = [
       "Compatible with standard power supplies",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/475569/fff?text=Rotaface+500",
+    images: [
+      {
+        id: "rotaface-500-main",
+        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+500",
+        alt: "Rotaface 500 Flange Facer",
+        caption: "Rotaface 500",
+      },
+    ],
   },
   {
     id: "rotaface-800",
@@ -720,7 +854,14 @@ export const products: Product[] = [
       "Suitable for high-pressure applications",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/64748b/fff?text=Rotaface+800",
+    images: [
+      {
+        id: "rotaface-800-main",
+        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+800",
+        alt: "Rotaface 800 Flange Facer",
+        caption: "Rotaface 800",
+      },
+    ],
   },
   {
     id: "rotaface-1000",
@@ -741,7 +882,14 @@ export const products: Product[] = [
       "Field-proven reliability in harsh environments",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/334155/fff?text=Rotaface+1000",
+    images: [
+      {
+        id: "rotaface-1000-main",
+        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+1000",
+        alt: "Rotaface 1000 Flange Facer",
+        caption: "Rotaface 1000",
+      },
+    ],
   },
   {
     id: "rotaface-1500",
@@ -762,7 +910,14 @@ export const products: Product[] = [
       "24/7 operation capability",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/475569/fff?text=Rotaface+1500",
+    images: [
+      {
+        id: "rotaface-1500-main",
+        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+1500",
+        alt: "Rotaface 1500 Flange Facer",
+        caption: "Rotaface 1500",
+      },
+    ],
   },
   {
     id: "rotaface-2000",
@@ -783,7 +938,14 @@ export const products: Product[] = [
       "Certified for hazardous area operation",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/64748b/fff?text=Rotaface+2000",
+    images: [
+      {
+        id: "rotaface-2000-main",
+        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+2000",
+        alt: "Rotaface 2000 Heavy-Duty Flange Facer",
+        caption: "Rotaface 2000",
+      },
+    ],
   },
   {
     id: "rotaface-3000",
@@ -804,7 +966,14 @@ export const products: Product[] = [
       "Suitable for nuclear and aerospace applications",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/334155/fff?text=Rotaface+3000",
+    images: [
+      {
+        id: "rotaface-3000-main",
+        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+3000",
+        alt: "Rotaface 3000 Heavy-Duty Flange Facer",
+        caption: "Rotaface 3000",
+      },
+    ],
   },
   {
     id: "rotaface-4000",
@@ -825,7 +994,14 @@ export const products: Product[] = [
       "Industry 4.0 ready with IoT connectivity",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/475569/fff?text=Rotaface+4000",
+    images: [
+      {
+        id: "rotaface-4000-main",
+        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+4000",
+        alt: "Rotaface 4000 Heavy-Duty Flange Facer",
+        caption: "Rotaface 4000",
+      },
+    ],
   },
   {
     id: "rotaface-5000",
@@ -846,7 +1022,14 @@ export const products: Product[] = [
       "Customizable for specific industry requirements",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/64748b/fff?text=Rotaface+5000",
+    images: [
+      {
+        id: "rotaface-5000-main",
+        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+5000",
+        alt: "Rotaface 5000 Heavy-Duty Flange Facer",
+        caption: "Rotaface 5000",
+      },
+    ],
   },
   {
     id: "rotamill",
@@ -867,7 +1050,14 @@ export const products: Product[] = [
       "Suitable for complex geometry machining",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/334155/fff?text=RotaMill",
+    images: [
+      {
+        id: "rotamill-main",
+        url: "https://placehold.co/800x600/334155/fff?text=RotaMill",
+        alt: "RotaMill Milling Flange Facer",
+        caption: "RotaMill",
+      },
+    ],
   },
 
   // Portable Boring Machines - PortaBore Series
@@ -890,7 +1080,14 @@ export const products: Product[] = [
       "Suitable for horizontal and vertical boring",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/059669/fff?text=PortaBore+75",
+    images: [
+      {
+        id: "portabore-75-main",
+        url: "https://placehold.co/800x600/059669/fff?text=PortaBore+75",
+        alt: "PortaBore 75 Portable Boring Machine",
+        caption: "PortaBore 75",
+      },
+    ],
   },
   {
     id: "portabore-50",
@@ -911,7 +1108,14 @@ export const products: Product[] = [
       "Ideal for maintenance and repair operations",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/10b981/fff?text=PortaBore+50",
+    images: [
+      {
+        id: "portabore-50-main",
+        url: "https://placehold.co/800x600/10b981/fff?text=PortaBore+50",
+        alt: "PortaBore 50 Portable Boring Machine",
+        caption: "PortaBore 50",
+      },
+    ],
   },
 
   // Portable Milling Machines - PortaMill Series
@@ -934,7 +1138,14 @@ export const products: Product[] = [
       "Suitable for ferrous and non-ferrous materials",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0891b2/fff?text=PortaMill+40",
+    images: [
+      {
+        id: "portamill-40-main",
+        url: "https://placehold.co/800x600/0891b2/fff?text=PortaMill+40",
+        alt: "PortaMill 40 Portable Milling Machine",
+        caption: "PortaMill 40",
+      },
+    ],
   },
   {
     id: "portamill-50",
@@ -955,7 +1166,14 @@ export const products: Product[] = [
       "Remote control operation",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/06b6d4/fff?text=PortaMill+50",
+    images: [
+      {
+        id: "portamill-50-main",
+        url: "https://placehold.co/800x600/06b6d4/fff?text=PortaMill+50",
+        alt: "PortaMill 50 Portable Milling Machine",
+        caption: "PortaMill 50",
+      },
+    ],
   },
   {
     id: "portamill-gantry",
@@ -976,7 +1194,14 @@ export const products: Product[] = [
       "Suitable for large structural components",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/0284c7/fff?text=PortaMill+Gantry",
+    images: [
+      {
+        id: "portamill-gantry-main",
+        url: "https://placehold.co/800x600/0284c7/fff?text=PortaMill+Gantry",
+        alt: "PortaMill Gantry Portable Milling Machine",
+        caption: "PortaMill Gantry",
+      },
+    ],
   },
 
   // Multi-Purpose Machining
@@ -1001,7 +1226,14 @@ export const products: Product[] = [
       "Industry 4.0 connectivity",
     ],
     specifications: commonSpecs,
-    image: "https://placehold.co/800x600/7c3aed/fff?text=Sarva+System",
+    images: [
+      {
+        id: "sarva-main",
+        url: "https://placehold.co/800x600/7c3aed/fff?text=Sarva+System",
+        alt: "Sarva Multi-Purpose In-Situ Machining System",
+        caption: "Sarva System",
+      },
+    ],
   },
 
   // Custom Solutions
@@ -1035,7 +1267,14 @@ export const products: Product[] = [
       { label: "Support", value: "24/7 technical assistance" },
       { label: "Warranty", value: "Standard warranty with extended options" },
     ],
-    image: "https://placehold.co/800x600/dc2626/fff?text=Custom+Solutions",
+    images: [
+      {
+        id: "special-machines-main",
+        url: "https://placehold.co/800x600/dc2626/fff?text=Custom+Solutions",
+        alt: "Special Machines and Solutions - Custom Equipment",
+        caption: "Custom Solutions",
+      },
+    ],
   },
 ]
 

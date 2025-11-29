@@ -20,7 +20,7 @@ export const Carousel: React.FC = () => {
     return {
       id: category.id,
       title: category.name,
-      image: representativeProduct?.image,
+      image: representativeProduct?.images?.[0]?.url || "/images/placeholder.jpg",
     };
   });
 

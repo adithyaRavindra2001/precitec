@@ -1,3 +1,11 @@
+export interface SpecificationGroup {
+  parameter?: string
+  description?: string
+  column_1?: string
+  column_2?: string
+  [key: string]: string | undefined
+}
+
 export interface Product {
   id: string
   name: string
@@ -10,7 +18,9 @@ export interface Product {
   specifications: {
     label: string
     value: string
-  }[]
+  }[] | {
+    [key: string]: SpecificationGroup[]
+  }
   image: string
 }
 
@@ -229,8 +239,107 @@ export const products: Product[] = [
       "Automatic tool changer (12 positions)",
       "Integrated coolant system with filtration",
     ],
-    specifications: commonSpecs,
-    image: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+500",
+    specifications: {
+      "Working Range": [
+        {
+          "parameter": "Max. Dia For Facing & OD Turning (mm)",
+          "500 TC-TL": "630",
+          "500 TC-CT": "630",
+          "630 TC-TL": "750",
+          "630 TC-CT": "750"
+        },
+        {
+          "parameter": "Max. Swing (mm)",
+          "500 TC-TL": "700",
+          "500 TC-CT": "700",
+          "630 TC-TL": "800",
+          "630 TC-CT": "800"
+        },
+        {
+          "parameter": "Day Light (mm)",
+          "500 TC-TL": "500",
+          "500 TC-CT": "500",
+          "630 TC-TL": "500",
+          "630 TC-CT": "500"
+        }
+      ],
+      "Table Range": [
+        {
+          "parameter": "Table Dia (mm)",
+          "500 TC-TL": "500",
+          "500 TC-CT": "400",
+          "630 TC-TL": "630",
+          "630 TC-CT": "500"
+        },
+        {
+          "parameter": "Speed Range (RPM)",
+          "500 TC-TL": "5-1000",
+          "500 TC-CT": "5-1000",
+          "630 TC-TL": "4-800",
+          "630 TC-CT": "4-800"
+        },
+        {
+          "parameter": "No of speed ranges",
+          "500 TC-TL": "1",
+          "500 TC-CT": "1",
+          "630 TC-TL": "1",
+          "630 TC-CT": "1"
+        },
+        {
+          "parameter": "Type of drive",
+          "500 TC-TL": "Belt drive/(Gear box drive)",
+          "500 TC-CT": "Belt drive/(Gear box drive)",
+          "630 TC-TL": "Belt drive/(Gear box drive)",
+          "630 TC-CT": "Belt drive/(Gear box drive)"
+        }
+      ],
+      "Axes": [
+        {
+          "parameter": "X Axis Stroke",
+          "500 TC-TL": "630",
+          "500 TC-CT": "400",
+          "630 TC-TL": "700",
+          "630 TC-CT": "450"
+        },
+        {
+          "parameter": "Z Axis Stroke",
+          "500 TC-TL": "630",
+          "500 TC-CT": "630",
+          "630 TC-TL": "630",
+          "630 TC-CT": "630"
+        },
+        {
+          "parameter": "Cutting Feed Rate (mm/min)",
+          "500 TC-TL": "0.5-2000",
+          "500 TC-CT": "0.5-2000",
+          "630 TC-TL": "0.5-2000",
+          "630 TC-CT": "0.5-2000"
+        },
+        {
+          "parameter": "CNC System",
+          "500 TC-TL": "Fanuc OiTF",
+          "500 TC-CT": "Siemens 840DSL",
+          "630 TC-TL": "Siemens 828D",
+          "630 TC-CT": "Siemens 808D"
+        },
+        {
+          "parameter": "Overall Machine Size (H X W X D)",
+          "500 TC-TL": "3.3m X 2.3m X 2.3m",
+          "500 TC-CT": "3.3m X 2.3m X 2.3m",
+          "630 TC-TL": "3.6m X 2.6m X 2.4m",
+          "630 TC-CT": "3.6m X 2.6m X 2.4m"
+        }
+      ],
+      "Models": [
+        {
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+        },
+        {
+          "description": "TC-CT : Turning Center - Chuck-Turret"
+        }
+      ]
+    },
+    image: "/images/VTL/VTL-500 (1).jpg",
   },
   {
     id: "sadaa-chakra-630",
@@ -269,8 +378,65 @@ export const products: Product[] = [
       "Chip conveyor and coolant management",
       "Remote monitoring and diagnostics",
     ],
-    specifications: commonSpecs,
-    image: "https://placehold.co/800x600/4d7c0f/fff?text=Sadaa+Chakra+800",
+    specifications: {
+      "Working Range": [
+        {
+          "parameter": "Max. Dia For Facing & OD Turning (mm)",
+          "800 TC-TR": "900",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "Max. Swing (mm)",
+          "800 TC-TR": "900",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "Day Light (mm)",
+          "800 TC-TR": "630",
+          "800 TC-TL": "-"
+        }
+      ],
+      "Table Range": [
+        {
+          "parameter": "Table Dia (mm)",
+          "800 TC-TR": "800",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "Speed Range (RPM)",
+          "800 TC-TR": "8-300",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "No of speed ranges",
+          "800 TC-TR": "2",
+          "800 TC-TL": "-"
+        }
+      ],
+      "Axes": [
+        {
+          "parameter": "X Axis Stroke",
+          "800 TC-TR": "800",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "Z Axis Stroke",
+          "800 TC-TR": "630/(800)",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "Cutting Feed Rate (mm/min)",
+          "800 TC-TR": "0.5-2000",
+          "800 TC-TL": "-"
+        },
+        {
+          "parameter": "CNC System",
+          "800 TC-TR": "Fanuc OiTF",
+          "800 TC-TL": "Siemens 840DSL"
+        }
+      ]
+    },
+    image: "/images/VTL/VTL-800.JPG",
   },
   {
     id: "sadaa-chakra-1200",
@@ -289,8 +455,106 @@ export const products: Product[] = [
       "In-process quality measurement",
       "Industry 4.0 connectivity",
     ],
-    specifications: commonSpecs,
-    image: "https://placehold.co/800x600/365314/fff?text=Sadaa+Chakra+1200",
+    specifications: {
+      "Working Range": [
+        {
+          "parameter": "Max. Dia For Facing & OD Turning (mm)",
+          "1200 TC-TR/ TC-TL": "1400",
+          "1600 TC-TR/ TC-TL": "2000",
+          "2000 TC-TR/ TC-TL": "2200"
+        },
+        {
+          "parameter": "Max. Swing (mm)",
+          "1200 TC-TR/ TC-TL": "1450",
+          "1600 TC-TR/ TC-TL": "2000",
+          "2000 TC-TR/ TC-TL": "2500"
+        },
+        {
+          "parameter": "Day Light (mm)",
+          "1200 TC-TR/ TC-TL": "1000",
+          "1600 TC-TR/ TC-TL": "1200",
+          "2000 TC-TR/ TC-TL": "1200"
+        }
+      ],
+      "Table Range": [
+        {
+          "parameter": "Table Dia (mm)",
+          "1200 TC-TR/ TC-TL": "1200",
+          "1600 TC-TR/ TC-TL": "1600",
+          "2000 TC-TR/ TC-TL": "2000"
+        },
+        {
+          "parameter": "Speed Range (RPM)",
+          "1200 TC-TR/ TC-TL": "2-350",
+          "1600 TC-TR/ TC-TL": "2-280",
+          "2000 TC-TR/ TC-TL": "2-250"
+        },
+        {
+          "parameter": "No of speed ranges",
+          "1200 TC-TR/ TC-TL": "2",
+          "1600 TC-TR/ TC-TL": "2",
+          "2000 TC-TR/ TC-TL": "2"
+        }
+      ],
+      "Axes": [
+        {
+          "parameter": "X Axis Stroke",
+          "1200 TC-TR/ TC-TL": "1460",
+          "1600 TC-TR/ TC-TL": "1600",
+          "2000 TC-TR/ TC-TL": "1900"
+        },
+        {
+          "parameter": "Z Axis Stroke",
+          "1200 TC-TR/ TC-TL": "1000 (630/800/1200)",
+          "1600 TC-TR/ TC-TL": "1000 (630/800/1200)",
+          "2000 TC-TR/ TC-TL": "1000 (630/800/1200)"
+        },
+        {
+          "parameter": "Cutting Feed Rate (mm/min)",
+          "1200 TC-TR/ TC-TL": "0.5-2000",
+          "1600 TC-TR/ TC-TL": "0.5-2000",
+          "2000 TC-TR/ TC-TL": "0.5-2000"
+        },
+        {
+          "parameter": "Ram Size (mm)",
+          "1200 TC-TR/ TC-TL": "220X230(230X230)(250X250)",
+          "1600 TC-TR/ TC-TL": "220X230(230X230)(250X250)",
+          "2000 TC-TR/ TC-TL": "220X230(230X230)(250X250)"
+        }
+      ],
+      "C-Axis & Live Spindle": [
+        {
+          "parameter": "Milling Spindle Speed Range (RPM)",
+          "1200 TC-TR/ TC-TL": "10-2500",
+          "1600 TC-TR/ TC-TL": "10-2500",
+          "2000 TC-TR/ TC-TL": "10-2500"
+        },
+        {
+          "parameter": "Milling Spindle Power (kW/Nm)",
+          "1200 TC-TR/ TC-TL": "11",
+          "1600 TC-TR/ TC-TL": "11",
+          "2000 TC-TR/ TC-TL": "11"
+        },
+        {
+          "parameter": "CNC System",
+          "1200 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D",
+          "1600 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D",
+          "2000 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D"
+        }
+      ],
+      "Models": [
+        {
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+        },
+        {
+          "description": "TC-TR : Turning Center Table Ram type"
+        },
+        {
+          "description": "TM-TR : Turn-Mill Centers Table Ram type"
+        }
+      ]
+    },
+    image: "/images/VTL/SADAA CHAKRA VTL 1200.jpg",
   },
   {
     id: "sadaa-chakra-1600",

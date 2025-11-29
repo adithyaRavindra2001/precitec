@@ -176,36 +176,155 @@ export function ProductDetailPage() {
             <CardTitle className="text-2xl">Technical Specifications</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b">
-                    <th className="px-4 py-3 text-left font-semibold text-foreground">
-                      Specification
-                    </th>
-                    <th className="px-4 py-3 text-left font-semibold text-foreground">
-                      Value
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.specifications.map((spec, index) => (
-                    <motion.tr
-                      key={index}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
+            <div className="space-y-8">
+              {Array.isArray(product.specifications) ? (
+                // Old format: simple array of label/value pairs
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="px-4 py-3 text-left font-semibold text-foreground">
+                          Specification
+                        </th>
+                        <th className="px-4 py-3 text-left font-semibold text-foreground">
+                          Value
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product.specifications.map((spec, index) => (
+                        <motion.tr
+                          key={index}
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.2, delay: index * 0.03 }}
+                          className="border-b last:border-0 hover:bg-slate-50 transition-colors"
+                        >
+                          <td className="px-4 py-3 font-medium text-muted-foreground">
+                            {spec.label}
+                          </td>
+                          <td className="px-4 py-3 text-foreground">{spec.value}</td>
+                        </motion.tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                // New format: nested object with category keys
+                Object.entries(product.specifications).map(([category, specs], categoryIndex) => {
+                  // Get column headers from first row (all keys except 'parameter' and 'description')
+                  const columnHeaders = Array.isArray(specs) && specs.length > 0
+                    ? Object.keys(specs[0]).filter(key => key !== 'parameter' && key !== 'description')
+                    : [];
+
+                  return (
+                    <motion.div
+                      key={category}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.2, delay: index * 0.03 }}
-                      className="border-b last:border-0 hover:bg-slate-50 transition-colors"
+                      transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
                     >
-                      <td className="px-4 py-3 font-medium text-muted-foreground">
-                        {spec.label}
-                      </td>
-                      <td className="px-4 py-3 text-foreground">{spec.value}</td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </table>
+                      <h3 className="mb-4 text-lg font-semibold text-foreground">{category}</h3>
+
+                      {/* Special handling for Models section */}
+                      {category === "Models" ? (
+                        <div className="space-y-2 mb-8">
+                          {Array.isArray(specs) &&
+                            specs.map((item: any, idx: number) => (
+                              <p key={idx} className="text-sm text-muted-foreground">
+                                <span className="font-medium text-foreground">{item.description}</span>
+                              </p>
+                            ))}
+                        </div>
+                      ) : (
+                        <>
+                          {/* Desktop Table View */}
+                          <div className="hidden md:block overflow-x-auto rounded-lg border">
+                            <table className="w-full">
+                              <thead>
+                                <tr className="bg-slate-50 border-b">
+                                  <th className="px-4 py-3 text-left font-semibold text-foreground min-w-[200px]">
+                                    Parameter
+                                  </th>
+                                  {columnHeaders.map((header) => (
+                                    <th
+                                      key={header}
+                                      className="px-4 py-3 text-left font-semibold text-foreground min-w-[120px]"
+                                    >
+                                      {header}
+                                    </th>
+                                  ))}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {Array.isArray(specs) &&
+                                  specs.map((spec: any, specIndex: number) => (
+                                    <motion.tr
+                                      key={specIndex}
+                                      initial={{ opacity: 0 }}
+                                      whileInView={{ opacity: 1 }}
+                                      viewport={{ once: true }}
+                                      transition={{
+                                        duration: 0.2,
+                                        delay: categoryIndex * 0.1 + specIndex * 0.03,
+                                      }}
+                                      className="border-b last:border-0 hover:bg-slate-50 transition-colors"
+                                    >
+                                      <td className="px-4 py-3 font-medium text-muted-foreground">
+                                        {spec.parameter}
+                                      </td>
+                                      {columnHeaders.map((header) => (
+                                        <td key={header} className="px-4 py-3 text-foreground">
+                                          {spec[header]}
+                                        </td>
+                                      ))}
+                                    </motion.tr>
+                                  ))}
+                              </tbody>
+                            </table>
+                          </div>
+
+                          {/* Mobile Card View */}
+                          <div className="md:hidden space-y-3">
+                            {Array.isArray(specs) &&
+                              specs.map((spec: any, specIndex: number) => (
+                                <motion.div
+                                  key={specIndex}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  whileInView={{ opacity: 1, x: 0 }}
+                                  viewport={{ once: true }}
+                                  transition={{
+                                    duration: 0.2,
+                                    delay: categoryIndex * 0.1 + specIndex * 0.03,
+                                  }}
+                                  className="rounded-lg border border-slate-200 bg-white p-3 sm:p-4"
+                                >
+                                  <p className="mb-3 font-medium text-foreground break-words">
+                                    {spec.parameter}
+                                  </p>
+                                  <div className={`grid gap-3 sm:gap-4 ${columnHeaders.length > 2 ? 'grid-cols-2' : 'grid-cols-2'}`}>
+                                    {columnHeaders.map((header) => (
+                                      <div key={header} className="min-w-0">
+                                        <p className="text-xs font-semibold text-muted-foreground uppercase truncate">
+                                          {header}
+                                        </p>
+                                        <p className="mt-1 text-xs sm:text-sm text-foreground break-words">
+                                          {spec[header]}
+                                        </p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </motion.div>
+                              ))}
+                          </div>
+                        </>
+                      )}
+                    </motion.div>
+                  );
+                })
+              )}
             </div>
           </CardContent>
         </Card>

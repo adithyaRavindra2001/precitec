@@ -1,33 +1,5 @@
-import { motion } from "framer-motion"
-import { Carousel } from "@/components/carousel/Carousel"
-
-const products = [
-  {
-    id: "turning-center",
-    title: "Turning Centers",
-    description: "Rigid, high-speed lathes delivering consistent concentricity across complex runs.",
-  },
-  {
-    id: "vmc",
-    title: "VMCs",
-    description: "Vertical machining centers optimized for accuracy, chip control, and uptime.",
-  },
-  {
-    id: "grinder",
-    title: "Grinders",
-    description: "Precision grinding solutions with micron-level finishes and thermal stability.",
-  },
-  {
-    id: "laser-cutter",
-    title: "Laser Cutters",
-    description: "High-power CO2 and Fiber lasers for precise sheet metal fabrication and complex geometries.",
-  },
-  {
-    id: "press-brake",
-    title: "Press Brakes",
-    description: "Hydraulic and electric bending solutions for versatile metal forming with exceptional repeatability.",
-  },
-]
+import { motion } from "framer-motion";
+import { Carousel } from "@/components/carousel/Carousel";
 
 export function ProductOverview() {
   return (
@@ -41,19 +13,24 @@ export function ProductOverview() {
     >
       <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-6 sm:mb-8">
-          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">Precision lineup</p>
-          <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">Our Machines</h2>
+          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
+            Precision lineup
+          </p>
+          <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
+            Our Machines
+          </h2>
           <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground px-2">
-            Select a platform to explore configurations, capacities, and automation options.
+            Select a platform to explore configurations, capacities, and
+            automation options.
           </p>
         </div>
 
-        <Carousel items={products} />
+        <Carousel />
 
         <div className="mt-4 sm:mt-8 text-center text-muted-foreground text-xs sm:text-sm">
           <p>Swipe or use arrow keys to navigate.</p>
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

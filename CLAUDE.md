@@ -22,7 +22,7 @@ npm run lint
 npm run preview
 ```
 
-## Architecture
+## Architecture and solution
 
 ### Routing Structure
 

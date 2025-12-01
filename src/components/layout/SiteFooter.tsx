@@ -7,23 +7,23 @@ export function SiteFooter() {
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-white transition-colors">
+                <a href="/about" className="text-sm sm:text-base hover:text-white transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#products" className="text-sm sm:text-base hover:text-white transition-colors">
+                <a href="/products" className="text-sm sm:text-base hover:text-white transition-colors">
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-white transition-colors">
-                  Careers
+                <a href="/services" className="text-sm sm:text-base hover:text-white transition-colors">
+                  Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-white transition-colors">
-                  News & Media
+                <a href="/contact" className="text-sm sm:text-base hover:text-white transition-colors">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -33,20 +33,24 @@ export function SiteFooter() {
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Corporate Address</h3>
             <address className="not-italic space-y-1 text-xs sm:text-sm">
               <p>PRECITEC Machines Pvt. Ltd.</p>
-              <p>Industrial Estate, Sector 12</p>
-              <p>Manufacturing Hub, 560001</p>
+              <p>A-353, B, 8th Main Road, 2nd Stage,</p>
+              <p>Peenya Industrial Estate,</p>
+              <p>Bengaluru, Karnataka 560058</p>
               <p className="mt-2 sm:mt-3">
                 <strong>Email:</strong>{" "}
                 <a
-                  href="mailto:info@precitec.com"
+                  href="mailto:info@precitec.co.in"
                   className="hover:text-white transition-colors break-all"
                 >
-                  info@precitec.com
+                  info@precitec.co.in
                 </a>
               </p>
-              <p>
-                <strong>Phone:</strong> +91 80 1234 5678
+              <p className="mt-2">
+                <strong>Phone:</strong>
               </p>
+              <p className="pl-2">+91 94481 37058</p>
+              <p className="pl-2">+91 80283 68067 / 68 / 69</p>
+              <p className="pl-2">+91 94481 18753</p>
             </address>
           </div>
 

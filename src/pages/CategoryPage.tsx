@@ -333,7 +333,7 @@ export function CategoryPage() {
                       </button>
 
                       <AnimatePresence>
-                        {isExpanded && Array.isArray(product.specifications) && (
+                        {isExpanded && (
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
@@ -342,21 +342,54 @@ export function CategoryPage() {
                             className="overflow-hidden"
                           >
                             <div className="mt-4 space-y-2 rounded-lg bg-slate-50 p-4">
-                              {product.specifications.slice(0, 4).map((spec: any, idx: number) => (
-                                <div
-                                  key={idx}
-                                  className="flex items-start justify-between gap-2 text-xs"
-                                >
-                                  <span className="font-medium text-muted-foreground">
-                                    {spec.label}
-                                  </span>
-                                  <span className="text-right font-semibold text-foreground">
-                                    {spec.value.length > 30
-                                      ? spec.value.substring(0, 30) + "..."
-                                      : spec.value}
-                                  </span>
-                                </div>
-                              ))}
+                              {Array.isArray(product.specifications) ? (
+                                // Old format: array of label/value pairs
+                                product.specifications.slice(0, 4).map((spec: any, idx: number) => (
+                                  <div
+                                    key={idx}
+                                    className="flex items-start justify-between gap-2 text-xs"
+                                  >
+                                    <span className="font-medium text-muted-foreground">
+                                      {spec.label}
+                                    </span>
+                                    <span className="text-right font-semibold text-foreground">
+                                      {spec.value.length > 30
+                                        ? spec.value.substring(0, 30) + "..."
+                                        : spec.value}
+                                    </span>
+                                  </div>
+                                ))
+                              ) : (
+                                // New format: nested object with category keys
+                                Object.entries(product.specifications)
+                                  .slice(0, 1)
+                                  .map(([, specs]) => {
+                                    const firstSpecs = Array.isArray(specs) ? specs.slice(0, 4) : []
+                                    return firstSpecs.map((spec: any, idx: number) => {
+                                      const columnHeaders = Object.keys(spec).filter(
+                                        (key) => key !== "parameter" && key !== "description"
+                                      )
+                                      const firstColumn = columnHeaders[0]
+                                      return (
+                                        <div
+                                          key={idx}
+                                          className="flex items-start justify-between gap-2 text-xs"
+                                        >
+                                          <span className="font-medium text-muted-foreground">
+                                            {spec.parameter}
+                                          </span>
+                                          <span className="text-right font-semibold text-foreground">
+                                            {firstColumn && spec[firstColumn]
+                                              ? spec[firstColumn].length > 30
+                                                ? spec[firstColumn].substring(0, 30) + "..."
+                                                : spec[firstColumn]
+                                              : "-"}
+                                          </span>
+                                        </div>
+                                      )
+                                    })
+                                  })
+                              )}
                               <Link
                                 to={`/products/${product.id}`}
                                 className="mt-3 block text-center text-xs font-semibold text-primary hover:underline"

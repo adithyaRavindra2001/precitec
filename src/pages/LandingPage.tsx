@@ -70,12 +70,12 @@ export function LandingPage() {
             Talk to our engineers about capacities, automation, and lead times tailored to your line.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
-            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4 break-all" href="mailto:info@precitec.com">
-              info@precitec.com
+            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4 break-all" href="mailto:info@precitec.co.in">
+              info@precitec.co.in
             </a>
             <span className="hidden sm:inline text-muted-foreground">|</span>
-            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4" href="tel:+918012345678">
-              +91 80 1234 5678
+            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4" href="tel:+919448137058">
+              +91 94481 37058
             </a>
           </div>
         </div>

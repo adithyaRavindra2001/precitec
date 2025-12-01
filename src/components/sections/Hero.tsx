@@ -22,8 +22,7 @@ export function Hero() {
     <section
       className="relative flex min-h-[60vh] sm:min-h-[70vh] md:min-h-[75vh] items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1920&auto=format&fit=crop')",
+        backgroundImage: "url('/hero-image.png')",
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/30" />

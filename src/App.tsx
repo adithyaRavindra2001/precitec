@@ -5,6 +5,9 @@ import { LandingPage } from "@/pages/LandingPage";
 import { Products } from "@/pages/Products";
 import { ProductDetailPage } from "@/pages/ProductDetailPage";
 import { CategoryPage } from "@/pages/CategoryPage";
+import { AboutPage } from "@/pages/AboutPage";
+import { ServicesPage } from "@/pages/ServicesPage";
+import { ContactPage } from "@/pages/ContactPage";
 import { Outlet, Route, Routes } from "react-router-dom";
 
 function Layout() {
@@ -26,6 +29,9 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* New Products Routes */}
           <Route path="/products" element={<Products />} />
           <Route path="/products/:productId" element={<ProductDetailPage />} />

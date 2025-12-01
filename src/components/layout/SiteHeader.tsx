@@ -7,9 +7,9 @@ import { Logo } from "@/components/ui/Logo"
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Company", href: "/#company" },
-  { label: "Services", href: "/#services" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const categoryIcons: Record<string, any> = {
@@ -41,9 +41,10 @@ export function SiteHeader() {
             <Link
               key={item.label}
               to={item.href}
-              className="transition-colors hover:text-foreground"
+              className="relative transition-colors hover:text-foreground group"
             >
               {item.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
 
@@ -63,10 +64,11 @@ export function SiteHeader() {
             }}
           >
             <button
-              className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="relative flex items-center gap-1.5 transition-colors hover:text-foreground group"
             >
               Products
               <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
 
             <AnimatePresence>

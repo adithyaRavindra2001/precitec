@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getProductById } from "@/data/products"
 import { HeroImageCarousel } from "@/components/product/HeroImageCarousel"
-import { ArrowLeft, CheckCircle2, Download, Mail, Phone } from "lucide-react"
+import { ArrowLeft, CheckCircle2, Mail, Phone } from "lucide-react"
 
 export function ProductDetailPage() {
   const { productId } = useParams<{ productId: string }>()
@@ -80,26 +80,24 @@ export function ProductDetailPage() {
             </h1>
             <p className="mt-2 text-lg sm:text-xl text-muted-foreground">{product.fullName}</p>
 
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button size="lg" className="gap-2 text-sm sm:text-base">
-                <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
-                Request a Quote
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2 text-sm sm:text-base">
-                <Download className="h-4 w-4 sm:h-5 sm:w-5" />
-                Download Brochure
-              </Button>
+            <div className="mt-6 sm:mt-8">
+              <Link to="/contact">
+                <Button size="lg" className="gap-2 text-sm sm:text-base">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
+                  Request a Quote
+                </Button>
+              </Link>
             </div>
 
             <div className="mt-8 flex items-center gap-6 border-t pt-8">
               <div>
                 <p className="text-sm text-muted-foreground">Need Help?</p>
                 <a
-                  href="tel:+918012345678"
+                  href="tel:+919448137058"
                   className="mt-1 flex items-center gap-2 text-primary hover:underline"
                 >
                   <Phone className="h-4 w-4" />
-                  +91 80 1234 5678
+                  +91 94481 37058
                 </a>
               </div>
             </div>
@@ -342,14 +340,18 @@ export function ProductDetailPage() {
                 Contact our sales team for pricing, delivery schedules, and customization options.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="gap-2 border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-slate-900">
-                  <Mail className="h-5 w-5" />
-                  Send Inquiry
-                </Button>
-                <Button size="lg" className="gap-2 border-2 border-white bg-transparent text-white hover:bg-white hover:text-slate-900">
-                  <Phone className="h-5 w-5" />
-                  Call Sales Team
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="gap-2 border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-slate-900">
+                    <Mail className="h-5 w-5" />
+                    Send Inquiry
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" className="gap-2 border-2 border-white bg-transparent text-white hover:bg-white hover:text-slate-900">
+                    <Phone className="h-5 w-5" />
+                    Call Sales Team
+                  </Button>
+                </Link>
               </div>
             </div>
           </CardContent>

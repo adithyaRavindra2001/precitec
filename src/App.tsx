@@ -8,6 +8,7 @@ import { CategoryPage } from "@/pages/CategoryPage";
 import { AboutPage } from "@/pages/AboutPage";
 import { ServicesPage } from "@/pages/ServicesPage";
 import { ContactPage } from "@/pages/ContactPage";
+import { MoreProductsPage } from "@/pages/MoreProductsPage";
 import { Outlet, Route, Routes } from "react-router-dom";
 
 function Layout() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           {/* New Products Routes */}
           <Route path="/products" element={<Products />} />
+          <Route path="/products/more" element={<MoreProductsPage />} />
           <Route path="/products/:productId" element={<ProductDetailPage />} />
           <Route
             path="/products/category/:categoryId"

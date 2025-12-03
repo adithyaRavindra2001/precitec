@@ -22,7 +22,7 @@ export function LandingPage() {
       >
         <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center md:text-left">
           <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">About</p>
-          <h3 className="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold text-foreground">Engineering precision since 1978</h3>
+          <h3 className="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold text-foreground">Precision-Focused Engineering, Trusted Since 1978</h3>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground md:text-lg">
             We design and build machine tools that keep factories running—rigid bases, balanced spindles,
             and intelligent controls tuned for demanding production.

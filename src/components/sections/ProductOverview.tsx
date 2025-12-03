@@ -14,14 +14,13 @@ export function ProductOverview() {
       <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
-            Precision lineup
+            Complete CNC Machine Portfolio
           </p>
           <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
-            Our Machines
+            Precision CNC Machining Equipment
           </h2>
           <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground px-2">
-            Select a platform to explore configurations, capacities, and
-            automation options.
+            Explore our comprehensive range of CNC turning centers, machining centers, grinding machines, and specialized finning equipment with advanced configurations and automation capabilities.
           </p>
         </div>
 

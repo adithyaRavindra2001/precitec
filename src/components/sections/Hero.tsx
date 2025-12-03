@@ -37,20 +37,19 @@ export function Hero() {
           variants={item}
           className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary-foreground/80"
         >
-          Precision Engineering
+          CNC Machine Manufacturer | Bangalore, India
         </motion.p>
         <motion.h1
           variants={item}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white"
         >
-          Machine Tools Built for <span className="text-primary">Industrial Reliability</span>
+          Precision CNC Machines for <span className="text-white">Industrial Manufacturing Excellence</span>
         </motion.h1>
         <motion.p
           variants={item}
           className="text-base sm:text-lg md:text-xl text-white/80 px-2"
         >
-          High-performance turning centers, machining centers, and grinders engineered to deliver accuracy,
-          uptime, and throughput for modern manufacturers.
+          High-performance CNC turning centers and multi-axis machining centers engineered to deliver exceptional accuracy, maximum uptime, and superior productivity for automotive, aerospace, and heavy engineering manufacturing operations.
         </motion.p>
         <motion.div variants={item} className="flex justify-center mt-2">
           <Button
@@ -60,7 +59,7 @@ export function Hero() {
               document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })
             }}
           >
-            Discover Machines
+            Explore CNC Machines
           </Button>
         </motion.div>
       </motion.div>

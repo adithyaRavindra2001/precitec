@@ -126,7 +126,7 @@ export function CategoryPage() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="mt-4 text-lg text-slate-300"
               >
-                Explore our range of {products.length} precision-engineered products
+                Discover {products.length} precision-engineered CNC machining solutions designed for industrial manufacturing excellence
               </motion.p>
 
               {/* Capacity Range Indicator */}
@@ -137,7 +137,7 @@ export function CategoryPage() {
                   transition={{ duration: 0.6, delay: 0.6 }}
                   className="mt-8 rounded-xl bg-white/10 p-6 backdrop-blur-sm"
                 >
-                  <p className="text-sm font-semibold text-slate-300 mb-3">Capacity Range</p>
+                  <p className="text-sm font-semibold text-slate-300 mb-3">Machine Capacity Range</p>
                   <div className="flex items-center gap-3">
                     <div className="text-2xl font-bold text-white">{products[0].name.split(' ')[1]}</div>
                     <div className="h-1 flex-1 rounded-full bg-white/20">
@@ -148,7 +148,7 @@ export function CategoryPage() {
                     </div>
                   </div>
                   <p className="mt-2 text-xs text-slate-400">
-                    From compact to heavy-duty solutions
+                    Complete range from compact precision machines to heavy-duty industrial CNC equipment
                   </p>
                 </motion.div>
               )}
@@ -209,9 +209,9 @@ export function CategoryPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground">Browse by Series</h2>
+            <h2 className="text-3xl font-bold text-foreground">Browse CNC Machine Series</h2>
             <p className="mt-2 text-muted-foreground">
-              Explore our specialized product series in this category
+              Explore our specialized precision machining equipment series with advanced CNC capabilities
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -264,10 +264,10 @@ export function CategoryPage() {
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h2 className="text-3xl font-bold text-foreground">
-              {subcategoryId ? "All Products" : "Product Range"}
+              {subcategoryId ? "Complete Machine Portfolio" : "Precision CNC Machine Range"}
             </h2>
             <p className="mt-2 text-muted-foreground">
-              Click any product to view detailed specifications
+              Click any CNC machine to view detailed technical specifications and capabilities
             </p>
           </div>
         </div>
@@ -421,21 +421,25 @@ export function CategoryPage() {
           <CardContent className="p-8 md:p-12">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-bold">Can't Find What You Need?</h3>
+                <h3 className="text-3xl font-bold">Need Custom CNC Machining Solutions?</h3>
                 <p className="mt-4 text-lg text-slate-300">
-                  Our engineering team specializes in custom solutions. We'll design and build equipment tailored to your exact specifications.
+                  Our precision engineering team specializes in designing and manufacturing custom CNC machines, special purpose machining equipment, and tailored industrial automation solutions to meet your exact manufacturing specifications.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" variant="secondary" className="gap-2">
-                    Request Custom Quote
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="gap-2 border-white bg-transparent text-white hover:bg-white hover:text-slate-900 hover:border-white"
-                  >
-                    Contact Engineering Team
-                  </Button>
+                  <Link to="/contact">
+                    <Button size="lg" variant="secondary" className="gap-2">
+                      Request Custom Quote
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="gap-2 border-white bg-transparent text-white hover:bg-white hover:text-slate-900 hover:border-white"
+                    >
+                      Contact Engineering Team
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative">
@@ -447,8 +451,8 @@ export function CategoryPage() {
                         <Zap className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold">Fast Turnaround</p>
-                        <p className="text-sm text-slate-400">Custom designs in weeks, not months</p>
+                        <p className="font-semibold">Rapid Custom Design</p>
+                        <p className="text-sm text-slate-400">Custom CNC machine engineering in weeks, not months</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -456,8 +460,8 @@ export function CategoryPage() {
                         <Zap className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold">Expert Engineering</p>
-                        <p className="text-sm text-slate-400">40+ years of machining expertise</p>
+                        <p className="font-semibold">40+ Years Precision Engineering</p>
+                        <p className="text-sm text-slate-400">Veteran CNC machine tool manufacturing expertise</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -465,8 +469,8 @@ export function CategoryPage() {
                         <Zap className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold">Worldwide Support</p>
-                        <p className="text-sm text-slate-400">Installation & training included</p>
+                        <p className="font-semibold">Global Installation Support</p>
+                        <p className="text-sm text-slate-400">Complete installation, commissioning & operator training services</p>
                       </div>
                     </div>
                   </div>

@@ -5,6 +5,25 @@ import { categories, getProductsByCategory } from "@/data/products"
 import { motion, AnimatePresence } from "framer-motion"
 import { Logo } from "@/components/ui/Logo"
 
+// SPMs and Other Products list
+const moreProducts = [
+  { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines" },
+  { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines" },
+  { name: "Edge Master", category: "Milling Machines" },
+  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions" },
+  { name: "Finning Machines", category: "Special Machines" },
+  { name: "Riser Cutting Machines", category: "Special Machines" },
+  { name: "Tube Coiling Machines", category: "Special Machines" },
+  { name: "SPM's", category: "Special Machines" },
+  { name: "Machining Composites", category: "Special Machines" },
+  { name: "Automobile Assembly Machines", category: "Special Machines" },
+  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories" },
+  { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories" },
+  { name: "B250 Facing Attachment", category: "Attachments and Accessories" },
+  { name: "UMS Series Spindle Units", category: "Attachments and Accessories" },
+  { name: "US Series Slides", category: "Attachments and Accessories" },
+]
+
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -112,6 +131,7 @@ export function SiteHeader() {
                           {categories.map((category) => {
                             const Icon = categoryIcons[category.id] || Wrench
                             const isHovered = hoveredCategory === category.id
+                            const linkTo = category.id === "spms-other" ? "/products/more" : `/products/category/${category.id}`
 
                             return (
                               <div
@@ -119,7 +139,7 @@ export function SiteHeader() {
                                 onMouseEnter={() => setHoveredCategory(category.id)}
                               >
                                 <Link
-                                  to={`/products/category/${category.id}`}
+                                  to={linkTo}
                                   className={`group flex items-start gap-3 rounded-lg p-3 transition-all ${
                                     isHovered
                                       ? "bg-white shadow-md"
@@ -177,7 +197,36 @@ export function SiteHeader() {
                                     <h3 className="mb-4 text-lg font-bold text-foreground">
                                       {category.name}
                                     </h3>
-                                    {category.subcategories && category.subcategories.length > 0 ? (
+                                    {category.id === "spms-other" ? (
+                                      <div className="space-y-2">
+                                        {moreProducts.slice(0, 6).map((product, idx) => (
+                                          <motion.div
+                                            key={idx}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.2, delay: idx * 0.05 }}
+                                          >
+                                            <Link
+                                              to="/products/more"
+                                              className="group block rounded-lg border-2 border-transparent p-3 transition-all hover:border-primary/30 hover:bg-primary/5 hover:shadow-sm"
+                                            >
+                                              <div className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                                                {product.name}
+                                              </div>
+                                              <div className="mt-1 text-xs text-muted-foreground">
+                                                {product.category} • Coming Soon
+                                              </div>
+                                            </Link>
+                                          </motion.div>
+                                        ))}
+                                        <Link
+                                          to="/products/more"
+                                          className="block pt-2 text-center text-xs font-semibold text-primary hover:underline"
+                                        >
+                                          + {moreProducts.length - 6} more products →
+                                        </Link>
+                                      </div>
+                                    ) : category.subcategories && category.subcategories.length > 0 ? (
                                       <div className="space-y-2">
                                         {category.subcategories.map((subcategory, idx) => (
                                           <motion.div
@@ -258,20 +307,12 @@ export function SiteHeader() {
 
                     {/* Bottom Banner */}
                     <div className="border-t bg-gradient-to-r from-slate-50 to-slate-100/50 px-6 py-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-xs font-semibold text-foreground">
-                            Need Custom Solutions?
-                          </p>
-                          <p className="text-xs text-muted-foreground">
-                            Our engineers can design equipment tailored to your needs
-                          </p>
-                        </div>
+                      <div className="flex items-center justify-center">
                         <Link
                           to="/products/special-machines"
-                          className="rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-md"
+                          className="rounded-lg bg-primary px-6 py-3 text-xs font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-md whitespace-nowrap"
                         >
-                          Learn More
+                          Custom Solutions
                         </Link>
                       </div>
                     </div>
@@ -342,10 +383,11 @@ export function SiteHeader() {
                           </Link>
                           {categories.map((category) => {
                             const Icon = categoryIcons[category.id] || Wrench
+                            const linkTo = category.id === "spms-other" ? "/products/more" : `/products/category/${category.id}`
                             return (
                               <Link
                                 key={category.id}
-                                to={`/products/category/${category.id}`}
+                                to={linkTo}
                                 onClick={closeMobileMenu}
                                 className="flex items-center gap-3 py-2 text-sm text-foreground hover:text-primary transition-colors"
                               >

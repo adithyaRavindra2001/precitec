@@ -86,6 +86,10 @@ export const categories: Category[] = [
       },
     ],
   },
+  {
+    id: "spms-other",
+    name: "SPMs and Other Products",
+  },
 ]
 
 // Common specifications template (used for all products for now)
@@ -130,7 +134,7 @@ export const products: Product[] = [
     images: [
       {
         id: "fc-40-main",
-        url: "https://placehold.co/800x600/0891b2/fff?text=FC+40",
+        url: "/FCM/FC-40.jpeg",
         alt: "FC 40 Facing and Centering Machine",
         caption: "Main view of FC 40",
       },
@@ -142,22 +146,153 @@ export const products: Product[] = [
     fullName: "FCM 80 - Facing and Centering Machine",
     category: "facing-centering",
     series: "MacInnes Series",
-    description: "The FCM 80 combines facing, centering, and chamfering operations in one robust machine. Engineered for high-volume production environments, it handles bars up to 80mm diameter with exceptional accuracy and repeatability. Features advanced automation options for unmanned operation.",
+    description: "Precitec FCM 80 NC machines are versatile facing and centring machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and centre depth are controlled very accurately. High-quality surface finish and centre depth controls are easily and consistently achieved on even tough materials. Compact design with Across movement for the job and independent forward and reverse movements for each of the spindles. All axes are controlled through servo motors and drives. High-quality spindles Case hardened and ground with preloaded Precision bearings, Poly V belt drive to the spindle. Programmable speeds for different operations. Spindles are precisely guided in hardened ground bores for movement and for Cross axis LM rails are provided. Well-designed bed and axes for easy flow of coolant and chip disposal towards rear side. Compact guarding with fully covered cutting zone with sliding doors. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's. Automation for Loading and unloading can be provided, In addition to special fixturing, tooling options for OD, turning, double ended boring, conveyor roller manufacturing. Etc.",
     features: [
-      "Multi-function capability: facing, centering, chamfering",
-      "Handles bars up to 80mm diameter",
-      "Servo-controlled feed system for precision",
-      "Programmable cycle times for optimization",
-      "Automatic bar loading ready",
-      "Digital measurement system",
-      "Heavy-duty spindle with high torque",
-      "Integrated chip conveyor system",
+      "Shaft-end machining",
+      "Length control within 0.1mm",
+      "Centre hole drilling",
+      "OD turning (optional)",
+      "Chamfering (optional)",
+      "Double-ended boring and facing",
+      "Standard Guard: with a sliding door near the cutting zone",
+      "Milling and centring tools 1 LH + 1 RH",
+      "Clamping Vice self-centring hydraulic 2nos",
+      "1 set of V jaws",
+      "Machine Levelling pads",
+      "Manuals 1 set (English)",
+      "Powerpack",
+      "Control panel",
+      "Operator Pendant with the Touch screen interface",
+      "Machine with PLC control",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Max job dia",
+          "FCM-80-NC-500": "80 mm / (3.15\")",
+          "FCM-80-CNC-500": "80 mm / (3.15\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "Min Job dia",
+          "FCM-80-NC-500": "20 mm / (0.79\")",
+          "FCM-80-CNC-500": "20 mm / (0.79\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "Maximum length of job",
+          "FCM-80-NC-500": "500 mm / (19.7\")",
+          "FCM-80-CNC-500": "500 mm / (19.7\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "Z axis stroke",
+          "FCM-80-NC-500": "125 mm / (4.9\")",
+          "FCM-80-CNC-500": "125 mm / (4.9\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "X axis stroke",
+          "FCM-80-NC-500": "150 mm / (5.8\")",
+          "FCM-80-CNC-500": "150 mm / (5.8\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "Minimum length of job",
+          "FCM-80-NC-500": "100 mm / (4\")",
+          "FCM-80-CNC-500": "100 mm / (4\")",
+          "Options": "60mm/2.25\" with 1 vice/special fixture"
+        },
+        {
+          "parameter": "No of spindles",
+          "FCM-80-NC-500": "2",
+          "FCM-80-CNC-500": "2",
+          "Options": "4/6 (Specials)"
+        },
+        {
+          "parameter": "Spindle speed range",
+          "FCM-80-NC-500": "30-1500 RPM",
+          "FCM-80-CNC-500": "30-3000 RPM",
+          "Options": "-"
+        },
+        {
+          "parameter": "Spindle Power",
+          "FCM-80-NC-500": "3.7 kW / (5 HP)",
+          "FCM-80-CNC-500": "2.2 kW / (3 HP)",
+          "Options": "-"
+        },
+        {
+          "parameter": "Spindle Max. torque/thrust force",
+          "FCM-80-NC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
+          "FCM-80-CNC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
+          "Options": "-"
+        },
+        {
+          "parameter": "Controls",
+          "FCM-80-NC-500": "PLC with servo motors and VFD",
+          "FCM-80-CNC-500": "CNC controls",
+          "Options": "Delta/Siemens/Mitsubishi/Pragati"
+        },
+        {
+          "parameter": "Vice Type",
+          "FCM-80-NC-500": "Self-Centring: 2 nos.",
+          "FCM-80-CNC-500": "Self-Centring: 2 nos.",
+          "Options": "V and flat, special fixtures"
+        },
+        {
+          "parameter": "Vice Actuation",
+          "FCM-80-NC-500": "Hydraulic",
+          "FCM-80-CNC-500": "Hydraulic",
+          "Options": "Air/Servomotor"
+        },
+        {
+          "parameter": "Tools",
+          "FCM-80-NC-500": "Milling cum centring tool 110mm dia",
+          "FCM-80-CNC-500": "Milling cum centring tool 110mm dia",
+          "Options": "90mm/125mm, boring tools and others"
+        },
+        {
+          "parameter": "Overall dimension (L × D × H)",
+          "FCM-80-NC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
+          "FCM-80-CNC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
+          "Options": "-"
+        },
+        {
+          "parameter": "Machine Overall weight (approx.)",
+          "FCM-80-NC-500": "1600 DaN / (3500 lbf)",
+          "FCM-80-CNC-500": "1600 DaN / (3500 lbf)",
+          "Options": "-"
+        },
+        {
+          "parameter": "Maximum connected load (electric)",
+          "FCM-80-NC-500": "15 KVA",
+          "FCM-80-CNC-500": "20 KVA",
+          "Options": "-"
+        },
+        {
+          "parameter": "Hydraulic power pack",
+          "FCM-80-NC-500": "1 kW, 6 L/min",
+          "FCM-80-CNC-500": "1 kW, 6 L/min",
+          "Options": "3 kW, 20 L/min (for special fixturing)"
+        },
+        {
+          "parameter": "Coolant tank and pump",
+          "FCM-80-NC-500": "120 Ltr, 40 LPM",
+          "FCM-80-CNC-500": "120 Ltr, 40 LPM",
+          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
+        },
+        {
+          "parameter": "Electric connection",
+          "FCM-80-NC-500": "3 ph, 415V / 50Hz/60Hz",
+          "FCM-80-CNC-500": "3 ph, 415V / 50Hz/60Hz",
+          "Options": "3ph, 200V, 50/60Hz"
+        }
+      ]
+    },
     images: [
       {
         id: "fcm-80-main",
-        url: "https://placehold.co/800x600/06b6d4/fff?text=FCM+80",
+        url: "/FCM/FCM 80-SC-500 edited.png",
         alt: "FCM 80 Facing and Centering Machine",
         caption: "FCM 80 Front View",
       },
@@ -169,22 +304,76 @@ export const products: Product[] = [
     fullName: "FCM 100 - Facing and Centering Machine",
     category: "facing-centering",
     series: "MacInnes Series",
-    description: "The FCM 100 offers enhanced capacity and power for demanding facing and centering applications. With its rigid construction and advanced control system, it maintains tight tolerances even on difficult materials. Ideal for large-scale production facilities requiring consistent quality.",
+    description: "Precitec FCM 100 NC machines are versatile face milling and centering machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and center depth are controlled very accurately. High-quality surface finish and center depth controls are easily and consistently achieved on even tough materials. Two-axis movements to spindle on either side facilitate length machining in either one step or multistep process to remove larger stock in forgings and castings. High-quality spindles, Case hardened and ground with preloaded Precision bearings. Spindle is driven through Poly V Belt. LM rails for all the axes movements with Ball screws ensure high accuracies and long life, and metallic telescopic covers prevent chip entry. Well-designed guides with easy movement and locking for setting the vice or fixturing position for different lengths of job on the base. Rigid base structures with inbuilt slopes for easy coolant and swarf removal Easy changeover of job setup by simple program recall or by drawing dimension and parameters-based programming for new jobs. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's.",
     features: [
-      "Large capacity up to 100mm diameter",
-      "Rigid cast iron construction",
-      "Advanced PLC control system",
-      "Multi-station tooling capability",
-      "Automatic cycle control",
-      "High-speed machining option",
-      "Precision linear guides",
-      "Remote monitoring capability",
+      "Shaft-end machining",
+      "Length control within 0.1mm",
+      "Center hole drilling",
+      "OD turning (optional)",
+      "Chamfering (optional)",
+      "Double ended boring and facing",
+      "Standard Guard: All round guard with sliding doors",
+      "2 spindles: 1 LH + 1 RH",
+      "Milling and centering tools 1 LH + 1 RH (Combination tool)",
+      "Clamping Vice self-centering hydraulic 2nos",
+      "1 set of V jaws 1 nos",
+      "Machine Levelling pads",
+      "Manuals 1 set (English)",
+      "Powerpack",
+      "Control panel",
+      "Operator pendant with touch screen Interface",
+      "Machine with PLC based controls",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Max job diameter",
+          "FCM-100-2S-2SC-800": "100 mm / (3.9\")",
+          "FCM-100-2S-2SC-1200": "100 mm / (3.9\")",
+          "FCM-100-2S-2SC-2000": "100 mm / (3.9\")"
+        },
+        {
+          "parameter": "Min job diameter",
+          "FCM-100-2S-2SC-800": "20 mm / (0.79\")",
+          "FCM-100-2S-2SC-1200": "20 mm / (0.79\")",
+          "FCM-100-2S-2SC-2000": "20 mm / (0.79\")"
+        },
+        {
+          "parameter": "Maximum length of job",
+          "FCM-100-2S-2SC-800": "800 mm / (31.5\")",
+          "FCM-100-2S-2SC-1200": "1200 mm / (47.5\")",
+          "FCM-100-2S-2SC-2000": "2000 mm / (79\")"
+        },
+        {
+          "parameter": "Minimum length of job",
+          "FCM-100-2S-2SC-800": "150 mm / (6\")",
+          "FCM-100-2S-2SC-1200": "150 mm / (6\")",
+          "FCM-100-2S-2SC-2000": "150 mm / (6\")"
+        },
+        {
+          "parameter": "Z1 and Z2 axis stroke (drilling)",
+          "FCM-100-2S-2SC-800": "425 mm",
+          "FCM-100-2S-2SC-1200": "625 mm",
+          "FCM-100-2S-2SC-2000": "1025 mm"
+        },
+        {
+          "parameter": "Overall dimension (L × D × H)",
+          "FCM-100-2S-2SC-800": "2500 × 1500 × 1500 mm / (8.2' × 5' × 5')",
+          "FCM-100-2S-2SC-1200": "3000 × 1500 × 1500 mm / (10' × 5' × 5')",
+          "FCM-100-2S-2SC-2000": "3900 × 1500 × 1500 mm / (12.8' × 5' × 5')"
+        },
+        {
+          "parameter": "Machine overall weight (approx.)",
+          "FCM-100-2S-2SC-800": "3200 DaN / (7194 lbf)",
+          "FCM-100-2S-2SC-1200": "3700 DaN / (8318 lbf)",
+          "FCM-100-2S-2SC-2000": "4400 DaN / (9891 lbf)"
+        }
+      ]
+    },
     images: [
       {
         id: "fcm-100-main",
-        url: "https://placehold.co/800x600/0284c7/fff?text=FCM+100",
+        url: "/FCM/FCM100-800-25C 2S EDITED.png",
         alt: "FCM 100 Facing and Centering Machine",
         caption: "FCM 100 - Large Capacity Model",
       },
@@ -196,22 +385,76 @@ export const products: Product[] = [
     fullName: "FCM 150 - Facing and Centering Machine",
     category: "facing-centering",
     series: "MacInnes Series",
-    description: "The FCM 150 is a heavy-duty facing and centering machine designed for large-diameter bars and tough materials. With its massive spindle power and rigid structure, it delivers precision results on workpieces up to 150mm. Perfect for oil & gas, mining, and heavy manufacturing sectors.",
+    description: "Precitec FCM 150 NC machines are versatile face milling and centring machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and centre depth are controlled very accurately. High-quality surface finish and centre depth controls are easily and consistently achieved on even tough materials. Two-axis movements to spindle on either side facilitate length machining in either one step or multistep process to remove larger stock in forgings and castings. High-quality and heavy duty ISO-50 spindles, Case hardened and ground with preloaded Precision bearings. Spindle is driven through Poly V Belt and gear drive is optional. LM rails for all the axes movements with Ball screws ensure high accuracies and long life, and metallic telescopic covers prevent chip entry. Well-designed guides with easy movement and locking for setting the vice or fixturing position for different lengths of job on the base. Rigid base structures with inbuilt slopes for easy coolant and swarf removal. Easy changeover of job setup by simple program recall or by drawing dimension and parameters-based programming for new jobs. And automation for Loading and unloading can also be provided. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's.",
     features: [
-      "Heavy-duty capacity up to 150mm diameter",
-      "Extra-powerful spindle motor",
-      "Reinforced frame for vibration-free operation",
-      "Advanced thermal management",
-      "Automatic tool wear compensation",
-      "Multiple machining programs storage",
-      "Safety interlocks and guarding",
-      "Long-term reliability in harsh environments",
+      "Shaft-end machining",
+      "Length control within 0.1mm",
+      "Centre hole drilling",
+      "OD turning (optional)",
+      "Chamfering (optional)",
+      "Double ended boring and facing",
+      "Standard Guard: All round guard with sliding door near cutting zone",
+      "Milling and centring tools 1 LH + 1 RH",
+      "Clamping Vice self-centring hydraulic 2nos",
+      "1 set of V jaws 1 nos",
+      "Machine Levelling pads",
+      "Manuals 1 set (English)",
+      "Powerpack",
+      "Control panel",
+      "Operator Pendant with Touch screen interface",
+      "Power draw bar used for Tool clamp",
+      "Machine with PLC Control",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Max job diameter",
+          "FCM-150-2S-SC-800": "180 mm / (7\")",
+          "FCM-150-2S-SC-1200": "180 mm / (7\")",
+          "FCM-150-2S-SC-2000": "180 mm / (7\")"
+        },
+        {
+          "parameter": "Min job diameter",
+          "FCM-150-2S-SC-800": "20 mm / (0.78\")",
+          "FCM-150-2S-SC-1200": "20 mm / (0.78\")",
+          "FCM-150-2S-SC-2000": "20 mm / (0.78\")"
+        },
+        {
+          "parameter": "Maximum length of job",
+          "FCM-150-2S-SC-800": "800 mm / (31.5\")",
+          "FCM-150-2S-SC-1200": "1200 mm / (47.5\")",
+          "FCM-150-2S-SC-2000": "2000 mm / (79\")"
+        },
+        {
+          "parameter": "Minimum length of job",
+          "FCM-150-2S-SC-800": "150 mm / (6\")",
+          "FCM-150-2S-SC-1200": "150 mm / (6\")",
+          "FCM-150-2S-SC-2000": "150 mm / (6\")"
+        },
+        {
+          "parameter": "Z1 and Z2 axis stroke (drilling)",
+          "FCM-150-2S-SC-800": "425 mm",
+          "FCM-150-2S-SC-1200": "625 mm",
+          "FCM-150-2S-SC-2000": "1025 mm"
+        },
+        {
+          "parameter": "Overall dimension (L × D × H) (approx.)",
+          "FCM-150-2S-SC-800": "3300 × 2000 × 2000 mm / (11' × 6.6' × 6.6')",
+          "FCM-150-2S-SC-1200": "4300 × 2000 × 2000 mm / (14' × 6.6' × 6.6')",
+          "FCM-150-2S-SC-2000": "5500 × 2000 × 2000 mm / (18' × 6.6' × 6.6')"
+        },
+        {
+          "parameter": "Machine overall weight (approx.)",
+          "FCM-150-2S-SC-800": "3500 DaN / (7870 lbf)",
+          "FCM-150-2S-SC-1200": "4000 DaN / (9000 lbf)",
+          "FCM-150-2S-SC-2000": "4700 DaN / (10570 lbf)"
+        }
+      ]
+    },
     images: [
       {
         id: "fcm-150-main",
-        url: "https://placehold.co/800x600/0369a1/fff?text=FCM+150",
+        url: "/FCM/FCM 150-NC-800w.png",
         alt: "FCM 150 Heavy-Duty Facing and Centering Machine",
         caption: "FCM 150 - Heavy Duty Configuration",
       },
@@ -238,7 +481,7 @@ export const products: Product[] = [
     images: [
       {
         id: "db-40-main",
-        url: "https://placehold.co/800x600/0e7490/fff?text=DB+40",
+        url: "/FCM/DBM40-Arudra.png",
         alt: "DB 40 Drilling and Boring Machine",
         caption: "DB 40 - Compact Drilling Solution",
       },
@@ -275,11 +518,11 @@ export const products: Product[] = [
   // Category 2: Vertical Turning and Turn Mill Solutions - Sadaa Chakra Series
   {
     id: "sadaa-chakra-500",
-    name: "Sadaa Chakra 500",
-    fullName: "Sadaa Chakra 500 - Vertical Turning Lathe",
+    name: "Sadaa Chakra 500 & 630",
+    fullName: "Sadaa Chakra 500 & 630 - Vertical Turning Lathe",
     category: "vertical-turning",
     series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 500 is an entry-level vertical turning lathe designed for compact workpieces requiring precision machining. With its stable vertical spindle design and rigid construction, it delivers excellent surface finish and dimensional accuracy. Ideal for small to medium batch production.",
+    description: "The Sadaa Chakra 500 & 630 series are entry to mid-level vertical turning lathes designed for compact to medium-sized workpieces requiring precision machining. With stable vertical spindle design and rigid construction, they deliver excellent surface finish and dimensional accuracy. Ideal for small to medium batch production.",
     features: [
       "Compact vertical design saves floor space",
       "Chuck diameter 500mm",
@@ -406,33 +649,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "sadaa-chakra-630",
-    name: "Sadaa Chakra 630",
-    fullName: "Sadaa Chakra 630 - Vertical Turning Lathe",
-    category: "vertical-turning",
-    series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 630 offers increased capacity and versatility for medium-sized workpieces. Its advanced CNC control and powerful spindle motor handle a wide range of materials and operations. Features enhanced automation options for improved productivity.",
-    features: [
-      "Chuck diameter 630mm",
-      "Powerful 22kW spindle motor",
-      "Rigid box-way construction",
-      "Live tooling capability",
-      "C-axis positioning for milling",
-      "Automatic tool changer (16 positions)",
-      "Advanced thermal compensation",
-      "Energy-efficient design",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "sadaa-chakra-630-main",
-        url: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+630",
-        alt: "Sadaa Chakra 630 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 630 - Medium Capacity",
-      },
-    ],
-  },
-  {
     id: "sadaa-chakra-800",
     name: "Sadaa Chakra 800",
     fullName: "Sadaa Chakra 800 - Vertical Turning Lathe",
@@ -518,11 +734,11 @@ export const products: Product[] = [
   },
   {
     id: "sadaa-chakra-1200",
-    name: "Sadaa Chakra 1200",
-    fullName: "Sadaa Chakra 1200 - Vertical Turning Lathe",
+    name: "Sadaa Chakra 1200 & 1600 & 1800",
+    fullName: "Sadaa Chakra 1200 & 1600 & 1800 - Vertical Turning Lathe",
     category: "vertical-turning",
     series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 1200 delivers exceptional capacity and performance for large-diameter workpieces. Its advanced vertical spindle design and comprehensive turn-mill capabilities make it a versatile machining center. Ideal for complex parts requiring multiple operations in one setup.",
+    description: "The Sadaa Chakra 1200, 1600 & 1800 series deliver exceptional capacity and performance for large-diameter workpieces. With advanced vertical spindle design and comprehensive turn-mill capabilities, they are versatile machining centers. Ideal for complex parts requiring multiple operations in one setup.",
     features: [
       "Large chuck diameter 1200mm",
       "Turn-mill capability with powered tools",
@@ -642,33 +858,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "sadaa-chakra-1600",
-    name: "Sadaa Chakra 1600",
-    fullName: "Sadaa Chakra 1600 - Vertical Turning Lathe",
-    category: "vertical-turning",
-    series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 1600 is a high-performance vertical turning center designed for large, heavy workpieces. With its exceptional rigidity and advanced features, it handles the most challenging machining tasks with ease. Features comprehensive automation for lights-out manufacturing.",
-    features: [
-      "Chuck diameter 1600mm",
-      "Maximum turning diameter 1800mm",
-      "Extra-heavy casting construction",
-      "Multi-function turning and milling",
-      "Automatic tool and workpiece changers",
-      "Advanced vibration damping system",
-      "Predictive maintenance monitoring",
-      "Comprehensive safety features",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "sadaa-chakra-1600-main",
-        url: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+1600",
-        alt: "Sadaa Chakra 1600 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 1600 - High Performance",
-      },
-    ],
-  },
-  {
     id: "sadaa-chakra-2000",
     name: "Sadaa Chakra 2000",
     fullName: "Sadaa Chakra 2000 - Vertical Turning Lathe",
@@ -716,7 +905,7 @@ export const products: Product[] = [
     images: [
       {
         id: "sadaa-chakra-2500-main",
-        url: "https://placehold.co/800x600/4d7c0f/fff?text=Sadaa+Chakra+2500",
+        url: "/images/VTL/Sadaa Chakra 2500 Edited.jpg",
         alt: "Sadaa Chakra 2500 Vertical Turning Lathe",
         caption: "Sadaa Chakra 2500 - Advanced Technology",
       },
@@ -885,7 +1074,7 @@ export const products: Product[] = [
     images: [
       {
         id: "rotaface-1000-main",
-        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+1000",
+        url: "/flange_facers/ROTO FACE 1000I.png",
         alt: "Rotaface 1000 Flange Facer",
         caption: "Rotaface 1000",
       },
@@ -1034,26 +1223,57 @@ export const products: Product[] = [
   {
     id: "rotamill",
     name: "RotaMill",
-    fullName: "RotaMill - Milling Flange Facer",
+    fullName: "RotaMill - In-Situ Machining System",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
-    description: "The RotaMill combines flange facing and precision milling capabilities in one versatile machine. Featuring advanced milling head technology and flexible tooling options, it handles complex machining operations on-site. Perfect for applications requiring both facing and milling operations without equipment changes.",
+    description: "Rotomill is an insitu machine developed for machining heavy components used in power plants, Ship building, Cement industry, Wind mills, Sugar Industry, huge chemical plants and refineries, etc., without having to move the job. It consists of a circular frame with spider arms which permit it to clamp on the surface of the job. At the center of the frame, a rotating arm is located and this arm houses a rotary drive from an electric motor which can be infinitely variable depending upon the requirement. At the end of rotary arm, the machining unit is suitably located. Depending upon the requirement of the machining operations to be carried out, suitable spindle unit with required axis movement slides/devices are selected.",
     features: [
-      "Dual functionality: facing and milling",
-      "Universal milling head with multi-angle capability",
-      "Quick-change tooling system",
-      "Digital angle measurement",
-      "Programmable cutting sequences",
-      "Integrated workpiece clamping",
-      "Compact design for versatile positioning",
-      "Suitable for complex geometry machining",
+      "No foundation Required: It doesn't require foundation and the machine is portable type so that the machine can be moved to the job",
+      "Ease of packing & Transportation: Special packing methods and containers are used to store the machine and for required transportation when not in use",
+      "Circular frame with spider arms for surface clamping",
+      "Rotating arm with variable speed electric motor drive",
+      "Customizable spindle unit selection based on operation requirements",
+      "Suitable for power plants, shipbuilding, cement industry, wind mills",
+      "Ideal for sugar industry, chemical plants, and refineries",
+      "On-site machining without moving heavy components",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "X Axis",
+          "Specs": "800 mm"
+        },
+        {
+          "parameter": "Z Axis",
+          "Specs": "800 mm"
+        },
+        {
+          "parameter": "Milling Head",
+          "Specs": "PRECITEC UMP-I-7.5HP"
+        },
+        {
+          "parameter": "Spindle Nose",
+          "Specs": "ISO 40"
+        },
+        {
+          "parameter": "Spindle Speed",
+          "Specs": "MIN 63rpm, MAX 600rpm"
+        },
+        {
+          "parameter": "Max Cutter Dia",
+          "Specs": "300 mm"
+        },
+        {
+          "parameter": "Working Area",
+          "Specs": "MIN DIA 5000mm, MAX DIA 10000 mm"
+        }
+      ]
+    },
     images: [
       {
         id: "rotamill-main",
-        url: "https://placehold.co/800x600/334155/fff?text=RotaMill",
+        url: "/flange_facers/ROTAMILL-10000.JPG",
         alt: "RotaMill Milling Flange Facer",
         caption: "RotaMill",
       },

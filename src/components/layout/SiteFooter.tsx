@@ -32,10 +32,10 @@ export function SiteFooter() {
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Corporate Address</h3>
             <address className="not-italic space-y-1 text-xs sm:text-sm">
-              <p>PRECITEC Machines Pvt. Ltd.</p>
-              <p>A-353, B, 8th Main Road, 2nd Stage,</p>
-              <p>Peenya Industrial Estate,</p>
-              <p>Bengaluru, Karnataka 560058</p>
+              <p>Precitec Precision Machineries Private Limited</p>
+              <p># A-353(b), 8th Main Road,</p>
+              <p>2nd Stage, Peenya Industrial Estate,</p>
+              <p>Bengaluru, Karnataka 560058, India</p>
               <p className="mt-2 sm:mt-3">
                 <strong>Email:</strong>{" "}
                 <a
@@ -62,7 +62,7 @@ export function SiteFooter() {
               Quality Management Systems
             </p>
             <p className="text-xs sm:text-sm italic">
-              "Engineering Tomorrow's Precision Today"
+              "Think Machine, Think Precitec"
             </p>
           </div>
         </div>

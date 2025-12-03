@@ -59,10 +59,10 @@ export function ServicesPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-              Our Services
+              Precision Engineering & Manufacturing Services
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
-              Comprehensive engineering consultancy services tailored to your business needs
+              Specialized CNC machining consultancy, custom machine tool design, and precision manufacturing solutions for industrial applications
             </p>
           </motion.div>
         </div>
@@ -100,7 +100,7 @@ export function ServicesPage() {
                   <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
                     {service.title}
                   </h2>
-                  <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
                     {service.description.split('\n\n').map((paragraph, idx) => (
                       <p key={idx}>{paragraph}</p>
                     ))}
@@ -154,10 +154,10 @@ export function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Ready to Start Your Next Project?
+              Ready to Start Your CNC Machining Project?
             </h3>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our engineering consultancy services can help you achieve your business goals.
+              Contact our precision engineering team to discuss custom CNC machine solutions, specialized tooling design, and manufacturing consultancy for your industrial applications.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">

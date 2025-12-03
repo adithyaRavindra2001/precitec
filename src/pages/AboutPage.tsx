@@ -24,7 +24,7 @@ const teamMembers = [
     image: "/Ravi.jpg",
   },
   {
-    name: "M K Kirshnaswamy",
+    name: "M K Krishnaswamy",
     designation: "Chief Consultant for Design",
     image: null,
   },
@@ -38,41 +38,41 @@ const teamMembers = [
 const milestones = [
   {
     year: "1978",
-    title: "Company Founded",
-    description: "Established by Mr. H. K. Sridhara and Mr. S. Y. Rao from CMTI",
+    title: "Precision Engineering Legacy",
+    description: "Founded by CMTI veteran engineers pioneering advanced CNC machine tool manufacturing in India",
   },
   {
     year: "40+",
-    title: "Years of Excellence",
-    description: "Over four decades of designing special purpose machine tools",
+    title: "Years of Manufacturing Excellence",
+    description: "Four decades of innovation in precision machining equipment and custom special purpose machine design",
   },
   {
     year: "50+",
-    title: "Team Members",
-    description: "Dynamic team of experienced engineers and professionals",
+    title: "Expert Engineering Team",
+    description: "Skilled mechanical engineers, CNC specialists, and precision manufacturing professionals",
   },
 ]
 
 const highlights = [
   {
     icon: Factory,
-    title: "State-of-the-art Manufacturing",
-    description: "Advanced facilities in Bangalore equipped with cutting-edge technology for large-scale production",
+    title: "Advanced CNC Manufacturing Facility",
+    description: "Modern precision engineering plant in Bangalore with high-capacity production capabilities for industrial-grade machining equipment",
   },
   {
     icon: Users,
-    title: "Expert Team",
-    description: "Led by experienced engineers with a team of 50+ dedicated professionals",
+    title: "Experienced Engineering Excellence",
+    description: "50+ specialized mechanical engineers, CNC programmers, and precision manufacturing experts delivering innovative solutions",
   },
   {
     icon: TrendingUp,
-    title: "Industry Leadership",
-    description: "Specialized in CNC machines for Automobile, Mass manufacturing, and Heavy Engineering industries",
+    title: "Industry-Leading Precision Machines",
+    description: "Specialized CNC turning centers, machining centers, and finning machines for automotive, mass production, and heavy engineering sectors",
   },
   {
     icon: Award,
-    title: "ISO Certified",
-    description: "ISO 9001:2015 certified ensuring highest quality standards",
+    title: "ISO 9001:2015 Quality Certified",
+    description: "Internationally certified quality management systems ensuring precision manufacturing standards and reliability",
   },
 ]
 
@@ -109,10 +109,10 @@ export function AboutPage() {
               </motion.div>
             </div>
             <h1 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-              About Precitec
+              Leading CNC Machine Tool Manufacturer
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Precision Engineering Excellence Since 1978
+              Precision Engineering & Custom Machining Solutions Since 1978 | Bangalore, India
             </p>
           </motion.div>
         </div>
@@ -131,13 +131,13 @@ export function AboutPage() {
             <CardContent className="p-6 sm:p-8 md:p-12">
               <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  <span className="font-semibold text-foreground">Precitec</span> is a machine tool manufacturing company led by two experienced engineers and powered by a dynamic team of more than 50 members. The company's manufacturing plants, which are located in Bangalore, India, are equipped with state-of-the-art technology to deliver large-scale high quality products.
+                  <span className="font-semibold text-foreground">Precitec</span> is a leading precision machine tool manufacturer in Bangalore, India, specializing in high-performance CNC machines and special purpose machining equipment. Our state-of-the-art manufacturing facility combines advanced engineering expertise with cutting-edge production technology to deliver industrial-grade precision machinery for demanding manufacturing applications across automotive, aerospace, and heavy engineering sectors.
                 </p>
                 <p>
-                  Precitec was established in 1978 by <span className="font-semibold text-foreground">Mr. H. K. Sridhara</span> and <span className="font-semibold text-foreground">Mr. S. Y. Rao</span> from the founding team at CMTI, who designed and built various special purpose machine tools for over four decades. The company has rich experience in designing and manufacturing machines for both conceptualization and production as well as supporting customers to get optimum output from the machines supplied both within India and abroad.
+                  Founded in 1978 by veteran engineers <span className="font-semibold text-foreground">Mr. H. K. Sridhara</span> and <span className="font-semibold text-foreground">Mr. S. Y. Rao</span> from the Central Machine Tool Institute (CMTI), Precitec brings over four decades of specialized experience in custom machine tool design, precision engineering, and manufacturing excellence. Our comprehensive capabilities span from initial concept development and machine design to full-scale production, installation, and ongoing technical support for complex machining solutions deployed across India and international markets.
                 </p>
                 <p>
-                  Currently, Precitec manufactures CNC machines for metal cutting to Automobile, Mass manufacturing, Heavy Engineering industries. Precitec has specialized in design manufacturer of Embedded type of Finning machine which caters to Heat Exchanger manufacturing industries.
+                  As a specialist CNC machine manufacturer, Precitec produces precision metal cutting machines, CNC turning centers, multi-axis machining centers, and specialized grinding equipment for automotive manufacturing, mass production facilities, and heavy engineering operations. We have developed unique expertise as a premier manufacturer of embedded finning machines specifically engineered for heat exchanger production industries, delivering unmatched accuracy and productivity in tube finning operations.
                 </p>
               </div>
             </CardContent>
@@ -155,9 +155,9 @@ export function AboutPage() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Our Journey</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Precision Machine Tool Manufacturing Heritage</h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Key milestones in our legacy of excellence
+              Four decades of innovation in CNC machining technology and custom engineering solutions
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
@@ -198,9 +198,9 @@ export function AboutPage() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Why Choose Precitec</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Why Choose Precitec for Precision Machining Equipment</h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Excellence in precision engineering
+              Industry-leading CNC machine manufacturing and custom engineering capabilities
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
@@ -245,9 +245,9 @@ export function AboutPage() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Our Leadership Team</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Expert Leadership in CNC Machine Engineering</h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Experienced leaders driving innovation and excellence
+              Veteran engineers and industry specialists driving precision manufacturing innovation
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
@@ -314,19 +314,19 @@ export function AboutPage() {
                 </div>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Quality Certifications
+                International Quality Certifications
               </h2>
               <p className="text-lg sm:text-xl text-slate-300 mb-8">
-                ISO 9001:2015 Certified Company
+                ISO 9001:2015 Certified Precision Machine Manufacturer
               </p>
               <div className="inline-flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-sm px-6 py-4 border-2 border-white/20">
                 <Award className="h-6 w-6 text-primary" />
                 <span className="text-white font-semibold">
-                  Certified Quality Management System
+                  Certified Quality Management for Precision Engineering
                 </span>
               </div>
               <p className="mt-6 text-slate-400 max-w-2xl mx-auto">
-                Our ISO 9001:2015 certification demonstrates our commitment to maintaining the highest standards in design, manufacturing, and customer service.
+                Our ISO 9001:2015 certification validates our commitment to world-class precision manufacturing standards, rigorous quality control processes, and exceptional customer service in CNC machine tool production.
               </p>
             </motion.div>
           </div>
@@ -344,10 +344,10 @@ export function AboutPage() {
         <Card className="overflow-hidden border-0 bg-gradient-to-r from-primary/10 to-primary/5 shadow-xl">
           <CardContent className="p-8 md:p-12 text-center">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              Ready to Experience Precision Engineering?
+              Partner with India's Leading CNC Machine Manufacturer
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Partner with us for world-class CNC machines and special purpose equipment designed for your specific needs.
+              Experience precision-engineered CNC machines, custom machining centers, and specialized manufacturing equipment tailored to your industrial requirements.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a

@@ -7,12 +7,12 @@ const moreProducts = [
   { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png" },
   { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png" },
   { name: "Shilpi FHBM", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI FHBM.png" },
-  { name: "Shilpi GM", category: "Milling and Boring Machines" },
+  { name: "Shilpi GM", category: "Milling and Boring Machines", image: "/others/shilpi-gm.png" },
   { name: "Shilpi VMC OF", category: "Milling and Boring Machines", image: "/Shilpi/Shilpi VMC OF.png" },
 
   // Milling Machines
   { name: "Edge Master", category: "Milling Machines" },
-  { name: "PEM", category: "Milling Machines" },
+  { name: "PEM", category: "Milling Machines", image: "/others/PEM.png" },
 
   // Horizontal Turning and TurnMill Solutions
   { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions" },
@@ -21,7 +21,7 @@ const moreProducts = [
   { name: "Floor Lathes", category: "Horizontal Turning and TurnMill Solutions" },
 
   // Special Machines
-  { name: "Finning Machines", category: "Special Machines" },
+  { name: "Finning Machines", category: "Special Machines", image: "/others/finning-machine.png" },
   { name: "Riser Cutting Machines", category: "Special Machines" },
   { name: "Tube Coiling Machines", category: "Special Machines" },
   { name: "SPM's", category: "Special Machines" },

@@ -938,110 +938,48 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "sadaa-chakra-2000",
-    name: "Sadaa Chakra 2000",
-    fullName: "Sadaa Chakra 2000 - Vertical Turning Lathe",
+    id: "sadaa-chakra-2000-4000",
+    name: "Sadaa Chakra 2000/2500/3000/4000",
+    fullName: "Sadaa Chakra 2000/2500/3000/4000 - Vertical Turning Lathe Series",
     category: "vertical-turning",
     series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 2000 is engineered for massive workpieces requiring precision machining. Its robust construction and powerful spindle deliver exceptional performance on large turbine components, mining equipment, and industrial machinery parts. Built for continuous operation in demanding environments.",
+    description: "The Sadaa Chakra 2000/2500/3000/4000 series represents advanced vertical turning technology for extra-large components and the most demanding applications in heavy industry. With massive structural design, comprehensive machining capabilities, and state-of-the-art automation, these machines handle the largest and most challenging workpieces. Ideal for shipbuilding, power generation, and large equipment manufacturing.",
     features: [
-      "Chuck diameter 2000mm",
+      "Extra-large chuck diameter from 2000mm to 4000mm",
+      "Maximum workpiece weight capacity up to 80+ tons",
+      "Ultra-rigid machine base with heavy-duty hydrostatic ways",
       "Heavy-duty spindle with 37kW motor",
       "Reinforced ram structure",
-      "Multiple tool turrets available",
-      "Automatic workpiece loading system",
-      "Advanced thermal stability features",
-      "High-accuracy position feedback",
-      "24/7 production capability",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "sadaa-chakra-2000-main",
-        url: "/VTL/SC 2000 SadaaChakra 2000 VTL.jpg",
-        alt: "Sadaa Chakra 2000 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 2000 - Massive Capacity",
-      },
-    ],
-  },
-  {
-    id: "sadaa-chakra-2500",
-    name: "Sadaa Chakra 2500",
-    fullName: "Sadaa Chakra 2500 - Vertical Turning Lathe",
-    category: "vertical-turning",
-    series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 2500 represents advanced vertical turning technology for extra-large components. With its massive structural design and comprehensive machining capabilities, it handles the most demanding applications in heavy industry. Features state-of-the-art automation and monitoring systems.",
-    features: [
-      "Extra-large chuck diameter 2500mm",
-      "Ultra-rigid machine base",
       "Multi-spindle configuration option",
       "Comprehensive turn-mill capabilities",
+      "Multiple machining heads and tool turrets available",
+      "Multi-axis simultaneous machining",
       "Automatic part inspection system",
-      "Centralized lubrication system",
-      "Real-time machine monitoring",
-      "Customizable automation solutions",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "sadaa-chakra-2500-main",
-        url: "/images/VTL/Sadaa Chakra 2500 Edited.jpg",
-        alt: "Sadaa Chakra 2500 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 2500 - Advanced Technology",
-      },
-    ],
-  },
-  {
-    id: "sadaa-chakra-3000",
-    name: "Sadaa Chakra 3000",
-    fullName: "Sadaa Chakra 3000 - Vertical Turning Lathe",
-    category: "vertical-turning",
-    series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 3000 is designed for the largest vertical turning applications in heavy manufacturing. Its massive structure and powerful components ensure precision machining of extra-large workpieces. Ideal for shipbuilding, power generation, and large equipment manufacturing.",
-    features: [
-      "Massive chuck diameter 3000mm",
-      "Maximum workpiece weight capacity 50 tons",
-      "Heavy-duty hydrostatic ways",
-      "Multiple machining heads available",
+      "Automatic workpiece loading system",
       "Automatic tool management system",
       "Advanced CNC with 3D simulation",
-      "Integrated quality control systems",
-      "Worldwide service and support",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "sadaa-chakra-3000-main",
-        url: "https://placehold.co/800x600/365314/fff?text=Sadaa+Chakra+3000",
-        alt: "Sadaa Chakra 3000 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 3000 - Largest Applications",
-      },
-    ],
-  },
-  {
-    id: "sadaa-chakra-4000",
-    name: "Sadaa Chakra 4000",
-    fullName: "Sadaa Chakra 4000 - Vertical Turning Lathe",
-    category: "vertical-turning",
-    series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 4000 is the ultimate vertical turning solution for the largest and most challenging workpieces. With its exceptional rigidity, massive spindle power, and comprehensive automation, it represents the pinnacle of vertical machining technology. Built for the most demanding industrial applications worldwide.",
-    features: [
-      "Ultimate capacity: 4000mm chuck diameter",
-      "Maximum workpiece weight 80+ tons",
-      "Triple-reinforced machine structure",
-      "Multi-axis simultaneous machining",
+      "Advanced thermal stability features",
+      "Centralized lubrication system",
+      "Real-time machine monitoring",
+      "High-accuracy position feedback",
       "Complete automation ecosystem",
       "Redundant safety and monitoring systems",
+      "Integrated quality control systems",
+      "Customizable automation solutions",
       "Climate-controlled precision environment",
       "Engineering support and custom integration",
+      "24/7 production capability",
+      "Worldwide service and support",
     ],
-    specifications: commonSpecs,
+    specifications: [
+      { label: "Coming Soon", value: "Detailed specifications will be available soon. Please contact us for more information." },
+    ],
     images: [
       {
-        id: "sadaa-chakra-4000-main",
-        url: "https://placehold.co/800x600/84cc16/fff?text=Sadaa+Chakra+4000",
-        alt: "Sadaa Chakra 4000 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 4000 - Ultimate Solution",
+        id: "sadaa-chakra-2000-4000-main",
+        url: "/VTL/SC 2000 SadaaChakra 2000 VTL.jpg",
+        alt: "Sadaa Chakra 2000/2500/3000/4000 Vertical Turning Lathe Series",
+        caption: "Coming Soon",
       },
     ],
   },
@@ -1070,7 +1008,7 @@ export const products: Product[] = [
     images: [
       {
         id: "rotaface-mini-350-main",
-        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+Mini+350",
+        url: "/flange_facers/Rota face MINI.jpeg",
         alt: "Rotaface Mini 350 Compact Flange Facer",
         caption: "Rotaface Mini 350",
       },
@@ -1078,8 +1016,8 @@ export const products: Product[] = [
   },
   {
     id: "rotaface-550-1000-1500",
-    name: "Rotaface 550/1000/1500",
-    fullName: "Rotaface 550/1000/1500 - Flange Facer Series",
+    name: "Rotaface 550/800/1000/1500",
+    fullName: "Rotaface 550/800/1000/1500 - Flange Facer Series",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
@@ -1173,15 +1111,15 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "rotaface-2000",
-    name: "Rotaface 2000",
-    fullName: "Rotaface 2000 - Heavy-Duty Flange Facer",
+    id: "rotaface-2000-5000",
+    name: "Rotaface 2000/3000/4000/5000",
+    fullName: "Rotaface 2000/3000/4000/5000 - Heavy-Duty Flange Facer Series",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
-    description: "The Rotaface 2000 heavy-duty flange facer is built for the most demanding industrial applications. Featuring massive cutting power and precision control, it handles extra-large flanges with ease. Perfect for shipbuilding, power plants, and large-scale manufacturing facilities.",
+    description: "The Rotaface heavy-duty series represents the pinnacle of flange machining technology for the most demanding industrial applications. Engineered with cutting-edge technology and massive structural rigidity, these machines handle the largest flanges with exceptional precision. Perfect for shipbuilding, power plants, large pressure vessels, turbine casings, and mega-projects in oil & gas and power generation.",
     features: [
-      "Heavy-duty capacity up to 2000mm diameter",
+      "Heavy-duty capacity from 2000mm to 5000mm diameter",
       "Extra-rigid construction for vibration-free cutting",
       "High-torque spindle with multiple speed ranges",
       "Advanced coolant filtration system",
@@ -1189,98 +1127,18 @@ export const products: Product[] = [
       "Modular tooling system for quick changes",
       "Built-in alignment laser system",
       "Certified for hazardous area operation",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-2000-main",
-        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+2000",
-        alt: "Rotaface 2000 Heavy-Duty Flange Facer",
-        caption: "Rotaface 2000",
-      },
-    ],
-  },
-  {
-    id: "rotaface-3000",
-    name: "Rotaface 3000",
-    fullName: "Rotaface 3000 - Heavy-Duty Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 3000 represents the pinnacle of heavy-duty flange machining technology. Engineered for extreme applications, it delivers unmatched power and precision for flanges up to 3000mm. The ultimate solution for large turbine casings, vessel openings, and massive pipeline connections.",
-    features: [
-      "Massive capacity up to 3000mm diameter",
-      "Ultra-rigid frame design",
       "Variable frequency drive (VFD) for precise speed control",
       "Automatic tool wear compensation",
       "Real-time load monitoring",
-      "Multiple operator interface options",
-      "Redundant safety systems",
-      "Suitable for nuclear and aerospace applications",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-3000-main",
-        url: "https://placehold.co/800x600/334155/fff?text=Rotaface+3000",
-        alt: "Rotaface 3000 Heavy-Duty Flange Facer",
-        caption: "Rotaface 3000",
-      },
-    ],
-  },
-  {
-    id: "rotaface-4000",
-    name: "Rotaface 4000",
-    fullName: "Rotaface 4000 - Heavy-Duty Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 4000 is designed for the largest flange machining challenges in heavy industry. With exceptional rigidity and cutting power, it maintains precision even on massive workpieces. Ideal for large pressure vessels, turbine casings, and industrial-scale manufacturing.",
-    features: [
-      "Extra-large capacity up to 4000mm diameter",
-      "Triple-bearing spindle support system",
-      "Servo-controlled feed mechanisms",
-      "Integrated vibration damping technology",
-      "Multi-axis positioning system",
-      "Advanced thermal stability features",
-      "Automated setup and calibration",
       "Industry 4.0 ready with IoT connectivity",
     ],
     specifications: commonSpecs,
     images: [
       {
-        id: "rotaface-4000-main",
-        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+4000",
-        alt: "Rotaface 4000 Heavy-Duty Flange Facer",
-        caption: "Rotaface 4000",
-      },
-    ],
-  },
-  {
-    id: "rotaface-5000",
-    name: "Rotaface 5000",
-    fullName: "Rotaface 5000 - Heavy-Duty Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 5000 is the ultimate heavy-duty flange facer for the most extreme machining applications. Engineered with cutting-edge technology and massive structural rigidity, it handles the largest flanges with micron-level precision. The go-to solution for mega-projects in oil & gas, shipbuilding, and power generation.",
-    features: [
-      "Maximum capacity up to 5000mm diameter",
-      "Reinforced cast iron construction",
-      "High-efficiency spindle cooling system",
-      "Precision linear encoders for positioning",
-      "Multi-zone lubrication system",
-      "Remote diagnostics and support capability",
-      "Explosion-proof electrical systems available",
-      "Customizable for specific industry requirements",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-5000-main",
-        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+5000",
-        alt: "Rotaface 5000 Heavy-Duty Flange Facer",
-        caption: "Rotaface 5000",
+        id: "rotaface-2000-5000-main",
+        url: "https://placehold.co/800x600/64748b/fff?text=Coming+Soon",
+        alt: "Rotaface 2000/3000/4000/5000 Heavy-Duty Flange Facer Series",
+        caption: "Coming Soon",
       },
     ],
   },
@@ -1461,22 +1319,103 @@ export const products: Product[] = [
     category: "in-situ",
     subcategory: "portable-boring",
     series: "PortaBore Series",
-    description: "The PortaBore 50 offers compact and efficient boring solutions for smaller diameter applications. Engineered for precision and reliability, it's the perfect tool for field service teams requiring accurate boring in challenging locations. Lightweight yet robust construction ensures consistent performance.",
+    description: "Precitec Portabore IBM50 boring system is a versatile, highly flexible, easy-to-mount, use and operates in-situ boring and machining system that can reach difficult-to-reach areas. Precitec Portabore IBM50 boring system is a comprehensive solution developed by Precitec with over two decades of experience in in-situ and portable machining solutions. The main features include: Modular approach with a variety of accessories and options. Choice of main drives (electric, pneumatic or hydraulic). Can carry out a wide variety of operations including boring, facing, drilling, and other related operations.",
     features: [
-      "Compact and lightweight for easy transport",
-      "Boring capacity up to 50mm diameter",
-      "Quick-lock boring bar system",
-      "Digital depth indicator",
-      "Magnetic base mounting option",
-      "Battery-powered operation available",
-      "Precision ground spindle",
-      "Ideal for maintenance and repair operations",
+      "Main drive unit with Electric/Pneumatic/Hydraulic drive as selected",
+      "Boring bar 75mm x 1500mm, 1no",
+      "Boring Bar 50mm x 1000mm and reduction sleeves, 1set",
+      "Feed Unit with DC drive programmable, 1no",
+      "Feed screw for boring 320mm, 1no",
+      "Support bearings, 2nos",
+      "Bearing support bracket rear, 1no",
+      "Bearing support bracket front, 1no",
+      "Control panel and operator pendent, 1set",
+      "Boring tool holders and boring tools, 1set",
+      "Holding cases, 1 set (plywood)",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Boring Bar Diameter",
+          "Standard": "75 / 50 mm",
+          "Options": "62 / 40 / 32 / 25 mm"
+        },
+        {
+          "parameter": "Boring Bar length (For Ø50mm)",
+          "Standard": "1250 mm",
+          "Options": "750 / 1000 / 1500 / 2000~4000 mm"
+        },
+        {
+          "parameter": "Boring Bar length (For Ø75mm)",
+          "Standard": "1500 mm",
+          "Options": "750 / 1000 / 1250 / 2000~4000 mm"
+        },
+        {
+          "parameter": "Bore range (For boring bar Ø50mm)",
+          "Standard": "Ø60mm - Ø400mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Bore range (For boring bar Ø75mm)",
+          "Standard": "Ø90mm - Ø800mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Lead Screw Stroke",
+          "Standard": "320 mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Boring Speed range",
+          "Standard": "3-150 RPM",
+          "Options": "-"
+        },
+        {
+          "parameter": "Feed rate (programmable)",
+          "Standard": "Programmable 0-300 mm/min",
+          "Options": "-"
+        },
+        {
+          "parameter": "Max Boring Torque/Thrust force",
+          "Standard": "180 Nm / 300 kgf",
+          "Options": "280 Nm / 550 kgf"
+        },
+        {
+          "parameter": "Tool setting",
+          "Standard": "-",
+          "Options": "Micro setting and measuring devices"
+        },
+        {
+          "parameter": "Drive motors - Electric (Std)",
+          "Standard": "1.5 kW",
+          "Options": "2.2 kW"
+        },
+        {
+          "parameter": "Drive motors - Hydraulic (Optional)",
+          "Standard": "1.4 kW",
+          "Options": "2.3 kW"
+        },
+        {
+          "parameter": "Drive motors - Pneumatic (Optional)",
+          "Standard": "1.2 kW",
+          "Options": "~2.0 kW"
+        },
+        {
+          "parameter": "Control",
+          "Standard": "PLC Control",
+          "Options": "-"
+        },
+        {
+          "parameter": "Feed Screw Length",
+          "Standard": "320 mm",
+          "Options": "500 / 630 / 800 / 1000 mm (special)"
+        }
+      ]
+    },
     images: [
       {
         id: "portabore-50-main",
-        url: "https://placehold.co/800x600/10b981/fff?text=PortaBore+50",
+        url: "/portabore/portabore50.jpg",
         alt: "PortaBore 50 Portable Boring Machine",
         caption: "PortaBore 50",
       },
@@ -1485,86 +1424,80 @@ export const products: Product[] = [
 
   // Portable Milling Machines - PortaMill Series
   {
-    id: "portamill-40",
-    name: "PortaMill 40",
-    fullName: "PortaMill 40 - Portable Milling Machine",
+    id: "portamill-2500",
+    name: "PortaMill 2500",
+    fullName: "PortaMill 2500 - Portable/In-Situ Milling Machine",
     category: "in-situ",
     subcategory: "portable-milling",
     series: "PortaMill Series",
-    description: "The PortaMill 40 is a portable milling solution designed for on-site machining operations. With its versatile milling capabilities and robust construction, it handles a wide range of materials and applications. Perfect for field repairs, maintenance work, and emergency machining situations.",
-    features: [
-      "Portable milling capacity",
-      "Multi-axis milling capability",
-      "Precision linear guides",
-      "Variable spindle speed",
-      "Digital readout system",
-      "Modular base plate system",
-      "Quick-setup magnetic clamping",
-      "Suitable for ferrous and non-ferrous materials",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "portamill-40-main",
-        url: "https://placehold.co/800x600/0891b2/fff?text=PortaMill+40",
-        alt: "PortaMill 40 Portable Milling Machine",
-        caption: "PortaMill 40",
-      },
-    ],
-  },
-  {
-    id: "portamill-50",
-    name: "PortaMill 50",
-    fullName: "PortaMill 50 - Portable Milling Machine",
-    category: "in-situ",
-    subcategory: "portable-milling",
-    series: "PortaMill Series",
-    description: "The PortaMill 50 offers enhanced milling capabilities with increased power and precision. Designed for demanding field applications, it delivers workshop-quality results on-site. Features advanced control systems and robust construction for reliable performance in industrial environments.",
-    features: [
-      "Increased milling capacity",
-      "High-torque milling spindle",
-      "Three-axis digital positioning",
-      "Programmable feed rates",
-      "Tool change system",
-      "Integrated coolant delivery",
-      "Heavy-duty construction",
-      "Remote control operation",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "portamill-50-main",
-        url: "https://placehold.co/800x600/06b6d4/fff?text=PortaMill+50",
-        alt: "PortaMill 50 Portable Milling Machine",
-        caption: "PortaMill 50",
-      },
-    ],
-  },
-  {
-    id: "portamill-gantry",
-    name: "PortaMill Gantry",
-    fullName: "PortaMill Gantry - Gantry-Style Portable Milling Machine",
-    category: "in-situ",
-    subcategory: "portable-milling",
-    series: "PortaMill Series",
-    description: "The PortaMill Gantry is a revolutionary gantry-style portable milling machine for large-scale on-site machining. With its expansive working envelope and precision control, it handles massive workpieces that cannot be moved to a workshop. Ideal for shipbuilding, large fabrication, and infrastructure projects.",
+    description: "The Precitec PortaMill 2500 is a revolutionary portable/in-situ milling system designed for large-scale on-site machining operations. This versatile gantry-style machine excels at portable/in-situ machining and milling of surfaces, edge preparation, and clad removal. With its expansive working envelope and precision control, it handles massive workpieces that cannot be moved to a workshop. Engineered for onsite milling of plates, clad removal, portable machining of mounting areas and pads, machining of skids, and various operations including drilling, milling, boring, and reaming. The PortaMill 2500 delivers workshop-quality results on-site with advanced control systems and robust construction for reliable performance in demanding industrial environments. Ideal for shipbuilding, large fabrication, infrastructure projects, power plants, oil & gas facilities, and heavy manufacturing sectors.",
     features: [
       "Large gantry-style working envelope",
+      "Portable/in-situ machining of surfaces",
+      "Edge preparation capabilities",
+      "Clad removal operations",
+      "Onsite milling of plates",
+      "Portable machining of mounting areas and pads",
+      "Machining of skids",
       "Multi-axis simultaneous machining",
       "Modular construction for scalability",
       "Laser-guided alignment system",
       "CNC control with CAM integration",
       "Wireless remote operation",
       "Heavy-duty linear motion system",
-      "Suitable for large structural components",
+      "High-torque milling spindle",
+      "Three-axis digital positioning",
+      "Programmable feed rates",
+      "Tool change system",
+      "Integrated coolant delivery",
+      "Suitable for large structural components and ferrous/non-ferrous materials",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Model",
+          "Specs": "Precitec PortaMill 2500"
+        },
+        {
+          "parameter": "Purpose",
+          "Specs": "Onsite milling of plates, clad removal, portable machining of mounting areas and pads, machining of skids, drilling, milling, boring, reaming various operations"
+        },
+        {
+          "parameter": "Max machining in one setup - Option 1",
+          "Specs": "2500 × 100 mm"
+        },
+        {
+          "parameter": "Max machining in one setup - Option 2",
+          "Specs": "2500 × 500 mm"
+        },
+        {
+          "parameter": "Milling cutter (Standard)",
+          "Specs": "125 mm"
+        },
+        {
+          "parameter": "Milling cutter (Maximum)",
+          "Specs": "Up to 300 mm"
+        },
+        {
+          "parameter": "Drilling capacity (solid)",
+          "Specs": "Up to 28 mm"
+        },
+        {
+          "parameter": "Boring capacity",
+          "Specs": "Up to 250 mm dia × 350 mm deep"
+        },
+        {
+          "parameter": "Main drive",
+          "Specs": "Rotary milling"
+        }
+      ]
+    },
     images: [
       {
-        id: "portamill-gantry-main",
-        url: "https://placehold.co/800x600/0284c7/fff?text=PortaMill+Gantry",
-        alt: "PortaMill Gantry Portable Milling Machine",
-        caption: "PortaMill Gantry",
+        id: "portamill-2500-main",
+        url: "/portamill/portamill-gantry.png",
+        alt: "PortaMill 2500 Portable Milling Machine",
+        caption: "PortaMill 2500",
       },
     ],
   },

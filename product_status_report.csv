@@ -1,0 +1,31 @@
+Product Name,Category,Subcategory,Series,Has Image,Has Specs,Status
+Rotaface 1000,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 2000,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 3000,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 4000,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 500,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 5000,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface 800,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Rotaface Mini 350,flange-facers,-,Rotaface Series,✗,✗,Missing Both
+Sarva,multi-purpose,-,Sarva,✗,✗,Missing Both
+PortaBore 50,portable-boring,-,PortaBore Series,✗,✗,Missing Both
+PortaMill 40,portable-milling,-,PortaMill Series,✗,✗,Missing Both
+PortaMill 50,portable-milling,-,PortaMill Series,✗,✗,Missing Both
+PortaMill Gantry,portable-milling,-,PortaMill Series,✗,✗,Missing Both
+Special Machines,custom-solutions,-,Custom Solutions,✗,✓,Missing Image
+RotaMill,flange-facers,-,Rotaface Series,✗,✓,Missing Image
+DB 40,Facing & Centering,-,MacInnes Series,✓,✗,Missing Specs
+DB 50,Facing & Centering,-,MacInnes Series,✓,✗,Missing Specs
+FC 40,Facing & Centering,-,MacInnes Series,✓,✗,Missing Specs
+Sadaa Chakra 2000,Vertical Turning,-,Sadaa Chakra Series,✓,✗,Missing Specs
+Sadaa Chakra 2500,Vertical Turning,-,Sadaa Chakra Series,✓,✗,Missing Specs
+Sadaa Chakra 3000,Vertical Turning,-,Sadaa Chakra Series,✓,✗,Missing Specs
+Sadaa Chakra 4000,Vertical Turning,-,Sadaa Chakra Series,✓,✗,Missing Specs
+Rotaface 1500,flange-facers,-,Rotaface Series,✓,✗,Missing Specs
+PortaBore 75,portable-boring,-,PortaBore Series,✓,✗,Missing Specs
+FCM 100,Facing & Centering,-,MacInnes Series,✓,✓,Complete
+FCM 150,Facing & Centering,-,MacInnes Series,✓,✓,Complete
+FCM 80,Facing & Centering,-,MacInnes Series,✓,✓,Complete
+Sadaa Chakra 1200 & 1600 & 1800,Vertical Turning,-,Sadaa Chakra Series,✓,✓,Complete
+Sadaa Chakra 500 & 630,Vertical Turning,-,Sadaa Chakra Series,✓,✓,Complete
+Sadaa Chakra 800,Vertical Turning,-,Sadaa Chakra Series,✓,✓,Complete

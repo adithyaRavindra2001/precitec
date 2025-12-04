@@ -67,7 +67,7 @@ export function MoreProductsPage() {
             className="max-w-3xl"
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-              More Products
+              Other Machines, SPM's and Accessories by Precitec
             </h1>
             <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-300 md:text-xl">
               Explore our expanding portfolio of precision machining solutions, special purpose machines, and accessories.
@@ -87,7 +87,7 @@ export function MoreProductsPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 border-2 border-yellow-200 rounded-lg">
             <span className="text-2xl">🚀</span>
             <p className="text-sm sm:text-base font-semibold text-yellow-800">
-              These products are currently in development and will be available soon
+              Web page coming soon
             </p>
           </div>
         </motion.div>
@@ -137,7 +137,7 @@ export function MoreProductsPage() {
 
                 <CardContent className="pt-0">
                   <p className="text-xs text-muted-foreground">
-                    Details and specifications will be available soon. Contact us for more information.
+                    Please contact us for Details and Specification
                   </p>
                 </CardContent>
               </Card>

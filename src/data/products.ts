@@ -119,18 +119,98 @@ export const products: Product[] = [
     fullName: "FC 40 - Facing and Centering Machine",
     category: "facing-centering",
     series: "MacInnes Series",
-    description: "The FC 40 is a compact facing and centering machine designed for precision end-face machining of round bars and tubes. Ideal for small to medium production runs, it delivers consistent chamfering and centering operations with minimal setup time. Perfect for automotive, hydraulic, and pneumatic component manufacturers.",
+    description: "Precitec FC 40 NC machines are versatile, fully programmable facing and centring machines with servo-controlled spindle movement and user-friendly programmable machining cycles. These machines possess exceptional precision in controlling both the length and centre depth, enabling the consistent achievement of high-quality surface finishes. Equipped as standard with plunge facing and centring tools. Wide range of custom and special tools for boring, drilling, end facing, chamfering and more. FC 40 spindles are well-established Precitec PUSF S 40 quill-type spindle units that are powered by servo motors, precisely manufactured, and undergo hard case hardening and grinding, supported by preloaded precision angular contact bearings. Hardened and well lubricated quill guide bores for very low wear and long life. PLC with HMI touch screen for menu-based on-screen cycle programming, providing users with the ability to set the cycle with ease and precision, and the option to adopt different feed rates in the machining cycle to achieve a superior surface finish.",
     features: [
-      "Compact footprint for space-efficient installation",
-      "High-precision centering with auto-adjustment",
-      "Quick-change tooling system for fast setup",
-      "Adjustable facing depth control",
-      "Integrated coolant system",
-      "Suitable for bars up to 40mm diameter",
-      "Durable construction for continuous operation",
-      "Easy operation with minimal training required",
+      "Standard Guard: with a sliding door near the cutting zone",
+      "Facing and centring tools 1 LH + 1 RH",
+      "Clamping Vice 1 set of V blocks, clamping cylinder",
+      "1 set of V block Shim for any one job dia",
+      "Machine Levelling pads",
+      "Manuals 1 set (English)",
+      "Powerpack",
+      "Control panel",
+      "Operator Pendant with the Touch screen interface",
+      "PLC based controls for machine Servo motor and drives 2 nos",
+      "Center bit holders 3 sizes",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Max job dia",
+          "FC-40-400-SC": "50 mm / (2\")",
+          "FC-40-800-SC": "50 mm / (2\")",
+          "FC-40-1200-SC": "50 mm / (2\")"
+        },
+        {
+          "parameter": "Min Job dia",
+          "FC-40-400-SC": "16 mm / (5/8\")",
+          "FC-40-800-SC": "16 mm / (5/8\")",
+          "FC-40-1200-SC": "16 mm / (5/8\")"
+        },
+        {
+          "parameter": "Maximum length of job",
+          "FC-40-400-SC": "400 mm / (15.75\")",
+          "FC-40-800-SC": "800 mm / (31.5\")",
+          "FC-40-1200-SC": "1200 mm / (47.2\")"
+        },
+        {
+          "parameter": "Spindle Position Adjustment for Job length",
+          "FC-40-400-SC": "Fixed",
+          "FC-40-800-SC": "Manually adjusted",
+          "FC-40-1200-SC": "Manually adjusted"
+        },
+        {
+          "parameter": "Minimum length of job",
+          "FC-40-400-SC": "60 mm / (2.4\")",
+          "FC-40-800-SC": "60 mm / (2.4\")",
+          "FC-40-1200-SC": "60 mm / (2.4\")"
+        },
+        {
+          "parameter": "Overall dimension (L × D × H)",
+          "FC-40-400-SC": "2300 × 1200 × 1500 mm / (7'6\" × 4' × 5')",
+          "FC-40-800-SC": "2800 × 1200 × 1500 mm / (9'2\" × 4' × 5')",
+          "FC-40-1200-SC": "3200 × 1200 × 1500 mm / (10'6\" × 4' × 5')"
+        },
+        {
+          "parameter": "Machine Overall weight (approx.)",
+          "FC-40-400-SC": "1800 DaN / (3968 lbf)",
+          "FC-40-800-SC": "2400 DaN / (5291 lbf)",
+          "FC-40-1200-SC": "2800 DaN / (6173 lbf)"
+        }
+      ],
+      "Standard and Optional Specifications": [
+        {
+          "parameter": "No of spindles",
+          "Standard": "2",
+          "Options": "-"
+        },
+        {
+          "parameter": "Spindle speed range",
+          "Standard": "630/750 RPM",
+          "Options": "30-1200 infinitely variable"
+        },
+        {
+          "parameter": "Spindle Power",
+          "Standard": "2.2 kW / (3 HP)",
+          "Options": "1.5 kW / (2 HP), 3.7 kW / (5 HP)"
+        },
+        {
+          "parameter": "Centring and facing Cutter size: dia",
+          "Standard": "80 mm / (3.2\")",
+          "Options": "50 mm"
+        },
+        {
+          "parameter": "Z1 and Z2 axis stroke (drilling)",
+          "Standard": "125 mm / (4.85\")",
+          "Options": "-"
+        },
+        {
+          "parameter": "Vice Type",
+          "Standard": "V and Flat Hydraulic",
+          "Options": "Self Centering (Hydraulic)"
+        }
+      ]
+    },
     images: [
       {
         id: "fc-40-main",
@@ -878,7 +958,7 @@ export const products: Product[] = [
     images: [
       {
         id: "sadaa-chakra-2000-main",
-        url: "https://placehold.co/800x600/65a30d/fff?text=Sadaa+Chakra+2000",
+        url: "/VTL/SC 2000 SadaaChakra 2000 VTL.jpg",
         alt: "Sadaa Chakra 2000 Vertical Turning Lathe",
         caption: "Sadaa Chakra 2000 - Massive Capacity",
       },
@@ -997,114 +1077,98 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "rotaface-500",
-    name: "Rotaface 500",
-    fullName: "Rotaface 500 - Flange Facer",
+    id: "rotaface-550-1000-1500",
+    name: "Rotaface 550/1000/1500",
+    fullName: "Rotaface 550/1000/1500 - Flange Facer Series",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
-    description: "The Rotaface 500 offers versatile flange facing capabilities for medium-sized applications. Engineered for durability and precision, this machine handles demanding on-site machining tasks with ease. Features advanced control systems and robust construction for reliable performance in industrial environments.",
+    description: "The Precitec Rotaface series offers versatile in-situ flange facing capabilities for medium to large-sized applications. Engineered for durability and precision, these portable, lightweight machines handle demanding on-site machining tasks with ease including flange facing, RTJ groove machining, serrated gasket seat machining, and boring. Features advanced control systems and robust construction for reliable performance in industrial environments.",
     features: [
-      "Flange facing capacity up to 500mm diameter",
-      "Heavy-duty construction for industrial applications",
+      "Portable, lightweight, easy to operate",
+      "In-situ flange facing capabilities",
+      "RTJ groove machining",
+      "Serrated gasket seat machining",
+      "Boring operations",
       "Variable speed control for different materials",
       "Digital position indicators for precise depth control",
       "Quick-change tooling system",
       "Integrated safety features and emergency stop",
       "Compact footprint for confined spaces",
-      "Compatible with standard power supplies",
     ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-500-main",
-        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+500",
-        alt: "Rotaface 500 Flange Facer",
-        caption: "Rotaface 500",
-      },
-    ],
-  },
-  {
-    id: "rotaface-800",
-    name: "Rotaface 800",
-    fullName: "Rotaface 800 - Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 800 delivers powerful flange facing performance for large-diameter applications. Built with industrial-grade components and precision engineering, it ensures consistent results even in the most challenging field conditions. Ideal for power generation, oil & gas, and heavy manufacturing sectors.",
-    features: [
-      "Large flange facing capacity up to 800mm",
-      "Robust gearbox for high torque transmission",
-      "Advanced thermal management system",
-      "Precision ground ways for smooth operation",
-      "Modular design for easy maintenance",
-      "Remote control operation available",
-      "Automatic feed and depth control",
-      "Suitable for high-pressure applications",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-800-main",
-        url: "https://placehold.co/800x600/64748b/fff?text=Rotaface+800",
-        alt: "Rotaface 800 Flange Facer",
-        caption: "Rotaface 800",
-      },
-    ],
-  },
-  {
-    id: "rotaface-1000",
-    name: "Rotaface 1000",
-    fullName: "Rotaface 1000 - Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 1000 combines power and precision for demanding flange machining applications. Designed for heavy industrial use, it features advanced control systems and robust construction to handle the toughest jobs. Perfect for large valve bodies, pump casings, and pipeline flanges.",
-    features: [
-      "Flange facing up to 1000mm diameter",
-      "High-power spindle motor for tough materials",
-      "CNC-ready with digital control options",
-      "Integrated clamping and centering system",
-      "Anti-vibration mounting system",
-      "Real-time cutting parameter monitoring",
-      "Dust and chip extraction ready",
-      "Field-proven reliability in harsh environments",
-    ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Model",
+          "Rotaface 550i": "Precitec Rotaface 550i",
+          "Rotaface 1000i": "Precitec Rotaface 1000i",
+          "Rotaface 1500i": "Precitec Rotaface 1500i",
+          "Rotaface 2000i": "Precitec Rotaface 2000i"
+        },
+        {
+          "parameter": "Purpose",
+          "Rotaface 550i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
+          "Rotaface 1000i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
+          "Rotaface 1500i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
+          "Rotaface 2000i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate"
+        },
+        {
+          "parameter": "Max flange dia",
+          "Rotaface 550i": "580 mm",
+          "Rotaface 1000i": "1080 mm",
+          "Rotaface 1500i": "1580 mm",
+          "Rotaface 2000i": "2100 mm"
+        },
+        {
+          "parameter": "Min flange dia",
+          "Rotaface 550i": "130 mm",
+          "Rotaface 1000i": "160 mm",
+          "Rotaface 1500i": "250 mm",
+          "Rotaface 2000i": "400 mm"
+        },
+        {
+          "parameter": "Stroke",
+          "Rotaface 550i": "150 mm",
+          "Rotaface 1000i": "250 mm",
+          "Rotaface 1500i": "400 mm",
+          "Rotaface 2000i": "500 mm"
+        },
+        {
+          "parameter": "Depth of cut",
+          "Rotaface 550i": "Up to 1.5 mm, serrated finish",
+          "Rotaface 1000i": "Up to 1.5 mm, serrated finish",
+          "Rotaface 1500i": "Up to 1.5 mm, serrated finish",
+          "Rotaface 2000i": "Up to 1.5 mm, serrated finish"
+        },
+        {
+          "parameter": "Rotary milling - Electric (Standard)",
+          "Rotaface 550i": "1.5 kW / 2.2 kW with AC motor",
+          "Rotaface 1000i": "1.5 kW / 2.2 kW with AC motor",
+          "Rotaface 1500i": "1.5 kW / 2.2 kW with AC motor",
+          "Rotaface 2000i": "1.5 kW / 2.2 kW with AC motor"
+        },
+        {
+          "parameter": "Pneumatic (Optional)",
+          "Rotaface 550i": "2 kW approx.",
+          "Rotaface 1000i": "2 kW approx.",
+          "Rotaface 1500i": "2 kW approx.",
+          "Rotaface 2000i": "2 kW approx."
+        },
+        {
+          "parameter": "Hydraulic (Optional)",
+          "Rotaface 550i": "Hydromotor approx. 3 kW / PP 7.5 kW",
+          "Rotaface 1000i": "Hydromotor approx. 3 kW / PP 7.5 kW",
+          "Rotaface 1500i": "Hydromotor approx. 3 kW / PP 7.5 kW",
+          "Rotaface 2000i": "Hydromotor approx. 3 kW / PP 7.5 kW"
+        }
+      ]
+    },
     images: [
       {
         id: "rotaface-1000-main",
         url: "/flange_facers/ROTO FACE 1000I.png",
-        alt: "Rotaface 1000 Flange Facer",
-        caption: "Rotaface 1000",
-      },
-    ],
-  },
-  {
-    id: "rotaface-1500",
-    name: "Rotaface 1500",
-    fullName: "Rotaface 1500 - Flange Facer",
-    category: "in-situ",
-    subcategory: "flange-facers",
-    series: "Rotaface Series",
-    description: "The Rotaface 1500 is engineered for large-scale flange machining operations. With its heavy-duty construction and advanced features, it delivers precision results on flanges up to 1500mm. Designed for continuous operation in demanding industrial environments with minimal downtime.",
-    features: [
-      "Large capacity up to 1500mm diameter",
-      "Dual-speed gearbox for versatile cutting",
-      "Precision ball screws for accurate positioning",
-      "Programmable logic controller (PLC) integration",
-      "Tool life monitoring system",
-      "Automatic lubrication system",
-      "Heavy-duty base for stability",
-      "24/7 operation capability",
-    ],
-    specifications: commonSpecs,
-    images: [
-      {
-        id: "rotaface-1500-main",
-        url: "https://placehold.co/800x600/475569/fff?text=Rotaface+1500",
-        alt: "Rotaface 1500 Flange Facer",
-        caption: "Rotaface 1500",
+        alt: "Rotaface 550/1000/1500 Flange Facer",
+        caption: "Rotaface Series",
       },
     ],
   },
@@ -1288,22 +1352,103 @@ export const products: Product[] = [
     category: "in-situ",
     subcategory: "portable-boring",
     series: "PortaBore Series",
-    description: "The PortaBore 75 is a versatile portable boring machine designed for precision on-site boring operations. With its compact design and powerful boring capabilities, it's ideal for maintenance and repair work in confined spaces. Perfect for bearing housings, cylinder blocks, and general machining tasks.",
+    description: "Precitec Portabore IBM75 boring system is a versatile, highly flexible, easy-to-mount, use and operates in-situ boring and machining system that can reach difficult-to-reach areas. Precitec Portabore IBM75 boring system is a comprehensive solution developed by Precitec with over two decades of experience in in-situ and portable machining solutions. The main features include: Modular approach with a variety of accessories and options. Choice of main drives (electric, pneumatic or hydraulic). Can carry out a wide variety of operations including boring, facing, drilling, and other related operations.",
     features: [
-      "Portable design with easy setup",
-      "Boring capacity up to 75mm diameter",
-      "Precision boring bar system",
-      "Adjustable boring head for various diameters",
-      "Self-centering alignment mechanism",
-      "Variable speed control",
-      "Integrated measurement system",
-      "Suitable for horizontal and vertical boring",
+      "Main drive unit with Electric/Pneumatic/Hydraulic drive as selected",
+      "Boring bar 75mm x 1500mm, 1no",
+      "Boring Bar 50mm x 1000mm and reduction sleeves, 1set",
+      "Feed Unit with DC drive programmable, 1no",
+      "Feed screw for boring 320mm, 1no",
+      "Support bearings, 2nos",
+      "Bearing support bracket rear, 1no",
+      "Bearing support bracket front, 1no",
+      "Control panel and operator pendent, 1set",
+      "Boring tool holders and boring tools, 1set",
+      "Holding cases, 1 set (plywood)",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Boring Bar Diameter",
+          "Standard": "75 / 50 mm",
+          "Options": "62 / 40 / 32 / 25 mm"
+        },
+        {
+          "parameter": "Boring Bar length (For Ø50mm)",
+          "Standard": "1250 mm",
+          "Options": "750 / 1000 / 1500 / 2000~4000 mm"
+        },
+        {
+          "parameter": "Boring Bar length (For Ø75mm)",
+          "Standard": "1500 mm",
+          "Options": "750 / 1000 / 1250 / 2000~4000 mm"
+        },
+        {
+          "parameter": "Bore range (For boring bar Ø50mm)",
+          "Standard": "Ø60mm - Ø400mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Bore range (For boring bar Ø75mm)",
+          "Standard": "Ø90mm - Ø800mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Lead Screw Stroke",
+          "Standard": "320 mm",
+          "Options": "-"
+        },
+        {
+          "parameter": "Boring Speed range",
+          "Standard": "3-150 RPM",
+          "Options": "-"
+        },
+        {
+          "parameter": "Feed rate (programmable)",
+          "Standard": "Programmable 0-300 mm/min",
+          "Options": "-"
+        },
+        {
+          "parameter": "Max Boring Torque/Thrust force",
+          "Standard": "180 Nm / 300 kgf",
+          "Options": "280 Nm / 550 kgf"
+        },
+        {
+          "parameter": "Tool setting",
+          "Standard": "-",
+          "Options": "Micro setting and measuring devices"
+        },
+        {
+          "parameter": "Drive motors - Electric (Std)",
+          "Standard": "1.5 kW",
+          "Options": "2.2 kW"
+        },
+        {
+          "parameter": "Drive motors - Hydraulic (Optional)",
+          "Standard": "1.4 kW",
+          "Options": "2.3 kW"
+        },
+        {
+          "parameter": "Drive motors - Pneumatic (Optional)",
+          "Standard": "1.2 kW",
+          "Options": "~2.0 kW"
+        },
+        {
+          "parameter": "Control",
+          "Standard": "PLC Control",
+          "Options": "-"
+        },
+        {
+          "parameter": "Feed Screw Length",
+          "Standard": "320 mm",
+          "Options": "500 / 630 / 800 / 1000 mm (special)"
+        }
+      ]
+    },
     images: [
       {
         id: "portabore-75-main",
-        url: "https://placehold.co/800x600/059669/fff?text=PortaBore+75",
+        url: "/portabore/portabore-75.png",
         alt: "PortaBore 75 Portable Boring Machine",
         caption: "PortaBore 75",
       },
@@ -1445,11 +1590,50 @@ export const products: Product[] = [
       "Remote diagnostics and support",
       "Industry 4.0 connectivity",
     ],
-    specifications: commonSpecs,
+    specifications: {
+      "Machine Specifications": [
+        {
+          "parameter": "Model",
+          "Specs": "Sarva-3-5A-7A (optional CNC)"
+        },
+        {
+          "parameter": "Purpose",
+          "Specs": "Portable/Insitu Machining operations: Milling, boring, nozzle cutout machining, drilling, edge preparation, flange facing etc"
+        },
+        {
+          "parameter": "Strokes (X × Y × Z)",
+          "Specs": "1500 × 800 × 800 mm"
+        },
+        {
+          "parameter": "Max boring dia",
+          "Specs": "9000 mm"
+        },
+        {
+          "parameter": "Max cutter dia",
+          "Specs": "315 mm"
+        },
+        {
+          "parameter": "Taper boring",
+          "Specs": "Available"
+        },
+        {
+          "parameter": "Facing",
+          "Specs": "Available"
+        },
+        {
+          "parameter": "Spindle Power",
+          "Specs": "11 kW (optional 15/18 kW)"
+        },
+        {
+          "parameter": "Controls",
+          "Specs": "Conventional with PLC or CNC"
+        }
+      ]
+    },
     images: [
       {
         id: "sarva-main",
-        url: "https://placehold.co/800x600/7c3aed/fff?text=Sarva+System",
+        url: "/mpm/SARVA.jpg",
         alt: "Sarva Multi-Purpose In-Situ Machining System",
         caption: "Sarva System",
       },

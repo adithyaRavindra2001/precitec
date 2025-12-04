@@ -13,6 +13,15 @@ export const Carousel: React.FC = () => {
   // Transform data: Map categories to carousel items
   // We use the first product in each category to provide the cover image
   const items = categories.map((category) => {
+    // Special handling for spms-other category - use image from MoreProductsPage
+    if (category.id === "spms-other") {
+      return {
+        id: category.id,
+        title: category.name,
+        image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png",
+      };
+    }
+
     const representativeProduct = products.find(
       (p) => p.category === category.id
     );

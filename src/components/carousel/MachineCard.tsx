@@ -20,8 +20,13 @@ export const MachineCard: React.FC<MachineCardProps> = ({
 
   const handleClick = () => {
     if (isActive) {
-      // Navigate to the category page
-      navigate(`/products/category/${id}`);
+      // Special routing for spms-other category
+      if (id === "spms-other") {
+        navigate("/products/more");
+      } else {
+        // Navigate to the category page
+        navigate(`/products/category/${id}`);
+      }
     } else {
       // Make this card active
       onClick();

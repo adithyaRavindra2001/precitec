@@ -557,7 +557,9 @@ export const products: Product[] = [
       "Compact and portable design",
       "Low maintenance requirements",
     ],
-    specifications: commonSpecs,
+    specifications: [
+      { label: "Coming Soon!", value: "Detailed specifications will be available soon. Please contact us for more information." },
+    ],
     images: [
       {
         id: "db-40-main",
@@ -584,7 +586,9 @@ export const products: Product[] = [
       "Production monitoring interface",
       "Automation-ready design",
     ],
-    specifications: commonSpecs,
+    specifications: [
+      { label: "Coming Soon!", value: "Detailed specifications will be available soon. Please contact us for more information." },
+    ],
     images: [
       {
         id: "db-50-main",

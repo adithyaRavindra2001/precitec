@@ -74,8 +74,8 @@ export function LandingPage() {
               info@precitec.co.in
             </a>
             <span className="hidden sm:inline text-muted-foreground">|</span>
-            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4" href="tel:+919448137058">
-              +91 94481 37058
+            <a className="text-sm sm:text-base text-primary underline decoration-primary/50 underline-offset-4" href="tel:+919448278217">
+              +91 94482 78217
             </a>
           </div>
         </div>

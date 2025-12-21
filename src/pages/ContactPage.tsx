@@ -97,10 +97,10 @@ export function ContactPage() {
                       <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                       <div className="space-y-1 text-sm">
                         <a
-                          href="tel:+919448137058"
+                          href="tel:+919448278217"
                           className="block text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +91 94481 37058
+                          +91 94482 78217
                         </a>
                         <a
                           href="tel:+918028368067"

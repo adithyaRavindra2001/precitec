@@ -93,11 +93,11 @@ export function ProductDetailPage() {
               <div>
                 <p className="text-sm text-muted-foreground">Need Help?</p>
                 <a
-                  href="tel:+919448137058"
+                  href="tel:+919448278217"
                   className="mt-1 flex items-center gap-2 text-primary hover:underline"
                 >
                   <Phone className="h-4 w-4" />
-                  +91 94481 37058
+                  +91 94482 78217
                 </a>
               </div>
             </div>

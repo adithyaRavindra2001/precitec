@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 const moreProducts = [
   // Milling and Boring Machines Solutions
@@ -11,33 +13,33 @@ const moreProducts = [
   { name: "Shilpi VMC OF", category: "Milling and Boring Machines", image: "/Shilpi/Shilpi VMC OF.png" },
 
   // Milling Machines
-  { name: "Edge Master", category: "Milling Machines" },
+  { name: "Edge Master", category: "Milling Machines", image: "/others/Edge Master.png" },
   { name: "PEM", category: "Milling Machines", image: "/others/PEM.png" },
 
   // Horizontal Turning and TurnMill Solutions
-  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions" },
-  { name: "SriChakra HDT", category: "Horizontal Turning and TurnMill Solutions" },
-  { name: "SriChakra Large Lathes", category: "Horizontal Turning and TurnMill Solutions" },
-  { name: "Floor Lathes", category: "Horizontal Turning and TurnMill Solutions" },
+  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra 350.jpg" },
+  { name: "SriChakra HDT", category: "Horizontal Turning and TurnMill Solutions", image: "/others/SriChakra-HDT.png" },
+  { name: "SriChakra Large Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/SRI-CHAKRA-LARGE-LATHE.JPG" },
+  { name: "Floor Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/floor-lathe.jpg" },
 
   // Special Machines
   { name: "Finning Machines", category: "Special Machines", image: "/others/finning-machine.png" },
-  { name: "Riser Cutting Machines", category: "Special Machines" },
+  { name: "Riser Cutting Machines", category: "Special Machines", image: "/others/riser-cutting.jpg" },
   { name: "Tube Coiling Machines", category: "Special Machines" },
   { name: "SPM's", category: "Special Machines" },
   { name: "Machining Composites", category: "Special Machines" },
   { name: "Automobile Assembly Machines", category: "Special Machines" },
 
   // Attachments and Accessories
-  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories" },
+  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories", image: "/others/pamh-right-angle-milling.jpg" },
   { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories" },
-  { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories" },
+  { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories", image: "/others/PUMH_U45.png" },
   { name: "PUAMBH: Universal Milling and Boring Head", category: "Attachments and Accessories" },
   { name: "B250 Facing Attachment", category: "Attachments and Accessories" },
   { name: "B1500 Facing Attachment", category: "Attachments and Accessories" },
   { name: "RAMH 50 Ram Head", category: "Attachments and Accessories" },
   { name: "RUMH 50 Plano Milling Head", category: "Attachments and Accessories" },
-  { name: "UMS Series Spindle Units", category: "Attachments and Accessories" },
+  { name: "UMS Series Spindle Units", category: "Attachments and Accessories", image: "/others/UMS 250.png" },
   { name: "Cartridge Type Spindle Units", category: "Attachments and Accessories" },
   { name: "US Series Slides", category: "Attachments and Accessories" },
 ]
@@ -45,20 +47,13 @@ const moreProducts = [
 export function MoreProductsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
-      {/* Hero Section with Coming Soon Banner */}
+      {/* Hero Section */}
       <motion.section
         className="relative bg-gradient-to-r from-slate-900 to-slate-700 py-12 sm:py-16 md:py-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        {/* Coming Soon Badge */}
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
-          <Badge className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-2 font-bold">
-            COMING SOON
-          </Badge>
-        </div>
-
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,45 +97,81 @@ export function MoreProductsPage() {
               transition={{ duration: 0.4, delay: index * 0.03 }}
               whileHover={{ y: -4 }}
             >
-              <Card className="h-full transition-all hover:shadow-lg border-2 hover:border-primary/50 relative overflow-hidden">
-                {/* Coming Soon Overlay */}
-                <div className="absolute top-3 right-3 z-10">
-                  <Badge variant="secondary" className="bg-yellow-500/90 text-slate-900 text-xs font-semibold">
-                    Coming Soon
-                  </Badge>
-                </div>
-
-                {/* Product Image */}
-                <div className="aspect-video overflow-hidden rounded-t-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-                  {product.image ? (
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <div className="text-center p-4">
-                      <div className="text-5xl mb-2">🏭</div>
-                      <p className="text-xs text-muted-foreground font-medium">Product Image</p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="h-full transition-all hover:shadow-lg border-2 hover:border-primary/50 relative overflow-hidden cursor-pointer">
+                    {/* Product Image */}
+                    <div className="aspect-video overflow-hidden rounded-t-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                      {product.image ? (
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <div className="text-center p-4">
+                          <div className="text-5xl mb-2">🏭</div>
+                          <p className="text-xs text-muted-foreground font-medium">Product Image</p>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
 
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-base sm:text-lg leading-tight">
-                    {product.name}
-                  </CardTitle>
-                  <CardDescription className="text-xs sm:text-sm">
-                    {product.category}
-                  </CardDescription>
-                </CardHeader>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-base sm:text-lg leading-tight">
+                        {product.name}
+                      </CardTitle>
+                      <CardDescription className="text-xs sm:text-sm">
+                        {product.category}
+                      </CardDescription>
+                    </CardHeader>
 
-                <CardContent className="pt-0">
-                  <p className="text-xs text-muted-foreground">
-                    Please contact us for Details and Specification
-                  </p>
-                </CardContent>
-              </Card>
+                    <CardContent className="pt-0">
+                      <p className="text-xs text-muted-foreground">
+                        Click for more details
+                      </p>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl">{product.name}</DialogTitle>
+                    <DialogDescription className="text-base">
+                      {product.category}
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  {/* Enlarged Product Image */}
+                  <div className="mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[400px]">
+                    {product.image ? (
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <div className="text-center p-8">
+                        <div className="text-8xl mb-4">🏭</div>
+                        <p className="text-lg text-muted-foreground font-medium">Product Image</p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Coming Soon Section */}
+                  <div className="mt-6 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg text-center">
+                    <h3 className="text-xl font-semibold text-yellow-900 mb-2">
+                      Web page coming soon
+                    </h3>
+                    <p className="text-yellow-800 mb-4">
+                      For more details contact us
+                    </p>
+                    <Link to="/contact">
+                      <Button className="bg-primary hover:bg-primary/90">
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </motion.div>
           ))}
         </div>

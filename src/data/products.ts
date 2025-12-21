@@ -249,123 +249,68 @@ export const products: Product[] = [
       "Machine Specifications": [
         {
           "parameter": "Max job dia",
-          "FCM-80-NC-500": "80 mm / (3.15\")",
-          "FCM-80-CNC-500": "80 mm / (3.15\")",
+          "FCM-80-NC/CNC-500": "80 mm / (3.15\")",
           "Options": "-"
         },
         {
           "parameter": "Min Job dia",
-          "FCM-80-NC-500": "20 mm / (0.79\")",
-          "FCM-80-CNC-500": "20 mm / (0.79\")",
+          "FCM-80-NC/CNC-500": "20 mm / (0.79\")",
           "Options": "-"
         },
         {
           "parameter": "Maximum length of job",
-          "FCM-80-NC-500": "500 mm / (19.7\")",
-          "FCM-80-CNC-500": "500 mm / (19.7\")",
-          "Options": "-"
-        },
-        {
-          "parameter": "Z axis stroke",
-          "FCM-80-NC-500": "125 mm / (4.9\")",
-          "FCM-80-CNC-500": "125 mm / (4.9\")",
-          "Options": "-"
-        },
-        {
-          "parameter": "X axis stroke",
-          "FCM-80-NC-500": "150 mm / (5.8\")",
-          "FCM-80-CNC-500": "150 mm / (5.8\")",
+          "FCM-80-NC/CNC-500": "500 mm / (19.7\")",
           "Options": "-"
         },
         {
           "parameter": "Minimum length of job",
-          "FCM-80-NC-500": "100 mm / (4\")",
-          "FCM-80-CNC-500": "100 mm / (4\")",
+          "FCM-80-NC/CNC-500": "100 mm / (4\")",
           "Options": "60mm/2.25\" with 1 vice/special fixture"
         },
         {
           "parameter": "No of spindles",
-          "FCM-80-NC-500": "2",
-          "FCM-80-CNC-500": "2",
+          "FCM-80-NC/CNC-500": "2",
           "Options": "4/6 (Specials)"
         },
         {
           "parameter": "Spindle speed range",
-          "FCM-80-NC-500": "30-1500 RPM",
-          "FCM-80-CNC-500": "30-3000 RPM",
+          "FCM-80-NC/CNC-500": "30-2250 RPM",
           "Options": "-"
         },
         {
           "parameter": "Spindle Power",
-          "FCM-80-NC-500": "3.7 kW / (5 HP)",
-          "FCM-80-CNC-500": "2.2 kW / (3 HP)",
+          "FCM-80-NC/CNC-500": "3.7 kW / (5 HP)",
           "Options": "-"
         },
         {
           "parameter": "Spindle Max. torque/thrust force",
-          "FCM-80-NC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
-          "FCM-80-CNC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
+          "FCM-80-NC/CNC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
           "Options": "-"
         },
         {
           "parameter": "Controls",
-          "FCM-80-NC-500": "PLC with servo motors and VFD",
-          "FCM-80-CNC-500": "CNC controls",
+          "FCM-80-NC/CNC-500": "NC controls with custom screen programing/ touch screen",
           "Options": "Delta/Siemens/Mitsubishi/Pragati"
         },
         {
           "parameter": "Vice Type",
-          "FCM-80-NC-500": "Self-Centring: 2 nos.",
-          "FCM-80-CNC-500": "Self-Centring: 2 nos.",
+          "FCM-80-NC/CNC-500": "Self-Centring: 2 nos.",
           "Options": "V and flat, special fixtures"
         },
         {
           "parameter": "Vice Actuation",
-          "FCM-80-NC-500": "Hydraulic",
-          "FCM-80-CNC-500": "Hydraulic",
+          "FCM-80-NC/CNC-500": "Hydraulic",
           "Options": "Air/Servomotor"
         },
         {
           "parameter": "Tools",
-          "FCM-80-NC-500": "Milling cum centring tool 110mm dia",
-          "FCM-80-CNC-500": "Milling cum centring tool 110mm dia",
+          "FCM-80-NC/CNC-500": "Milling cum centring tool 110mm dia",
           "Options": "90mm/125mm, boring tools and others"
         },
         {
           "parameter": "Overall dimension (L × D × H)",
-          "FCM-80-NC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
-          "FCM-80-CNC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
+          "FCM-80-NC/CNC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
           "Options": "-"
-        },
-        {
-          "parameter": "Machine Overall weight (approx.)",
-          "FCM-80-NC-500": "1600 DaN / (3500 lbf)",
-          "FCM-80-CNC-500": "1600 DaN / (3500 lbf)",
-          "Options": "-"
-        },
-        {
-          "parameter": "Maximum connected load (electric)",
-          "FCM-80-NC-500": "15 KVA",
-          "FCM-80-CNC-500": "20 KVA",
-          "Options": "-"
-        },
-        {
-          "parameter": "Hydraulic power pack",
-          "FCM-80-NC-500": "1 kW, 6 L/min",
-          "FCM-80-CNC-500": "1 kW, 6 L/min",
-          "Options": "3 kW, 20 L/min (for special fixturing)"
-        },
-        {
-          "parameter": "Coolant tank and pump",
-          "FCM-80-NC-500": "120 Ltr, 40 LPM",
-          "FCM-80-CNC-500": "120 Ltr, 40 LPM",
-          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
-        },
-        {
-          "parameter": "Electric connection",
-          "FCM-80-NC-500": "3 ph, 415V / 50Hz/60Hz",
-          "FCM-80-CNC-500": "3 ph, 415V / 50Hz/60Hz",
-          "Options": "3ph, 200V, 50/60Hz"
         }
       ]
     },
@@ -448,6 +393,58 @@ export const products: Product[] = [
           "FCM-100-2S-2SC-1200": "3700 DaN / (8318 lbf)",
           "FCM-100-2S-2SC-2000": "4400 DaN / (9891 lbf)"
         }
+      ],
+      "Standard and Optional Specifications": [
+        {
+          "parameter": "No of spindles",
+          "Standard": "2",
+          "Options": "4/6 (Specials)"
+        },
+        {
+          "parameter": "Spindle speed range (RPM)",
+          "Standard": "30-1200",
+          "Options": "30-1200"
+        },
+        {
+          "parameter": "Spindle Power",
+          "Standard": "3.7 kW / (5 HP)",
+          "Options": "2.2 kW / (3 HP), 5.5 kW / (7.5 HP)"
+        },
+        {
+          "parameter": "Centring and facing Cutter size dia",
+          "Standard": "125 mm / (5\")",
+          "Options": "63/80/100/150 mm (2.5\"/3.15\"/4\"/6\")"
+        },
+        {
+          "parameter": "X1 and X2 axis stroke (milling)",
+          "Standard": "200 mm / (10\")",
+          "Options": "400 mm / (16\")"
+        },
+        {
+          "parameter": "Vice actuation",
+          "Standard": "Hydraulic",
+          "Options": "Servo/Air-hydraulic"
+        },
+        {
+          "parameter": "Maximum connected load (electric)",
+          "Standard": "15 KVA",
+          "Options": "20 KVA"
+        },
+        {
+          "parameter": "Hydraulic power pack",
+          "Standard": "1 kW, 6 L/min",
+          "Options": "3 kW, 20 L/min (for special fixturing)"
+        },
+        {
+          "parameter": "Coolant tank and pump",
+          "Standard": "120 Ltr, 40 LPM",
+          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
+        },
+        {
+          "parameter": "Electric connection",
+          "Standard": "3 ph, 415V / 50Hz/60Hz",
+          "Options": "3ph, 200V, 50/60Hz"
+        }
       ]
     },
     images: [
@@ -529,6 +526,58 @@ export const products: Product[] = [
           "FCM-150-2S-SC-1200": "4000 DaN / (9000 lbf)",
           "FCM-150-2S-SC-2000": "4700 DaN / (10570 lbf)"
         }
+      ],
+      "Standard and Optional Specifications": [
+        {
+          "parameter": "No of spindles",
+          "Standard": "2",
+          "Options": "4/6 (Specials)"
+        },
+        {
+          "parameter": "Spindle speed range (RPM)",
+          "Standard": "30-1200",
+          "Options": "30-1200"
+        },
+        {
+          "parameter": "Spindle Power",
+          "Standard": "5.5 kW / (7.5 HP)",
+          "Options": "7.5 kW / (10 HP), 11 kW / (15 HP)"
+        },
+        {
+          "parameter": "Centering and facing Cutter size dia",
+          "Standard": "200 mm / (5\")",
+          "Options": "63/80/100/150/250 mm (2.5\"/3.15\"/4\"/6\"/10\")"
+        },
+        {
+          "parameter": "X1 and X2 axis stroke (milling)",
+          "Standard": "250 mm / (10\")",
+          "Options": "400/630 mm (16\"/25\")"
+        },
+        {
+          "parameter": "Vice actuation",
+          "Standard": "Hydraulic",
+          "Options": "Servo/Air-hydraulic"
+        },
+        {
+          "parameter": "Maximum connected load (electric)",
+          "Standard": "15 KVA",
+          "Options": "20/30 KVA"
+        },
+        {
+          "parameter": "Hydraulic power pack",
+          "Standard": "1 kW, 6 L/min",
+          "Options": "3 kW, 20 L/min (for special fixturing)"
+        },
+        {
+          "parameter": "Coolant tank and pump",
+          "Standard": "120 Ltr, 40 LPM",
+          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
+        },
+        {
+          "parameter": "Electric connection",
+          "Standard": "3 ph, 415V / 50Hz/60Hz",
+          "Options": "3ph, 200V, 50/60Hz"
+        }
       ]
     },
     images: [
@@ -557,9 +606,121 @@ export const products: Product[] = [
       "Compact and portable design",
       "Low maintenance requirements",
     ],
-    specifications: [
-      { label: "Coming Soon!", value: "Detailed specifications will be available soon. Please contact us for more information." },
-    ],
+    specifications: {
+      "Spindle": [
+        {
+          "parameter": "Type",
+          "Model DB 40": "'Precitec' UMS 200",
+          "Model DB 50": "'Precitec' UMS 250"
+        },
+        {
+          "parameter": "Bearing",
+          "Model DB 40": "Precision angular contact Bearing",
+          "Model DB 50": "Precision angular contact Bearing"
+        },
+        {
+          "parameter": "Nose",
+          "Model DB 40": "ISO40",
+          "Model DB 50": "ISO 50"
+        },
+        {
+          "parameter": "Power Std (kW)",
+          "Model DB 40": "2.2",
+          "Model DB 50": "3.7"
+        },
+        {
+          "parameter": "Power Optional (kW)",
+          "Model DB 40": "3.7, 5.6",
+          "Model DB 50": "5.6, 7.5"
+        },
+        {
+          "parameter": "Speed Range - Fixed (RPM)",
+          "Model DB 40": "400-2500",
+          "Model DB 50": "400-2500"
+        },
+        {
+          "parameter": "Speed Range - Inverter Drive (RPM)",
+          "Model DB 40": "50-2500",
+          "Model DB 50": "50-2500"
+        },
+        {
+          "parameter": "Drive",
+          "Model DB 40": "Poly V Belt",
+          "Model DB 50": "Poly V Belt"
+        }
+      ],
+      "Slide": [
+        {
+          "parameter": "Type",
+          "Model DB 40": "'Precitec' US 200-SP",
+          "Model DB 50": "'Precitec' US 250"
+        },
+        {
+          "parameter": "Max. Feed Stroke Std (mm)",
+          "Model DB 40": "200",
+          "Model DB 50": "250"
+        },
+        {
+          "parameter": "Max. Feed Stroke Optional (mm)",
+          "Model DB 40": "400, 630",
+          "Model DB 50": "400, 630"
+        },
+        {
+          "parameter": "Slide Feed",
+          "Model DB 40": "Hydraulic / AC Servo (Std/Optional)",
+          "Model DB 50": "Hydraulic / AC Servo (Std/Optional)"
+        }
+      ],
+      "Job Specifications": [
+        {
+          "parameter": "Max Diameter (mm)",
+          "Model DB 40": "70",
+          "Model DB 50": "180"
+        },
+        {
+          "parameter": "Max Length (mm)",
+          "Model DB 40": "400",
+          "Model DB 50": "500"
+        },
+        {
+          "parameter": "Min Length (mm)",
+          "Model DB 40": "60",
+          "Model DB 50": "100"
+        },
+        {
+          "parameter": "Optional",
+          "Model DB 40": "As per requirement",
+          "Model DB 50": "As per requirement"
+        }
+      ],
+      "Machine Details": [
+        {
+          "parameter": "Coolant (LPM/Bar)",
+          "Model DB 40": "40/2",
+          "Model DB 50": "60/2"
+        },
+        {
+          "parameter": "Flush Optional (LPM)",
+          "Model DB 40": "50",
+          "Model DB 50": "50"
+        },
+        {
+          "parameter": "Total Connected Load (kVA)",
+          "Model DB 40": "10",
+          "Model DB 50": "15"
+        },
+        {
+          "parameter": "Machine Dimension L×W×H (mm) Approx.",
+          "Model DB 40": "2300 × 1960 × 1780",
+          "Model DB 50": "3050 × 2100 × 2100"
+        },
+        {
+          "parameter": "Weight (Kgf) Approx.",
+          "Model DB 40": "1500",
+          "Model DB 50": "2200"
+        }
+      ]
+    },
     images: [
       {
         id: "db-40-main",
@@ -586,13 +747,125 @@ export const products: Product[] = [
       "Production monitoring interface",
       "Automation-ready design",
     ],
-    specifications: [
-      { label: "Coming Soon!", value: "Detailed specifications will be available soon. Please contact us for more information." },
-    ],
+    specifications: {
+      "Spindle": [
+        {
+          "parameter": "Type",
+          "Model DB 40": "'Precitec' UMS 200",
+          "Model DB 50": "'Precitec' UMS 250"
+        },
+        {
+          "parameter": "Bearing",
+          "Model DB 40": "Precision angular contact Bearing",
+          "Model DB 50": "Precision angular contact Bearing"
+        },
+        {
+          "parameter": "Nose",
+          "Model DB 40": "ISO40",
+          "Model DB 50": "ISO 50"
+        },
+        {
+          "parameter": "Power Std (kW)",
+          "Model DB 40": "2.2",
+          "Model DB 50": "3.7"
+        },
+        {
+          "parameter": "Power Optional (kW)",
+          "Model DB 40": "3.7, 5.6",
+          "Model DB 50": "5.6, 7.5"
+        },
+        {
+          "parameter": "Speed Range - Fixed (RPM)",
+          "Model DB 40": "400-2500",
+          "Model DB 50": "400-2500"
+        },
+        {
+          "parameter": "Speed Range - Inverter Drive (RPM)",
+          "Model DB 40": "50-2500",
+          "Model DB 50": "50-2500"
+        },
+        {
+          "parameter": "Drive",
+          "Model DB 40": "Poly V Belt",
+          "Model DB 50": "Poly V Belt"
+        }
+      ],
+      "Slide": [
+        {
+          "parameter": "Type",
+          "Model DB 40": "'Precitec' US 200-SP",
+          "Model DB 50": "'Precitec' US 250"
+        },
+        {
+          "parameter": "Max. Feed Stroke Std (mm)",
+          "Model DB 40": "200",
+          "Model DB 50": "250"
+        },
+        {
+          "parameter": "Max. Feed Stroke Optional (mm)",
+          "Model DB 40": "400, 630",
+          "Model DB 50": "400, 630"
+        },
+        {
+          "parameter": "Slide Feed",
+          "Model DB 40": "Hydraulic / AC Servo (Std/Optional)",
+          "Model DB 50": "Hydraulic / AC Servo (Std/Optional)"
+        }
+      ],
+      "Job Specifications": [
+        {
+          "parameter": "Max Diameter (mm)",
+          "Model DB 40": "70",
+          "Model DB 50": "180"
+        },
+        {
+          "parameter": "Max Length (mm)",
+          "Model DB 40": "400",
+          "Model DB 50": "500"
+        },
+        {
+          "parameter": "Min Length (mm)",
+          "Model DB 40": "60",
+          "Model DB 50": "100"
+        },
+        {
+          "parameter": "Optional",
+          "Model DB 40": "As per requirement",
+          "Model DB 50": "As per requirement"
+        }
+      ],
+      "Machine Details": [
+        {
+          "parameter": "Coolant (LPM/Bar)",
+          "Model DB 40": "40/2",
+          "Model DB 50": "60/2"
+        },
+        {
+          "parameter": "Flush Optional (LPM)",
+          "Model DB 40": "50",
+          "Model DB 50": "50"
+        },
+        {
+          "parameter": "Total Connected Load (kVA)",
+          "Model DB 40": "10",
+          "Model DB 50": "15"
+        },
+        {
+          "parameter": "Machine Dimension L×W×H (mm) Approx.",
+          "Model DB 40": "2300 × 1960 × 1780",
+          "Model DB 50": "3050 × 2100 × 2100"
+        },
+        {
+          "parameter": "Weight (Kgf) Approx.",
+          "Model DB 40": "1500",
+          "Model DB 50": "2200"
+        }
+      ]
+    },
     images: [
       {
         id: "db-50-main",
-        url: "https://placehold.co/800x600/155e75/fff?text=DB+50",
+        url: "/FCM/DB50.png",
         alt: "DB 50 Drilling and Boring Machine",
         caption: "DB 50 - Enhanced Capacity Model",
       },
@@ -1140,9 +1413,9 @@ export const products: Product[] = [
     images: [
       {
         id: "rotaface-2000-5000-main",
-        url: "https://placehold.co/800x600/64748b/fff?text=Coming+Soon",
+        url: "/flange_facers/Rotaface_2000_3000_4000_5000.jpeg",
         alt: "Rotaface 2000/3000/4000/5000 Heavy-Duty Flange Facer Series",
-        caption: "Coming Soon",
+        caption: "Rotaface 2000/3000/4000/5000 Series",
       },
     ],
   },

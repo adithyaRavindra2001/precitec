@@ -606,121 +606,29 @@ export const products: Product[] = [
       "Compact and portable design",
       "Low maintenance requirements",
     ],
-    specifications: {
-      "Spindle": [
-        {
-          "parameter": "Type",
-          "Model DB 40": "'Precitec' UMS 200",
-          "Model DB 50": "'Precitec' UMS 250"
-        },
-        {
-          "parameter": "Bearing",
-          "Model DB 40": "Precision angular contact Bearing",
-          "Model DB 50": "Precision angular contact Bearing"
-        },
-        {
-          "parameter": "Nose",
-          "Model DB 40": "ISO40",
-          "Model DB 50": "ISO 50"
-        },
-        {
-          "parameter": "Power Std (kW)",
-          "Model DB 40": "2.2",
-          "Model DB 50": "3.7"
-        },
-        {
-          "parameter": "Power Optional (kW)",
-          "Model DB 40": "3.7, 5.6",
-          "Model DB 50": "5.6, 7.5"
-        },
-        {
-          "parameter": "Speed Range - Fixed (RPM)",
-          "Model DB 40": "400-2500",
-          "Model DB 50": "400-2500"
-        },
-        {
-          "parameter": "Speed Range - Inverter Drive (RPM)",
-          "Model DB 40": "50-2500",
-          "Model DB 50": "50-2500"
-        },
-        {
-          "parameter": "Drive",
-          "Model DB 40": "Poly V Belt",
-          "Model DB 50": "Poly V Belt"
-        }
-      ],
-      "Slide": [
-        {
-          "parameter": "Type",
-          "Model DB 40": "'Precitec' US 200-SP",
-          "Model DB 50": "'Precitec' US 250"
-        },
-        {
-          "parameter": "Max. Feed Stroke Std (mm)",
-          "Model DB 40": "200",
-          "Model DB 50": "250"
-        },
-        {
-          "parameter": "Max. Feed Stroke Optional (mm)",
-          "Model DB 40": "400, 630",
-          "Model DB 50": "400, 630"
-        },
-        {
-          "parameter": "Slide Feed",
-          "Model DB 40": "Hydraulic / AC Servo (Std/Optional)",
-          "Model DB 50": "Hydraulic / AC Servo (Std/Optional)"
-        }
-      ],
-      "Job Specifications": [
-        {
-          "parameter": "Max Diameter (mm)",
-          "Model DB 40": "70",
-          "Model DB 50": "180"
-        },
-        {
-          "parameter": "Max Length (mm)",
-          "Model DB 40": "400",
-          "Model DB 50": "500"
-        },
-        {
-          "parameter": "Min Length (mm)",
-          "Model DB 40": "60",
-          "Model DB 50": "100"
-        },
-        {
-          "parameter": "Optional",
-          "Model DB 40": "As per requirement",
-          "Model DB 50": "As per requirement"
-        }
-      ],
-      "Machine Details": [
-        {
-          "parameter": "Coolant (LPM/Bar)",
-          "Model DB 40": "40/2",
-          "Model DB 50": "60/2"
-        },
-        {
-          "parameter": "Flush Optional (LPM)",
-          "Model DB 40": "50",
-          "Model DB 50": "50"
-        },
-        {
-          "parameter": "Total Connected Load (kVA)",
-          "Model DB 40": "10",
-          "Model DB 50": "15"
-        },
-        {
-          "parameter": "Machine Dimension L×W×H (mm) Approx.",
-          "Model DB 40": "2300 × 1960 × 1780",
-          "Model DB 50": "3050 × 2100 × 2100"
-        },
-        {
-          "parameter": "Weight (Kgf) Approx.",
-          "Model DB 40": "1500",
-          "Model DB 50": "2200"
-        }
-      ]
-    },
+    specifications: [
+      { label: "Spindle Type", value: "'Precitec' UMS 200" },
+      { label: "Bearing", value: "Precision angular contact Bearing" },
+      { label: "Nose", value: "ISO40" },
+      { label: "Power Std (kW)", value: "2.2" },
+      { label: "Power Optional (kW)", value: "3.7, 5.6" },
+      { label: "Speed Range - Fixed (RPM)", value: "400-2500" },
+      { label: "Speed Range - Inverter Drive (RPM)", value: "50-2500" },
+      { label: "Drive", value: "Poly V Belt" },
+      { label: "Slide Type", value: "'Precitec' US 200-SP" },
+      { label: "Max. Feed Stroke Std (mm)", value: "200" },
+      { label: "Max. Feed Stroke Optional (mm)", value: "400, 630" },
+      { label: "Slide Feed", value: "Hydraulic / AC Servo (Std/Optional)" },
+      { label: "Max Diameter (mm)", value: "70" },
+      { label: "Max Length (mm)", value: "400" },
+      { label: "Min Length (mm)", value: "60" },
+      { label: "Optional", value: "As per requirement" },
+      { label: "Coolant (LPM/Bar)", value: "40/2" },
+      { label: "Flush Optional (LPM)", value: "50" },
+      { label: "Total Connected Load (kVA)", value: "10" },
+      { label: "Machine Dimension L×W×H (mm) Approx.", value: "2300 × 1960 × 1780" },
+      { label: "Weight (Kgf) Approx.", value: "1500" }
+    ],
     images: [
       {
         id: "db-40-main",
@@ -747,121 +655,29 @@ export const products: Product[] = [
       "Production monitoring interface",
       "Automation-ready design",
     ],
-    specifications: {
-      "Spindle": [
-        {
-          "parameter": "Type",
-          "Model DB 40": "'Precitec' UMS 200",
-          "Model DB 50": "'Precitec' UMS 250"
-        },
-        {
-          "parameter": "Bearing",
-          "Model DB 40": "Precision angular contact Bearing",
-          "Model DB 50": "Precision angular contact Bearing"
-        },
-        {
-          "parameter": "Nose",
-          "Model DB 40": "ISO40",
-          "Model DB 50": "ISO 50"
-        },
-        {
-          "parameter": "Power Std (kW)",
-          "Model DB 40": "2.2",
-          "Model DB 50": "3.7"
-        },
-        {
-          "parameter": "Power Optional (kW)",
-          "Model DB 40": "3.7, 5.6",
-          "Model DB 50": "5.6, 7.5"
-        },
-        {
-          "parameter": "Speed Range - Fixed (RPM)",
-          "Model DB 40": "400-2500",
-          "Model DB 50": "400-2500"
-        },
-        {
-          "parameter": "Speed Range - Inverter Drive (RPM)",
-          "Model DB 40": "50-2500",
-          "Model DB 50": "50-2500"
-        },
-        {
-          "parameter": "Drive",
-          "Model DB 40": "Poly V Belt",
-          "Model DB 50": "Poly V Belt"
-        }
-      ],
-      "Slide": [
-        {
-          "parameter": "Type",
-          "Model DB 40": "'Precitec' US 200-SP",
-          "Model DB 50": "'Precitec' US 250"
-        },
-        {
-          "parameter": "Max. Feed Stroke Std (mm)",
-          "Model DB 40": "200",
-          "Model DB 50": "250"
-        },
-        {
-          "parameter": "Max. Feed Stroke Optional (mm)",
-          "Model DB 40": "400, 630",
-          "Model DB 50": "400, 630"
-        },
-        {
-          "parameter": "Slide Feed",
-          "Model DB 40": "Hydraulic / AC Servo (Std/Optional)",
-          "Model DB 50": "Hydraulic / AC Servo (Std/Optional)"
-        }
-      ],
-      "Job Specifications": [
-        {
-          "parameter": "Max Diameter (mm)",
-          "Model DB 40": "70",
-          "Model DB 50": "180"
-        },
-        {
-          "parameter": "Max Length (mm)",
-          "Model DB 40": "400",
-          "Model DB 50": "500"
-        },
-        {
-          "parameter": "Min Length (mm)",
-          "Model DB 40": "60",
-          "Model DB 50": "100"
-        },
-        {
-          "parameter": "Optional",
-          "Model DB 40": "As per requirement",
-          "Model DB 50": "As per requirement"
-        }
-      ],
-      "Machine Details": [
-        {
-          "parameter": "Coolant (LPM/Bar)",
-          "Model DB 40": "40/2",
-          "Model DB 50": "60/2"
-        },
-        {
-          "parameter": "Flush Optional (LPM)",
-          "Model DB 40": "50",
-          "Model DB 50": "50"
-        },
-        {
-          "parameter": "Total Connected Load (kVA)",
-          "Model DB 40": "10",
-          "Model DB 50": "15"
-        },
-        {
-          "parameter": "Machine Dimension L×W×H (mm) Approx.",
-          "Model DB 40": "2300 × 1960 × 1780",
-          "Model DB 50": "3050 × 2100 × 2100"
-        },
-        {
-          "parameter": "Weight (Kgf) Approx.",
-          "Model DB 40": "1500",
-          "Model DB 50": "2200"
-        }
-      ]
-    },
+    specifications: [
+      { label: "Spindle Type", value: "'Precitec' UMS 250" },
+      { label: "Bearing", value: "Precision angular contact Bearing" },
+      { label: "Nose", value: "ISO 50" },
+      { label: "Power Std (kW)", value: "3.7" },
+      { label: "Power Optional (kW)", value: "5.6, 7.5" },
+      { label: "Speed Range - Fixed (RPM)", value: "400-2500" },
+      { label: "Speed Range - Inverter Drive (RPM)", value: "50-2500" },
+      { label: "Drive", value: "Poly V Belt" },
+      { label: "Slide Type", value: "'Precitec' US 250" },
+      { label: "Max. Feed Stroke Std (mm)", value: "250" },
+      { label: "Max. Feed Stroke Optional (mm)", value: "400, 630" },
+      { label: "Slide Feed", value: "Hydraulic / AC Servo (Std/Optional)" },
+      { label: "Max Diameter (mm)", value: "180" },
+      { label: "Max Length (mm)", value: "500" },
+      { label: "Min Length (mm)", value: "100" },
+      { label: "Optional", value: "As per requirement" },
+      { label: "Coolant (LPM/Bar)", value: "60/2" },
+      { label: "Flush Optional (LPM)", value: "50" },
+      { label: "Total Connected Load (kVA)", value: "15" },
+      { label: "Machine Dimension L×W×H (mm) Approx.", value: "3050 × 2100 × 2100" },
+      { label: "Weight (Kgf) Approx.", value: "2200" }
+    ],
     images: [
       {
         id: "db-50-main",

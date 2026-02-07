@@ -154,12 +154,6 @@ export const products: Product[] = [
           "FC-40-1200-SC": "1200 mm / (47.2\")"
         },
         {
-          "parameter": "Spindle Position Adjustment for Job length",
-          "FC-40-400-SC": "Fixed",
-          "FC-40-800-SC": "Manually adjusted",
-          "FC-40-1200-SC": "Manually adjusted"
-        },
-        {
           "parameter": "Minimum length of job",
           "FC-40-400-SC": "60 mm / (2.4\")",
           "FC-40-800-SC": "60 mm / (2.4\")",
@@ -176,6 +170,12 @@ export const products: Product[] = [
           "FC-40-400-SC": "1800 DaN / (3968 lbf)",
           "FC-40-800-SC": "2400 DaN / (5291 lbf)",
           "FC-40-1200-SC": "2800 DaN / (6173 lbf)"
+        },
+        {
+          "parameter": "Spindle Position Adjustment for Job length",
+          "FC-40-400-SC": "Fixed",
+          "FC-40-800-SC": "Manually adjusted",
+          "FC-40-1200-SC": "Manually adjusted"
         }
       ],
       "Standard and Optional Specifications": [
@@ -208,6 +208,26 @@ export const products: Product[] = [
           "parameter": "Vice Type",
           "Standard": "V and Flat Hydraulic",
           "Options": "Self Centering (Hydraulic)"
+        },
+        {
+          "parameter": "Maximum connected load (electric)",
+          "Standard": "15 KVA",
+          "Options": "20 KVA"
+        },
+        {
+          "parameter": "Hydraulic power pack",
+          "Standard": "0.75 kW / (1 HP), 6L/min / (1.55 Gal/min)",
+          "Options": "2.2 kW / (3 HP), 20L/min / (5.25 Gal/min) (for special fixturing)"
+        },
+        {
+          "parameter": "Coolant tank and pump",
+          "Standard": "100 Ltr / (26.5 Gal), 40 LPM / (10.5 GPM)",
+          "Options": "180 Ltr / (47.5 Gal); 40+150 LPM / (10.5+40 GPM) (Cutting+flush coolant)"
+        },
+        {
+          "parameter": "Electric connection",
+          "Standard": "3ph, 415V, 50Hz/60Hz",
+          "Options": "3ph, 200V, 50/60 Hz"
         }
       ]
     },
@@ -265,52 +285,89 @@ export const products: Product[] = [
         {
           "parameter": "Minimum length of job",
           "FCM-80-NC/CNC-500": "100 mm / (4\")",
-          "Options": "60mm/2.25\" with 1 vice/special fixture"
+          "Options": "60mm / 2.25\" with 1 vice/special fixture"
         },
         {
+          "parameter": "Z axis stroke",
+          "FCM-80-NC/CNC-500": "125 / 4.9\"",
+          "Options": "-"
+        },
+        {
+          "parameter": "Overall dimension (L × D × H)",
+          "FCM-80-NC/CNC-500": "2300mm × 1500mm × 1500mm / 7'9\" × 5' × 5'",
+          "Options": "-"
+        },
+        {
+          "parameter": "Machine overall weight (approx.)",
+          "FCM-80-NC/CNC-500": "1600 DaN / (3500 lbf)",
+          "Options": "-"
+        }
+      ],
+      "Standard and Optional Specifications": [
+        {
           "parameter": "No of spindles",
-          "FCM-80-NC/CNC-500": "2",
+          "Standard": "2",
           "Options": "4/6 (Specials)"
         },
         {
           "parameter": "Spindle speed range",
-          "FCM-80-NC/CNC-500": "30-2250 RPM",
+          "Standard": "30-2250 RPM",
           "Options": "-"
         },
         {
           "parameter": "Spindle Power",
-          "FCM-80-NC/CNC-500": "3.7 kW / (5 HP)",
+          "Standard": "3.7 kW / (5 HP)",
           "Options": "-"
         },
         {
           "parameter": "Spindle Max. torque/thrust force",
-          "FCM-80-NC/CNC-500": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
+          "Standard": "50 Nm (440 lb-in) / 450 Kgf (1000 Lbf)",
           "Options": "-"
         },
         {
+          "parameter": "Tools",
+          "Standard": "Milling cum centring tool 110mm dia",
+          "Options": "90mm/125mm, boring tools and others"
+        },
+        {
           "parameter": "Controls",
-          "FCM-80-NC/CNC-500": "NC controls with custom screen programing/ touch screen",
+          "Standard": "PLC with servo motors and VFD/CNC controls",
           "Options": "Delta/Siemens/Mitsubishi/Pragati"
         },
         {
+          "parameter": "X axis stroke",
+          "Standard": "150 / 5.8\"",
+          "Options": "-"
+        },
+        {
           "parameter": "Vice Type",
-          "FCM-80-NC/CNC-500": "Self-Centring: 2 nos.",
+          "Standard": "Self-Centring: 2 nos.",
           "Options": "V and flat, special fixtures"
         },
         {
           "parameter": "Vice Actuation",
-          "FCM-80-NC/CNC-500": "Hydraulic",
+          "Standard": "Hydraulic",
           "Options": "Air/Servomotor"
         },
         {
-          "parameter": "Tools",
-          "FCM-80-NC/CNC-500": "Milling cum centring tool 110mm dia",
-          "Options": "90mm/125mm, boring tools and others"
+          "parameter": "Maximum connected load (electric)",
+          "Standard": "15 KVA",
+          "Options": "20 KVA"
         },
         {
-          "parameter": "Overall dimension (L × D × H)",
-          "FCM-80-NC/CNC-500": "2300 × 1500 × 1500 mm / (7'9\" × 5' × 5')",
-          "Options": "-"
+          "parameter": "Hydraulic power pack",
+          "Standard": "1 kW, 6 L/min",
+          "Options": "3 kW, 20 L/min (for special fixturing)"
+        },
+        {
+          "parameter": "Coolant tank and pump",
+          "Standard": "120 Ltr, 40 LPM",
+          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
+        },
+        {
+          "parameter": "Electric connection",
+          "Standard": "3 ph, 415V / 50Hz/60Hz",
+          "Options": "3ph, 200V, 50/60Hz"
         }
       ]
     },
@@ -418,7 +475,7 @@ export const products: Product[] = [
         {
           "parameter": "X1 and X2 axis stroke (milling)",
           "Standard": "200 mm / (10\")",
-          "Options": "400 mm / (16\")"
+          "Options": "425 mm / (16\")"
         },
         {
           "parameter": "Vice actuation",
@@ -438,7 +495,7 @@ export const products: Product[] = [
         {
           "parameter": "Coolant tank and pump",
           "Standard": "120 Ltr, 40 LPM",
-          "Options": "300 Ltr, 40+150 LPM (flush coolant)"
+          "Options": "450 Ltr, 40+150 LPM (flush coolant)"
         },
         {
           "parameter": "Electric connection",
@@ -627,7 +684,7 @@ export const products: Product[] = [
       { label: "Flush Optional (LPM)", value: "50" },
       { label: "Total Connected Load (kVA)", value: "10" },
       { label: "Machine Dimension L×W×H (mm) Approx.", value: "2300 × 1960 × 1780" },
-      { label: "Weight (Kgf) Approx.", value: "1500" }
+      { label: "Machine Weight Kgf (Approx)", value: "1500" }
     ],
     images: [
       {
@@ -664,7 +721,7 @@ export const products: Product[] = [
       { label: "Speed Range - Fixed (RPM)", value: "400-2500" },
       { label: "Speed Range - Inverter Drive (RPM)", value: "50-2500" },
       { label: "Drive", value: "Poly V Belt" },
-      { label: "Slide Type", value: "'Precitec' US 250" },
+      { label: "Slide Type", value: "Precitec' US 250 SP" },
       { label: "Max. Feed Stroke Std (mm)", value: "250" },
       { label: "Max. Feed Stroke Optional (mm)", value: "400, 630" },
       { label: "Slide Feed", value: "Hydraulic / AC Servo (Std/Optional)" },
@@ -676,7 +733,7 @@ export const products: Product[] = [
       { label: "Flush Optional (LPM)", value: "50" },
       { label: "Total Connected Load (kVA)", value: "15" },
       { label: "Machine Dimension L×W×H (mm) Approx.", value: "3050 × 2100 × 2100" },
-      { label: "Weight (Kgf) Approx.", value: "2200" }
+      { label: "Machine Weight Kgf (Approx)", value: "2200" }
     ],
     images: [
       {
@@ -712,14 +769,14 @@ export const products: Product[] = [
           "parameter": "Max. Dia For Facing & OD Turning (mm)",
           "500 TC-TL": "630",
           "500 TC-CT": "630",
-          "630 TC-TL": "750",
+          "630 TC-TL": "800",
           "630 TC-CT": "750"
         },
         {
           "parameter": "Max. Swing (mm)",
           "500 TC-TL": "700",
           "500 TC-CT": "700",
-          "630 TC-TL": "800",
+          "630 TC-TL": "900",
           "630 TC-CT": "800"
         },
         {
@@ -735,7 +792,7 @@ export const products: Product[] = [
           "parameter": "Table Dia (mm)",
           "500 TC-TL": "500",
           "500 TC-CT": "400",
-          "630 TC-TL": "630",
+          "630 TC-TL": "600",
           "630 TC-CT": "500"
         },
         {
@@ -765,7 +822,7 @@ export const products: Product[] = [
           "parameter": "X Axis Stroke",
           "500 TC-TL": "630",
           "500 TC-CT": "400",
-          "630 TC-TL": "700",
+          "630 TC-TL": "450",
           "630 TC-CT": "450"
         },
         {
@@ -894,6 +951,14 @@ export const products: Product[] = [
           "800 TC-TR": "Fanuc OiTF",
           "800 TC-TL": "Siemens 840DSL"
         }
+      ],
+      "Models": [
+        {
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+        },
+        {
+          "description": "TC-TR : Turning Center - Table Ram type"
+        }
       ]
     },
     images: [
@@ -927,86 +992,78 @@ export const products: Product[] = [
         {
           "parameter": "Max. Dia For Facing & OD Turning (mm)",
           "1200 TC-TR/ TC-TL": "1400",
-          "1600 TC-TR/ TC-TL": "2000",
-          "2000 TC-TR/ TC-TL": "2200"
+          "1600 TC-TR/ TC-TL": "2050"
         },
         {
           "parameter": "Max. Swing (mm)",
           "1200 TC-TR/ TC-TL": "1450",
-          "1600 TC-TR/ TC-TL": "2000",
-          "2000 TC-TR/ TC-TL": "2500"
+          "1600 TC-TR/ TC-TL": "2200"
         },
         {
           "parameter": "Day Light (mm)",
-          "1200 TC-TR/ TC-TL": "1000",
-          "1600 TC-TR/ TC-TL": "1200",
-          "2000 TC-TR/ TC-TL": "1200"
+          "1200 TC-TR/ TC-TL": "1100",
+          "1600 TC-TR/ TC-TL": "1100"
         }
       ],
       "Table Range": [
         {
           "parameter": "Table Dia (mm)",
           "1200 TC-TR/ TC-TL": "1200",
-          "1600 TC-TR/ TC-TL": "1600",
-          "2000 TC-TR/ TC-TL": "2000"
+          "1600 TC-TR/ TC-TL": "1600"
         },
         {
           "parameter": "Speed Range (RPM)",
           "1200 TC-TR/ TC-TL": "2-350",
-          "1600 TC-TR/ TC-TL": "2-280",
-          "2000 TC-TR/ TC-TL": "2-250"
+          "1600 TC-TR/ TC-TL": "2-250"
         },
         {
           "parameter": "No of speed ranges",
           "1200 TC-TR/ TC-TL": "2",
-          "1600 TC-TR/ TC-TL": "2",
-          "2000 TC-TR/ TC-TL": "2"
+          "1600 TC-TR/ TC-TL": "2"
+        },
+        {
+          "parameter": "Table Spindle Motor (kW)",
+          "1200 TC-TR/ TC-TL": "30 (37/45)",
+          "1600 TC-TR/ TC-TL": "30 (37/45)"
         }
       ],
       "Axes": [
         {
           "parameter": "X Axis Stroke",
-          "1200 TC-TR/ TC-TL": "1460",
-          "1600 TC-TR/ TC-TL": "1600",
-          "2000 TC-TR/ TC-TL": "1900"
+          "1200 TC-TR/ TC-TL": "-100, +1100",
+          "1600 TC-TR/ TC-TL": "-100, +1350"
         },
         {
           "parameter": "Z Axis Stroke",
-          "1200 TC-TR/ TC-TL": "1000 (630/800/1200)",
-          "1600 TC-TR/ TC-TL": "1000 (630/800/1200)",
-          "2000 TC-TR/ TC-TL": "1000 (630/800/1200)"
+          "1200 TC-TR/ TC-TL": "1000 (1200/1400)",
+          "1600 TC-TR/ TC-TL": "1000 (1200/1400)"
         },
         {
           "parameter": "Cutting Feed Rate (mm/min)",
-          "1200 TC-TR/ TC-TL": "0.5-2000",
-          "1600 TC-TR/ TC-TL": "0.5-2000",
-          "2000 TC-TR/ TC-TL": "0.5-2000"
+          "1200 TC-TR/ TC-TL": "0.5-5000",
+          "1600 TC-TR/ TC-TL": "0.5-5000"
         },
         {
           "parameter": "Ram Size (mm)",
-          "1200 TC-TR/ TC-TL": "220X230(230X230)(250X250)",
-          "1600 TC-TR/ TC-TL": "220X230(230X230)(250X250)",
-          "2000 TC-TR/ TC-TL": "220X230(230X230)(250X250)"
+          "1200 TC-TR/ TC-TL": "230X230 (250X250)",
+          "1600 TC-TR/ TC-TL": "230X230 (250X250)"
         }
       ],
       "C-Axis & Live Spindle": [
         {
           "parameter": "Milling Spindle Speed Range (RPM)",
-          "1200 TC-TR/ TC-TL": "10-2500",
-          "1600 TC-TR/ TC-TL": "10-2500",
-          "2000 TC-TR/ TC-TL": "10-2500"
+          "1200 TM-TR": "10-2500",
+          "1600 TM-TR": "10-2500"
         },
         {
           "parameter": "Milling Spindle Power (kW/Nm)",
-          "1200 TC-TR/ TC-TL": "11",
-          "1600 TC-TR/ TC-TL": "11",
-          "2000 TC-TR/ TC-TL": "11"
+          "1200 TM-TR": "11",
+          "1600 TM-TR": "11"
         },
         {
           "parameter": "CNC System",
-          "1200 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D",
-          "1600 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D",
-          "2000 TC-TR/ TC-TL": "Fanuc OiTF, Siemens 840DSL, 828D"
+          "1200 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D",
+          "1600 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D"
         }
       ],
       "Models": [
@@ -1014,10 +1071,10 @@ export const products: Product[] = [
           "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
         },
         {
-          "description": "TC-TR : Turning Center Table Ram type"
+          "description": "TC-TR : Turning Center - Table Ram type"
         },
         {
-          "description": "TM-TR : Turn-Mill Centers Table Ram type"
+          "description": "TM-TR : Turn-Mill Centers - Table Ram type"
         }
       ]
     },
@@ -1064,15 +1121,103 @@ export const products: Product[] = [
       "24/7 production capability",
       "Worldwide service and support",
     ],
-    specifications: [
-      { label: "Coming Soon", value: "Detailed specifications will be available soon. Please contact us for more information." },
-    ],
+    specifications: {
+      "Working Range": [
+        {
+          "parameter": "Max. Dia For Facing & OD Turning (mm)",
+          "2000 TC-TR/ TC-TL": "2300",
+          "2500 TC-TR/ TC-TL": "2800"
+        },
+        {
+          "parameter": "Max. Swing (mm)",
+          "2000 TC-TR/ TC-TL": "2500",
+          "2500 TC-TR/ TC-TL": "2900"
+        },
+        {
+          "parameter": "Day Light (mm)",
+          "2000 TC-TR/ TC-TL": "1400",
+          "2500 TC-TR/ TC-TL": "1400"
+        }
+      ],
+      "Table Range": [
+        {
+          "parameter": "Table Dia (mm)",
+          "2000 TC-TR/ TC-TL": "2000",
+          "2500 TC-TR/ TC-TL": "2500"
+        },
+        {
+          "parameter": "Speed Range (RPM)",
+          "2000 TC-TR/ TC-TL": "2-220",
+          "2500 TC-TR/ TC-TL": "2-190"
+        },
+        {
+          "parameter": "No of speed ranges",
+          "2000 TC-TR/ TC-TL": "2",
+          "2500 TC-TR/ TC-TL": "2"
+        },
+        {
+          "parameter": "Table Spindle Motor (kW)",
+          "2000 TC-TR/ TC-TL": "45 (50/60)",
+          "2500 TC-TR/ TC-TL": "45 (50/60)"
+        }
+      ],
+      "Axes": [
+        {
+          "parameter": "X Axis Stroke",
+          "2000 TC-TR/ TC-TL": "-100, +1450",
+          "2500 TC-TR/ TC-TL": "-100, +1650"
+        },
+        {
+          "parameter": "Z Axis Stroke",
+          "2000 TC-TR/ TC-TL": "1200 (1300/1400)",
+          "2500 TC-TR/ TC-TL": "1300 (1400/1500)"
+        },
+        {
+          "parameter": "Cutting Feed Rate (mm/min)",
+          "2000 TC-TR/ TC-TL": "0.5-5000",
+          "2500 TC-TR/ TC-TL": "0.5-2000"
+        },
+        {
+          "parameter": "Ram Size (mm)",
+          "2000 TC-TR/ TC-TL": "230X230 (250X250)",
+          "2500 TC-TR/ TC-TL": "250X250 (280X280)"
+        }
+      ],
+      "C-Axis & Live Spindle": [
+        {
+          "parameter": "Milling Spindle Speed Range (RPM)",
+          "2000 TM-TR": "10-2500",
+          "2500 TM-TR": "10-2500"
+        },
+        {
+          "parameter": "Milling Spindle Power (kW/Nm)",
+          "2000 TM-TR": "11",
+          "2500 TM-TR": "11"
+        },
+        {
+          "parameter": "CNC System",
+          "2000 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D",
+          "2500 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D"
+        }
+      ],
+      "Models": [
+        {
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+        },
+        {
+          "description": "TC-TR : Turning Center - Table Ram type"
+        },
+        {
+          "description": "TM-TR : Turn-Mill Centers - Table Ram type"
+        }
+      ]
+    },
     images: [
       {
         id: "sadaa-chakra-2000-4000-main",
         url: "/VTL/SC 2000 SadaaChakra 2000 VTL.jpg",
         alt: "Sadaa Chakra 2000/2500/3000/4000 Vertical Turning Lathe Series",
-        caption: "Coming Soon",
+        caption: "Sadaa Chakra 2000/2500/3000/4000",
       },
     ],
   },
@@ -1081,21 +1226,20 @@ export const products: Product[] = [
   // Flange Facers - Rotaface Series
   {
     id: "rotaface-mini-350",
-    name: "Rotaface Mini 350",
-    fullName: "Rotaface Mini 350 - Compact Flange Facer",
+    name: "RotaFace MFF-350",
+    fullName: "RotaFace MFF-350 - Portable Flange Facing Machine",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
-    description: "The Rotaface Mini 350 is a compact, portable flange facing machine designed for on-site machining operations. Perfect for tight spaces and smaller flanges, it delivers precision machining with minimal setup time. Ideal for maintenance teams and field service operations requiring reliable, accurate flange preparation.",
+    description: "The Precitec RotaFace MFF-350 is a compact and portable flange facing machine designed for on-site machining, maintenance, and repair applications. Fully hand-operated and independent of any external power source, the machine is ideal for field conditions, shutdown maintenance, and confined working spaces. Despite its lightweight and portable construction, the MFF-350 is capable of accurately machining flange faces up to 360 mm diameter on materials such as cast iron, steel, and stainless steel, delivering consistent and reliable surface finishes with minimal setup time.",
     features: [
-      "Compact and lightweight design for easy transportation",
-      "Quick setup and alignment system",
-      "Precise flange facing up to 350mm diameter",
-      "Hydraulic feed system for smooth cutting",
-      "Self-centering mechanism for accurate alignment",
-      "Built-in coolant delivery system",
-      "Low vibration operation",
-      "Suitable for various flange standards including ANSI, DIN, and JIS",
+      "Fully hand-operated machine requiring no external power",
+      "Lightweight and portable design for easy on-site use",
+      "Machines flange diameters up to 360 mm on multiple materials",
+      "Precision mechanical feed for smooth and controlled cutting",
+      "Interchangeable feed system for different surface finishes",
+      "Wide clamping range with self-centering mechanism",
+      "Quick setup and easy alignment for field applications",
     ],
     specifications: commonSpecs,
     images: [
@@ -1256,32 +1400,40 @@ export const products: Product[] = [
     specifications: {
       "Machine Specifications": [
         {
-          "parameter": "X Axis",
-          "Specs": "800 mm"
+          "parameter": "Machining Range Standard (Diameter)",
+          "Rotamill 5000": "2000 – 5000 mm",
+          "Rotamill 10000": "4800 – 10000 mm",
+          "Rotamill 16 M": "6300 – 16000 mm"
         },
         {
-          "parameter": "Z Axis",
-          "Specs": "800 mm"
+          "parameter": "ID Clamping Range",
+          "Rotamill 5000": "2000 – 4800 mm",
+          "Rotamill 10000": "4600 – 9500 mm",
+          "Rotamill 16 M": "Modular customised clamping systems provided for ID and OD"
+        },
+        {
+          "parameter": "Optional: OD Clamping Range",
+          "Rotamill 5000": "2400 – 5200 mm",
+          "Rotamill 10000": "5200 – 10000 mm",
+          "Rotamill 16 M": "-"
+        },
+        {
+          "parameter": "Main Table Rotation Speed (Standard / Optional)",
+          "Rotamill 5000": "0.016 – 0.05 rpm (for single point grinding; additional drive & motor provided)",
+          "Rotamill 10000": "0.1 – 0.25 rpm (for milling) / < 2 to 6 rpm (single point tool operation)",
+          "Rotamill 16 M": "0.008 – 2 rpm (for milling) / < 0.8 rpm"
         },
         {
           "parameter": "Milling Head",
-          "Specs": "PRECITEC UMP-I-7.5HP"
+          "Rotamill 5000": "ISO 40/ISO 50 - 2.2 to 5.6 kW electric or hydromotor drive (optional tilting arrangement)",
+          "Rotamill 10000": "ISO 40/ISO 50 - 2.2 to 5.6 kW electric or hydromotor drive (optional tilting arrangement)",
+          "Rotamill 16 M": "ISO 40/ISO 50 - 2.2 to 5.6 kW electric or hydromotor drive (optional tilting arrangement)"
         },
         {
-          "parameter": "Spindle Nose",
-          "Specs": "ISO 40"
-        },
-        {
-          "parameter": "Spindle Speed",
-          "Specs": "MIN 63rpm, MAX 600rpm"
-        },
-        {
-          "parameter": "Max Cutter Dia",
-          "Specs": "300 mm"
-        },
-        {
-          "parameter": "Working Area",
-          "Specs": "MIN DIA 5000mm, MAX DIA 10000 mm"
+          "parameter": "Cross Feed Slide Stroke (for radius adjustment)",
+          "Rotamill 5000": "400 mm",
+          "Rotamill 10000": "400 / 630 mm",
+          "Rotamill 16 M": "400 / 630 mm"
         }
       ]
     },

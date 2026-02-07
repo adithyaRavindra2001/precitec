@@ -48,9 +48,7 @@ export function SiteFooter() {
               <p className="mt-2">
                 <strong>Phone:</strong>
               </p>
-              <p className="pl-2">+91 94482 78217</p>
-              <p className="pl-2">+91 80283 68067 / 68 / 69</p>
-              <p className="pl-2">+91 94481 18753</p>
+              <p className="pl-2">+91 70220 24562</p>
             </address>
           </div>
 

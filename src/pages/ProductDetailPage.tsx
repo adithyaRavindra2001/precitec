@@ -2,13 +2,15 @@ import { motion } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { getProductById } from "@/data/products"
+import { getProductById, getCategoryById, getSubcategoryById } from "@/data/products"
 import { HeroImageCarousel } from "@/components/product/HeroImageCarousel"
 import { ArrowLeft, CheckCircle2, Mail, Phone } from "lucide-react"
 
 export function ProductDetailPage() {
   const { productId } = useParams<{ productId: string }>()
   const product = productId ? getProductById(productId) : undefined
+  const category = product ? getCategoryById(product.category) : undefined
+  const subcategory = product?.subcategory ? getSubcategoryById(product.category, product.subcategory) : undefined
 
   if (!product) {
     return (
@@ -33,15 +35,31 @@ export function ProductDetailPage() {
       <div className="border-b bg-white">
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground overflow-x-auto">
-            <Link to="/" className="hover:text-primary transition-colors">
+            <Link to="/" className="hover:text-primary transition-colors whitespace-nowrap">
               Home
             </Link>
             <span>/</span>
-            <Link to="/products" className="hover:text-primary transition-colors">
+            <Link to="/products" className="hover:text-primary transition-colors whitespace-nowrap">
               Products
             </Link>
+            {category && (
+              <>
+                <span>/</span>
+                <Link to={`/products?category=${category.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
+                  {category.name}
+                </Link>
+              </>
+            )}
+            {subcategory && (
+              <>
+                <span>/</span>
+                <Link to={`/products?category=${product.category}&subcategory=${subcategory.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
+                  {subcategory.name}
+                </Link>
+              </>
+            )}
             <span>/</span>
-            <span className="text-foreground">{product.name}</span>
+            <span className="text-foreground whitespace-nowrap">{product.name}</span>
           </div>
         </div>
       </div>
@@ -89,17 +107,14 @@ export function ProductDetailPage() {
               </Link>
             </div>
 
-            <div className="mt-8 flex items-center gap-6 border-t pt-8">
-              <div>
-                <p className="text-sm text-muted-foreground">Need Help?</p>
-                <a
-                  href="tel:+919448278217"
-                  className="mt-1 flex items-center gap-2 text-primary hover:underline"
-                >
+            <div className="mt-8 border-t pt-8">
+              <p className="mb-3 text-sm text-muted-foreground">Need Help?</p>
+              <Link to="/contact">
+                <Button variant="outline" className="gap-2">
                   <Phone className="h-4 w-4" />
-                  +91 94482 78217
-                </a>
-              </div>
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -173,14 +188,14 @@ export function ProductDetailPage() {
             <div className="space-y-8">
               {Array.isArray(product.specifications) ? (
                 // Old format: simple array of label/value pairs
-                <div className="overflow-x-auto">
-                  <table className="w-full">
+                <div className="overflow-x-auto rounded-lg border">
+                  <table className="w-full table-fixed border-collapse">
                     <thead>
-                      <tr className="border-b">
-                        <th className="px-4 py-3 text-left font-semibold text-foreground">
+                      <tr className="bg-slate-50 border-b">
+                        <th className="w-[35%] px-4 py-3 text-left font-semibold text-foreground">
                           Specification
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-foreground">
+                        <th className="w-[65%] px-4 py-3 text-left font-semibold text-foreground">
                           Value
                         </th>
                       </tr>
@@ -195,10 +210,10 @@ export function ProductDetailPage() {
                           transition={{ duration: 0.2, delay: index * 0.03 }}
                           className="border-b last:border-0 hover:bg-slate-50 transition-colors"
                         >
-                          <td className="px-4 py-3 font-medium text-muted-foreground">
+                          <td className="px-4 py-3 font-medium text-muted-foreground break-words">
                             {spec.label}
                           </td>
-                          <td className="px-4 py-3 text-foreground">{spec.value}</td>
+                          <td className="px-4 py-3 text-foreground break-words">{spec.value}</td>
                         </motion.tr>
                       ))}
                     </tbody>
@@ -236,16 +251,17 @@ export function ProductDetailPage() {
                         <>
                           {/* Desktop Table View */}
                           <div className="hidden md:block overflow-x-auto rounded-lg border">
-                            <table className="w-full">
+                            <table className="w-full table-fixed border-collapse">
                               <thead>
                                 <tr className="bg-slate-50 border-b">
-                                  <th className="px-4 py-3 text-left font-semibold text-foreground min-w-[200px]">
+                                  <th className="w-[35%] px-4 py-3 text-left font-semibold text-foreground">
                                     Parameter
                                   </th>
                                   {columnHeaders.map((header) => (
                                     <th
                                       key={header}
-                                      className="px-4 py-3 text-left font-semibold text-foreground min-w-[120px]"
+                                      className="px-4 py-3 text-left font-semibold text-foreground"
+                                      style={{ width: `${65 / columnHeaders.length}%` }}
                                     >
                                       {header}
                                     </th>
@@ -266,11 +282,11 @@ export function ProductDetailPage() {
                                       }}
                                       className="border-b last:border-0 hover:bg-slate-50 transition-colors"
                                     >
-                                      <td className="px-4 py-3 font-medium text-muted-foreground">
+                                      <td className="px-4 py-3 font-medium text-muted-foreground break-words">
                                         {spec.parameter}
                                       </td>
                                       {columnHeaders.map((header) => (
-                                        <td key={header} className="px-4 py-3 text-foreground">
+                                        <td key={header} className="px-4 py-3 text-foreground break-words">
                                           {spec[header]}
                                         </td>
                                       ))}

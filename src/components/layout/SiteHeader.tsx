@@ -4,25 +4,7 @@ import { ChevronDown, Wrench, Cog, Zap, Menu, X } from "lucide-react"
 import { categories, getProductsByCategory } from "@/data/products"
 import { motion, AnimatePresence } from "framer-motion"
 import { Logo } from "@/components/ui/Logo"
-
-// SPMs and Other Products list
-const moreProducts = [
-  { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines" },
-  { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines" },
-  { name: "Edge Master", category: "Milling Machines" },
-  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions" },
-  { name: "Finning Machines", category: "Special Machines" },
-  { name: "Riser Cutting Machines", category: "Special Machines" },
-  { name: "Tube Coiling Machines", category: "Special Machines" },
-  { name: "SPM's", category: "Special Machines" },
-  { name: "Machining Composites", category: "Special Machines" },
-  { name: "Automobile Assembly Machines", category: "Special Machines" },
-  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories" },
-  { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories" },
-  { name: "B250 Facing Attachment", category: "Attachments and Accessories" },
-  { name: "UMS Series Spindle Units", category: "Attachments and Accessories" },
-  { name: "US Series Slides", category: "Attachments and Accessories" },
-]
+import { moreProducts } from "@/pages/MoreProductsPage"
 
 const navItems = [
   { label: "Home", href: "/" },

@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 
-const moreProducts = [
+export const moreProducts = [
   // Milling and Boring Machines Solutions
   { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI-FHMB-MH-SERIES.png" },
   { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png" },
@@ -26,7 +26,6 @@ const moreProducts = [
   { name: "Finning Machines", category: "Special Machines", image: "/others/finning-machine.png" },
   { name: "Riser Cutting Machines", category: "Special Machines", image: "/others/riser-cutting.jpg" },
   { name: "Tube Coiling Machines", category: "Special Machines", image: "/others/Tube-Coiling-Machine.jpg" },
-  { name: "SPM's", category: "Special Machines" },
   { name: "Machining Composites", category: "Special Machines", image: "/others/Composite-Machine.png" },
   { name: "Automobile Assembly Machines", category: "Special Machines" },
 
@@ -35,10 +34,10 @@ const moreProducts = [
   { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories", image: "/others/PUMH-A-NC-CNC-Milling-Attachment.jpg" },
   { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories", image: "/others/PUMH_U45.png" },
   { name: "PUAMBH: Universal Milling and Boring Head", category: "Attachments and Accessories", image: "/others/PUAMBH.png" },
-  { name: "B250 Facing Attachment", category: "Attachments and Accessories" },
-  { name: "B1500 Facing Attachment", category: "Attachments and Accessories", image: "/others/B1500-Facing-Attachment.jpg" },
-  { name: "RAMH 50 Ram Head", category: "Attachments and Accessories", image: "/others/RAMH-50-Ram-Head.jpg" },
-  { name: "RUMH 50 Plano Milling Head", category: "Attachments and Accessories", image: "/others/RUMH-50-Plano-Milling-Head.png" },
+  { name: "B25: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/B25-Facing-Attachment.jpg" },
+  { name: "B1400: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/B1500-Facing-Attachment.jpg" },
+  { name: "RMH 50: Ram Type Milling Head", category: "Attachments and Accessories", image: "/others/RAMH-50-Ram-Head.jpg" },
+  { name: "Plano Milling Head", category: "Attachments and Accessories", image: "/others/RUMH-50-Plano-Milling-Head.png" },
   { name: "UMS Series Spindle Units", category: "Attachments and Accessories", image: "/others/UMS 250.png" },
   { name: "Cartridge Type Spindle Units", category: "Attachments and Accessories", image: "/others/Cartridge-Type-Spindle-Units.png" },
   { name: "US Series Slides", category: "Attachments and Accessories", image: "/others/US-Series-Slides.png" },

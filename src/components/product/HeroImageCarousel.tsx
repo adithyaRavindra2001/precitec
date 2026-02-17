@@ -51,13 +51,17 @@ export function HeroImageCarousel({
     );
   };
 
+  // Use object-contain for PortaMill 2500 to show full image
+  const isPortaMill2500 = productName.includes("PortaMill 2500");
+  const objectFitClass = isPortaMill2500 ? "object-contain" : "object-cover";
+
   return (
     <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted shadow-xl group">
       {/* Main Image */}
       <img
         src={getImageUrl(currentImage)}
         alt={currentImage.alt || productName}
-        className="h-full w-full object-cover"
+        className={`h-full w-full ${objectFitClass}`}
         onError={() => handleImageError(currentImage.id)}
       />
 

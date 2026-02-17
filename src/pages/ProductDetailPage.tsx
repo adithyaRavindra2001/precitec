@@ -45,7 +45,7 @@ export function ProductDetailPage() {
             {category && (
               <>
                 <span>/</span>
-                <Link to={`/products?category=${category.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
+                <Link to={`/products/category/${category.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
                   {category.name}
                 </Link>
               </>
@@ -53,7 +53,7 @@ export function ProductDetailPage() {
             {subcategory && (
               <>
                 <span>/</span>
-                <Link to={`/products?category=${product.category}&subcategory=${subcategory.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
+                <Link to={`/products/category/${product.category}/${subcategory.id}`} className="hover:text-primary transition-colors whitespace-nowrap">
                   {subcategory.name}
                 </Link>
               </>

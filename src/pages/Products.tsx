@@ -1,7 +1,10 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 import { categories, getProductsBySubcategory, getProductsByCategory } from "@/data/products"
+import { moreProducts } from "./MoreProductsPage"
 import { ChevronRight } from "lucide-react"
 
 export function Products() {
@@ -36,6 +39,9 @@ export function Products() {
         <div className="space-y-16">
           {categories.map((category, categoryIndex) => {
             const categoryProducts = getProductsByCategory(category.id)
+            const isOtherProducts = category.id === "spms-other"
+            const displayProducts = isOtherProducts ? moreProducts : categoryProducts
+            const productCount = displayProducts.length
 
             return (
               <motion.div
@@ -47,7 +53,7 @@ export function Products() {
               >
                 <div className="mb-8">
                   <Link
-                    to={`/products/category/${category.id}`}
+                    to={isOtherProducts ? `/products/more` : `/products/category/${category.id}`}
                     className="group inline-flex items-center gap-2 transition-all"
                   >
                     <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
@@ -56,7 +62,7 @@ export function Products() {
                     <ChevronRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </Link>
                   <p className="mt-2 text-muted-foreground">
-                    {categoryProducts.length} product{categoryProducts.length !== 1 ? 's' : ''} available
+                    {productCount} product{productCount !== 1 ? 's' : ''} available
                   </p>
                 </div>
 
@@ -98,6 +104,75 @@ export function Products() {
                       )
                     })}
                   </div>
+                ) : isOtherProducts ? (
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    {moreProducts.slice(0, 4).map((product, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ y: -4 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Card className="h-full transition-all hover:shadow-lg cursor-pointer">
+                              <div className="aspect-video overflow-hidden rounded-t-lg bg-muted flex items-center justify-center">
+                                {product.image ? (
+                                  <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="h-full w-full object-contain"
+                                  />
+                                ) : (
+                                  <div className="text-4xl">🏭</div>
+                                )}
+                              </div>
+                              <CardHeader>
+                                <CardTitle className="text-lg">{product.name}</CardTitle>
+                                <CardDescription className="line-clamp-2 text-xs">
+                                  {product.category}
+                                </CardDescription>
+                              </CardHeader>
+                            </Card>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+                            <DialogHeader>
+                              <DialogTitle className="text-2xl">{product.name}</DialogTitle>
+                              <DialogDescription className="text-base">
+                                {product.category}
+                              </DialogDescription>
+                            </DialogHeader>
+                            <div className="mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[300px]">
+                              {product.image ? (
+                                <img
+                                  src={product.image}
+                                  alt={product.name}
+                                  className="w-full h-full object-contain"
+                                />
+                              ) : (
+                                <div className="text-center p-8">
+                                  <div className="text-8xl mb-4">🏭</div>
+                                  <p className="text-lg text-muted-foreground font-medium">Product Image</p>
+                                </div>
+                              )}
+                            </div>
+                            <div className="mt-6 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg text-center">
+                              <h3 className="text-xl font-semibold text-yellow-900 mb-2">
+                                Web page coming soon
+                              </h3>
+                              <p className="text-yellow-800 mb-4">
+                                For more details contact us
+                              </p>
+                              <Link to="/contact">
+                                <Button className="bg-primary hover:bg-primary/90">
+                                  Contact Us
+                                </Button>
+                              </Link>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
+                      </motion.div>
+                    ))}
+                  </div>
                 ) : (
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {categoryProducts.slice(0, 4).map((product) => (
@@ -112,7 +187,7 @@ export function Products() {
                               <img
                                 src={product.images?.[0]?.url || "/images/placeholder.jpg"}
                                 alt={product.images?.[0]?.alt || product.name}
-                                className="h-full w-full object-cover transition-transform hover:scale-105"
+                                className="h-full w-full object-contain transition-transform hover:scale-105"
                               />
                             </div>
                             <CardHeader>
@@ -128,7 +203,19 @@ export function Products() {
                   </div>
                 )}
 
-                {!category.subcategories && categoryProducts.length > 4 && (
+                {isOtherProducts && moreProducts.length > 4 && (
+                  <div className="mt-6 text-center">
+                    <Link
+                      to="/products/more"
+                      className="inline-flex items-center gap-2 text-primary hover:underline"
+                    >
+                      View all {moreProducts.length} products
+                      <ChevronRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                )}
+
+                {!category.subcategories && !isOtherProducts && categoryProducts.length > 4 && (
                   <div className="mt-6 text-center">
                     <Link
                       to={`/products/category/${category.id}`}

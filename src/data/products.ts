@@ -112,14 +112,14 @@ const commonSpecs = [
 
 // Products data
 export const products: Product[] = [
-  // Category 1: Facing and Centering Machines - MacInnes Series
+  // Category 1: Facing and Centering Machines - FCM products
   {
     id: "fc-40",
     name: "FC 40",
     fullName: "FC 40 - Facing and Centering Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
-    description: "Precitec FC 40 NC machines are versatile, fully programmable facing and centring machines with servo-controlled spindle movement and user-friendly programmable machining cycles. These machines possess exceptional precision in controlling both the length and centre depth, enabling the consistent achievement of high-quality surface finishes. Equipped as standard with plunge facing and centring tools. Wide range of custom and special tools for boring, drilling, end facing, chamfering and more. FC 40 spindles are well-established Precitec PUSF S 40 quill-type spindle units that are powered by servo motors, precisely manufactured, and undergo hard case hardening and grinding, supported by preloaded precision angular contact bearings. Hardened and well lubricated quill guide bores for very low wear and long life. PLC with HMI touch screen for menu-based on-screen cycle programming, providing users with the ability to set the cycle with ease and precision, and the option to adopt different feed rates in the machining cycle to achieve a superior surface finish.",
+    series: "FCM products",
+    description: "Precitec FC-40-NC machines are versatile, fully programmable facing and centring machines with servo-controlled spindle movement and user-friendly programmable machining cycles. These machines possess exceptional precision in controlling both the length and centre depth, enabling the consistent achievement of high-quality surface finishes. Equipped as standard with plunge facing and centring tools. Wide range of custom and special tools for boring, drilling, end facing, chamfering and more. FC 40 spindles are well-established Precitec PUSF S 40 quill-type spindle units that are powered by servo motors, precisely manufactured, and undergo hard case hardening and grinding, supported by preloaded precision angular contact bearings. Hardened and well lubricated quill guide bores for very low wear and long life. PLC with HMI touch screen for menu-based on-screen cycle programming, providing users with the ability to set the cycle with ease and precision, and the option to adopt different feed rates in the machining cycle to achieve a superior surface finish.",
     features: [
       "Standard Guard: with a sliding door near the cutting zone",
       "Facing and centring tools 1 LH + 1 RH",
@@ -245,7 +245,7 @@ export const products: Product[] = [
     name: "FCM 80",
     fullName: "FCM 80 - Facing and Centering Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
+    series: "FCM products",
     description: "Precitec FCM 80 NC machines are versatile facing and centring machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and centre depth are controlled very accurately. High-quality surface finish and centre depth controls are easily and consistently achieved on even tough materials. Compact design with Across movement for the job and independent forward and reverse movements for each of the spindles. All axes are controlled through servo motors and drives. High-quality spindles Case hardened and ground with preloaded Precision bearings, Poly V belt drive to the spindle. Programmable speeds for different operations. Spindles are precisely guided in hardened ground bores for movement and for Cross axis LM rails are provided. Well-designed bed and axes for easy flow of coolant and chip disposal towards rear side. Compact guarding with fully covered cutting zone with sliding doors. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's. Automation for Loading and unloading can be provided, In addition to special fixturing, tooling options for OD, turning, double ended boring, conveyor roller manufacturing. Etc.",
     features: [
       "Shaft-end machining",
@@ -385,7 +385,7 @@ export const products: Product[] = [
     name: "FCM 100",
     fullName: "FCM 100 - Facing and Centering Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
+    series: "FCM products",
     description: "Precitec FCM 100 NC machines are versatile face milling and centering machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and center depth are controlled very accurately. High-quality surface finish and center depth controls are easily and consistently achieved on even tough materials. Two-axis movements to spindle on either side facilitate length machining in either one step or multistep process to remove larger stock in forgings and castings. High-quality spindles, Case hardened and ground with preloaded Precision bearings. Spindle is driven through Poly V Belt. LM rails for all the axes movements with Ball screws ensure high accuracies and long life, and metallic telescopic covers prevent chip entry. Well-designed guides with easy movement and locking for setting the vice or fixturing position for different lengths of job on the base. Rigid base structures with inbuilt slopes for easy coolant and swarf removal Easy changeover of job setup by simple program recall or by drawing dimension and parameters-based programming for new jobs. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's.",
     features: [
       "Shaft-end machining",
@@ -518,7 +518,7 @@ export const products: Product[] = [
     name: "FCM 150",
     fullName: "FCM 150 - Facing and Centering Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
+    series: "FCM products",
     description: "Precitec FCM 150 NC machines are versatile face milling and centring machines with servo-controlled slides and easily menu-driven programmable machining cycles. Length and centre depth are controlled very accurately. High-quality surface finish and centre depth controls are easily and consistently achieved on even tough materials. Two-axis movements to spindle on either side facilitate length machining in either one step or multistep process to remove larger stock in forgings and castings. High-quality and heavy duty ISO-50 spindles, Case hardened and ground with preloaded Precision bearings. Spindle is driven through Poly V Belt and gear drive is optional. LM rails for all the axes movements with Ball screws ensure high accuracies and long life, and metallic telescopic covers prevent chip entry. Well-designed guides with easy movement and locking for setting the vice or fixturing position for different lengths of job on the base. Rigid base structures with inbuilt slopes for easy coolant and swarf removal. Easy changeover of job setup by simple program recall or by drawing dimension and parameters-based programming for new jobs. And automation for Loading and unloading can also be provided. Simultaneous RH and LH side functioning with different programming cycles as standard. PLC-based controls with Touch Screen HMI with simple easy to understand Menus and programming screens. 100 Job program storage. Optional CNC based controls with Pragati or Fanuc CNC's.",
     features: [
       "Shaft-end machining",
@@ -649,19 +649,16 @@ export const products: Product[] = [
   {
     id: "db-40",
     name: "DB 40",
-    fullName: "DB 40 - Drilling and Boring Machine",
+    fullName: "DB 40 - Double Ended Boring Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
-    description: "The DB 40 is a precision drilling and boring machine optimized for creating accurate center holes in round bars. Its compact design and easy operation make it ideal for job shops and small production facilities. Delivers consistent bore quality with minimal operator intervention.",
+    series: "FCM products",
+    description: "Precitec DB-40 machines are double ended boring machines designed with modular construction using proven Precitec slide and spindle units and equipped with two ISO-40 Precitec UMS high-precision boring spindles with angular contact bearings. The machine enables simultaneous machining from both ends with accurately controlled boring depths and feeds, ensuring consistent dimensional results and good surface finish. The rigid bed structure is well designed for smooth flow of coolant and efficient chip disposal towards the rear of the machine, supported by compact guarding to avoid coolant splash. Standard equipment includes dual spindles, hydraulic job clamping with self-centering fixtures, hydraulic feed with rapid forward, cutting feed and rapid return auto cycles, PLC-based electrical controls, centralized lubrication system, external coolant tank with pump, and machine lamp. Automatic machining cycles are controlled through PLC with optional CNC-based controls, programmable spindle speeds through AC drive arrangement, and provisions for special fixturing, extended machining lengths, automation, and advanced coolant and tool handling systems.",
     features: [
-      "Precision drilling and boring operations",
-      "Capacity up to 40mm diameter bars",
-      "Variable speed spindle control",
-      "Quick-change drill chuck system",
-      "Digital depth measurement",
-      "Automatic feed control",
-      "Compact and portable design",
-      "Low maintenance requirements",
+      "Modular construction with proven Precitec slide and spindle units",
+      "Dual ISO-40 high-precision UMS spindles for simultaneous double-end boring",
+      "Rigid bed design for machining stability and efficient chip evacuation",
+      "Hydraulic clamping, feed system, and centralized lubrication as standard",
+      "PLC-based controls with CNC, automation, and advanced coolant options available",
     ],
     specifications: [
       { label: "Spindle Type", value: "'Precitec' UMS 200" },
@@ -690,7 +687,7 @@ export const products: Product[] = [
       {
         id: "db-40-main",
         url: "/FCM/DBM40-Arudra.png",
-        alt: "DB 40 Drilling and Boring Machine",
+        alt: "DB 40 Double Ended Boring Machine",
         caption: "DB 40 - Compact Drilling Solution",
       },
     ],
@@ -698,19 +695,16 @@ export const products: Product[] = [
   {
     id: "db-50",
     name: "DB 50",
-    fullName: "DB 50 - Drilling and Boring Machine",
+    fullName: "DB 50 - Double Ended Boring Machine",
     category: "facing-centering",
-    series: "MacInnes Series",
-    description: "The DB 50 offers enhanced drilling and boring capabilities for medium to large production volumes. With its robust construction and advanced features, it handles tough materials and continuous operation with ease. Features automation-ready design for integration into production lines.",
+    series: "FCM products",
+    description: "Precitec DB-50 machines are heavy-duty double ended boring machines designed with modular construction using proven Precitec slide and spindle units and fitted with two ISO-50 Precitec UMS high-precision boring spindles with angular contact bearings for machining larger and heavier components. The machine allows simultaneous end machining with stable cutting performance and accurate control of boring depths and feeds. The robust bed and slide design ensures high rigidity and provides smooth coolant flow and chip evacuation towards the rear side, supported by well-planned guarding for safe operation. Standard equipment includes dual spindles, hydraulic job clamping with self-centering fixtures, hydraulic feed with rapid forward, cutting feed and rapid return auto cycles, PLC-based electrical controls, centralized lubrication system, external coolant tank with pump, and machine lamp. Automatic machining cycles are managed through PLC with optional CNC-based controls, programmable spindle speeds with AC drive arrangement, and flexibility for special fixturing, extended machining lengths, automation, and enhanced coolant and tool handling options.",
     features: [
-      "Enhanced capacity up to 50mm diameter",
-      "High-torque drilling spindle",
-      "Programmable drilling cycles",
-      "Automatic tool change system",
-      "Precision boring head",
-      "Integrated cooling system",
-      "Production monitoring interface",
-      "Automation-ready design",
+      "Modular construction with proven Precitec slide and spindle units",
+      "Dual ISO-50 high-precision UMS spindles for simultaneous double-end boring",
+      "Rigid bed design for machining stability and efficient chip evacuation",
+      "Hydraulic clamping, feed system, and centralized lubrication as standard",
+      "PLC-based controls with CNC, automation, and advanced coolant options available",
     ],
     specifications: [
       { label: "Spindle Type", value: "'Precitec' UMS 250" },
@@ -739,7 +733,7 @@ export const products: Product[] = [
       {
         id: "db-50-main",
         url: "/FCM/DB50.png",
-        alt: "DB 50 Drilling and Boring Machine",
+        alt: "DB 50 Double Ended Boring Machine",
         caption: "DB 50 - Enhanced Capacity Model",
       },
     ],
@@ -856,7 +850,7 @@ export const products: Product[] = [
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
         },
         {
           "description": "TC-CT : Turning Center - Chuck-Turret"
@@ -884,14 +878,14 @@ export const products: Product[] = [
     fullName: "Sadaa Chakra 800 - Vertical Turning Lathe",
     category: "vertical-turning",
     series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 800 is engineered for demanding vertical turning applications on larger workpieces. With its massive structural rigidity and powerful cutting capabilities, it maintains precision even under heavy cutting loads. Perfect for mold & die, aerospace, and power generation industries.",
+    description: "Precitec SC-800 series machines are uniquely designed with a construction and feature set suited for both heavy-duty components weighing up to 1000 kgf and high-productivity applications with cycle times as low as 30 seconds, with a proven performance record in demanding environments. The machines are provided as standard with a complete gear-driven spindle system, incorporating a spindle housing with an integral gearbox and heavy-duty precision-ground gears to ensure smooth and reliable performance. The spindle and gearbox are supported by a continuous lubrication system, while rigid taper roller bearings with large bore sizes are used to support high loads during machining. The gearbox delivers torque up to 2500 Nm, enabling stable heavy-duty cutting operations and reliable handling of large and heavy work pieces.",
     features: [
       "Chuck diameter 800mm",
       "Heavy-duty casting for maximum rigidity",
       "High-torque spindle with multiple speed ranges",
       "Large tool turret capacity (20 positions)",
       "Advanced CNC with conversational programming",
-      "Automatic workpiece measurement",
+      "Automatic work piece measurement",
       "Chip conveyor and coolant management",
       "Remote monitoring and diagnostics",
     ],
@@ -954,7 +948,7 @@ export const products: Product[] = [
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
         },
         {
           "description": "TC-TR : Turning Center - Table Ram type"
@@ -976,7 +970,7 @@ export const products: Product[] = [
     fullName: "Sadaa Chakra 1200 & 1600 & 1800 - Vertical Turning Lathe",
     category: "vertical-turning",
     series: "Sadaa Chakra Series",
-    description: "The Sadaa Chakra 1200, 1600 & 1800 series deliver exceptional capacity and performance for large-diameter workpieces. With advanced vertical spindle design and comprehensive turn-mill capabilities, they are versatile machining centers. Ideal for complex parts requiring multiple operations in one setup.",
+    description: "Sadaa Chakra SC-1200, SC-1600 and SC-2000 machines are contemporary design, fully featured vertical turning centers and turn-mill machines developed for medium and heavy machining applications. These machines are designed with high table load carrying capacity and are supported by accurately pre-loaded cross taper roller bearings to ensure stable and precise machining performance. The machines are well suited for machining a wide range of components used in railways, earthmoving and construction machinery, pumps and valves, industrial machinery and machine tools, process equipment, power plants and energy sectors, turbine casings and rings, and aerospace components, offering versatility across multiple heavy engineering industries.",
     features: [
       "Large chuck diameter 1200mm",
       "Turn-mill capability with powered tools",
@@ -1068,7 +1062,7 @@ export const products: Product[] = [
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
         },
         {
           "description": "TC-TR : Turning Center - Table Ram type"
@@ -1083,7 +1077,13 @@ export const products: Product[] = [
         id: "sadaa-chakra-1200-main",
         url: "/images/VTL/SADAA CHAKRA VTL 1200.jpg",
         alt: "Sadaa Chakra 1200 Vertical Turning Lathe",
-        caption: "Sadaa Chakra 1200 - Extra Large Capacity",
+        caption: "Sadaa Chakra 1200",
+      },
+      {
+        id: "sadaa-chakra-1600",
+        url: "/images/VTL/VTL-1600.JPG",
+        alt: "Sadaa Chakra 1600 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 1600",
       },
     ],
   },
@@ -1202,7 +1202,7 @@ export const products: Product[] = [
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
         },
         {
           "description": "TC-TR : Turning Center - Table Ram type"
@@ -1216,8 +1216,14 @@ export const products: Product[] = [
       {
         id: "sadaa-chakra-2000-4000-main",
         url: "/VTL/SC 2000 SadaaChakra 2000 VTL.jpg",
-        alt: "Sadaa Chakra 2000/2500/3000/4000 Vertical Turning Lathe Series",
-        caption: "Sadaa Chakra 2000/2500/3000/4000",
+        alt: "Sadaa Chakra 2000 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 2000",
+      },
+      {
+        id: "sadaa-chakra-2500",
+        url: "/VTL/Sadaa-Chakra-2500.jpg",
+        alt: "Sadaa Chakra 2500 Vertical Turning Lathe",
+        caption: "Sadaa Chakra 2500",
       },
     ],
   },
@@ -1241,7 +1247,16 @@ export const products: Product[] = [
       "Wide clamping range with self-centering mechanism",
       "Quick setup and easy alignment for field applications",
     ],
-    specifications: commonSpecs,
+    specifications: [
+      { label: "Stroke", value: "48 mm" },
+      { label: "Operating", value: "Manual" },
+      { label: "Facing Range", value: "25 to 355 mm" },
+      { label: "Clamping Range", value: "24 to 252 mm" },
+      { label: "Type of clamping", value: "Self centering easy clamping arrangement" },
+      { label: "Weight of Machine", value: "Approx 7 Kgf" },
+      { label: "Purpose", value: "Plain/smooth finish, Stock finish, Gramophone, serrated finish" },
+      { label: "Method of change of feed rate", value: "Interchanging feed screw rods" },
+    ],
     images: [
       {
         id: "rotaface-mini-350-main",
@@ -1253,88 +1268,118 @@ export const products: Product[] = [
   },
   {
     id: "rotaface-550-1000-1500",
-    name: "Rotaface 550/800/1000/1500",
-    fullName: "Rotaface 550/800/1000/1500 - Flange Facer Series",
+    name: "Rotaface 500/850/1000/1250/1550",
+    fullName: "Rotaface 500/850/1000/1250/1550 - Flange Facer Series",
     category: "in-situ",
     subcategory: "flange-facers",
     series: "Rotaface Series",
-    description: "The Precitec Rotaface series offers versatile in-situ flange facing capabilities for medium to large-sized applications. Engineered for durability and precision, these portable, lightweight machines handle demanding on-site machining tasks with ease including flange facing, RTJ groove machining, serrated gasket seat machining, and boring. Features advanced control systems and robust construction for reliable performance in industrial environments.",
+    description: "The Precitec RotaFace series (500, 850, 1000, 1250, and 1550) is a range of portable in-situ flange facing machines designed for on-site machining where dismantling or moving large components is impractical. These machines are suitable for flange facing, RTJ groove machining, serrated gasket seat machining, and boring operations. The compact and lightweight construction allows easy transportation and quick setup at site, while the rotary milling arrangement delivers consistent machining performance across a wide range of flange sizes. The RotaFace series supports multiple drive options, making it adaptable for different site conditions and application requirements.",
     features: [
-      "Portable, lightweight, easy to operate",
-      "In-situ flange facing capabilities",
-      "RTJ groove machining",
-      "Serrated gasket seat machining",
-      "Boring operations",
-      "Variable speed control for different materials",
-      "Digital position indicators for precise depth control",
-      "Quick-change tooling system",
-      "Integrated safety features and emergency stop",
-      "Compact footprint for confined spaces",
+      "Portable and lightweight in-situ flange facing solution",
+      "Covers a wide range of flange diameters across multiple models",
+      "Suitable for flange facing, RTJ groove machining, serrated gasket seats, and boring",
+      "Rotary milling drive with AC motor as standard",
+      "Optional pneumatic or hydraulic drive configurations",
+      "Depth of cut up to 1.5 mm with serrated finish capability",
+      "Designed for easy handling, quick setup, and field operation",
     ],
     specifications: {
       "Machine Specifications": [
         {
-          "parameter": "Model",
-          "Rotaface 550i": "Precitec Rotaface 550i",
-          "Rotaface 1000i": "Precitec Rotaface 1000i",
-          "Rotaface 1500i": "Precitec Rotaface 1500i",
-          "Rotaface 2000i": "Precitec Rotaface 2000i"
+          "parameter": "Min. Facing Diameter (mm)",
+          "FFi 500": "120",
+          "FFi 850": "138",
+          "FFi 1000": "150",
+          "FFi 1250": "200",
+          "FFi 1550": "250"
         },
         {
-          "parameter": "Purpose",
-          "Rotaface 550i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
-          "Rotaface 1000i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
-          "Rotaface 1500i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate",
-          "Rotaface 2000i": "Insitu Flange facing, RTJ groove machining, serrated gasket seat machining, boring, etc. Machine is portable, light weight easy to operate"
+          "parameter": "Max. Facing Diameter (mm)",
+          "FFi 500": "550",
+          "FFi 850": "875",
+          "FFi 1000": "1035",
+          "FFi 1250": "1250",
+          "FFi 1550": "1550"
         },
         {
-          "parameter": "Max flange dia",
-          "Rotaface 550i": "580 mm",
-          "Rotaface 1000i": "1080 mm",
-          "Rotaface 1500i": "1580 mm",
-          "Rotaface 2000i": "2100 mm"
+          "parameter": "Min. Clamping Dia (Self Centering) (mm)",
+          "FFi 500": "120",
+          "FFi 850": "135",
+          "FFi 1000": "150",
+          "FFi 1250": "200",
+          "FFi 1550": "250"
         },
         {
-          "parameter": "Min flange dia",
-          "Rotaface 550i": "130 mm",
-          "Rotaface 1000i": "160 mm",
-          "Rotaface 1500i": "250 mm",
-          "Rotaface 2000i": "400 mm"
+          "parameter": "Max. Clamping Dia (Self Centering) (mm)",
+          "FFi 500": "250",
+          "FFi 850": "300",
+          "FFi 1000": "350",
+          "FFi 1250": "400",
+          "FFi 1550": "500"
         },
         {
-          "parameter": "Stroke",
-          "Rotaface 550i": "150 mm",
-          "Rotaface 1000i": "250 mm",
-          "Rotaface 1500i": "400 mm",
-          "Rotaface 2000i": "500 mm"
+          "parameter": "Max. Clamping Diameter (mm)",
+          "FFi 500": "460",
+          "FFi 850": "825",
+          "FFi 1000": "950",
+          "FFi 1250": "1200",
+          "FFi 1550": "1450"
         },
         {
-          "parameter": "Depth of cut",
-          "Rotaface 550i": "Up to 1.5 mm, serrated finish",
-          "Rotaface 1000i": "Up to 1.5 mm, serrated finish",
-          "Rotaface 1500i": "Up to 1.5 mm, serrated finish",
-          "Rotaface 2000i": "Up to 1.5 mm, serrated finish"
+          "parameter": "X-Axis Stroke (mm)",
+          "FFi 500": "125",
+          "FFi 850": "150",
+          "FFi 1000": "200",
+          "FFi 1250": "200",
+          "FFi 1550": "200"
         },
         {
-          "parameter": "Rotary milling - Electric (Standard)",
-          "Rotaface 550i": "1.5 kW / 2.2 kW with AC motor",
-          "Rotaface 1000i": "1.5 kW / 2.2 kW with AC motor",
-          "Rotaface 1500i": "1.5 kW / 2.2 kW with AC motor",
-          "Rotaface 2000i": "1.5 kW / 2.2 kW with AC motor"
+          "parameter": "Z-Axis Stroke (mm)",
+          "FFi 500": "50",
+          "FFi 850": "55",
+          "FFi 1000": "60",
+          "FFi 1250": "70",
+          "FFi 1550": "80"
         },
         {
-          "parameter": "Pneumatic (Optional)",
-          "Rotaface 550i": "2 kW approx.",
-          "Rotaface 1000i": "2 kW approx.",
-          "Rotaface 1500i": "2 kW approx.",
-          "Rotaface 2000i": "2 kW approx."
+          "parameter": "Motor Power (Air / AC 110V) (kW)",
+          "FFi 500": "1.5 / 1.8",
+          "FFi 850": "1.8 / 2.2",
+          "FFi 1000": "1.8 / 2.2",
+          "FFi 1250": "1.8 / 2.2",
+          "FFi 1550": "2.5 / 3.7"
         },
         {
-          "parameter": "Hydraulic (Optional)",
-          "Rotaface 550i": "Hydromotor approx. 3 kW / PP 7.5 kW",
-          "Rotaface 1000i": "Hydromotor approx. 3 kW / PP 7.5 kW",
-          "Rotaface 1500i": "Hydromotor approx. 3 kW / PP 7.5 kW",
-          "Rotaface 2000i": "Hydromotor approx. 3 kW / PP 7.5 kW"
+          "parameter": "Speed (rpm)",
+          "FFi 500": "15–45",
+          "FFi 850": "10–30",
+          "FFi 1000": "10–25",
+          "FFi 1250": "5–20",
+          "FFi 1550": "3–15"
+        },
+        {
+          "parameter": "Weight (Machine only) (kgf)",
+          "FFi 500": "75",
+          "FFi 850": "95",
+          "FFi 1000": "120",
+          "FFi 1250": "140",
+          "FFi 1550": "180"
+        },
+        {
+          "parameter": "X-Axis Feed Motor",
+          "FFi 500": "Stepper (Adj Feed)",
+          "FFi 850": "Stepper (Adj Feed)",
+          "FFi 1000": "Stepper (Adj Feed)",
+          "FFi 1250": "Stepper (Adj Feed)",
+          "FFi 1550": "Stepper (Adj Feed)"
+        },
+        {
+          "parameter": "Z-Axis Feed",
+          "FFi 500": "Manual / Stepper Drive",
+          "FFi 850": "Manual / Stepper Drive",
+          "FFi 1000": "Manual / Stepper Drive",
+          "FFi 1250": "Manual / Stepper Drive",
+          "FFi 1550": "Manual / Stepper Drive"
         }
       ]
     },
@@ -1342,7 +1387,7 @@ export const products: Product[] = [
       {
         id: "rotaface-1000-main",
         url: "/flange_facers/ROTO FACE 1000I.png",
-        alt: "Rotaface 550/1000/1500 Flange Facer",
+        alt: "Rotaface 500/850/1000/1250/1550 Flange Facer",
         caption: "Rotaface Series",
       },
     ],

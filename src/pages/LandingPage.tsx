@@ -2,6 +2,8 @@ import { Hero } from "@/components/sections/Hero"
 import { StatisticsRow } from "@/components/sections/StatisticsRow"
 import { IsoIdentityBanner } from "@/components/sections/IsoIdentityBanner"
 import { ProductOverview } from "@/components/sections/ProductOverview"
+import { TrustedBy } from "@/components/sections/TrustedBy"
+import { Testimonials } from "@/components/sections/Testimonials"
 import { motion } from "framer-motion"
 
 export function LandingPage() {
@@ -29,6 +31,9 @@ export function LandingPage() {
           </p>
         </div>
       </motion.section>
+
+      <TrustedBy />
+      <Testimonials />
 
       <motion.section
         id="services"

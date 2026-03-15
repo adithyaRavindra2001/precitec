@@ -6,41 +6,41 @@ import { Link } from "react-router-dom"
 
 export const moreProducts = [
   // Milling and Boring Machines Solutions
-  { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI-FHMB-MH-SERIES.png" },
-  { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines", image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png" },
-  { name: "Shilpi FHBM", category: "Milling and Boring Machines", image: "/Shilpi/Shilpi-FHBM.jpg" },
-  { name: "Shilpi GM", category: "Milling and Boring Machines", image: "/Shilpi/Shilpi-Gantry-Milling-GM.png" },
-  { name: "Shilpi VMC OF", category: "Milling and Boring Machines", image: "/Shilpi/Shilpi VMC OF.png" },
+  { name: "Shilpi FHMB Horizontal Milling and Boring Machines MH Series", category: "Milling and Boring Machines", image: "/others/shilpi-fhmb-mh-series.jpg" },
+  { name: "Shilpi Horizontal Boring Machines (HBM)", category: "Milling and Boring Machines", image: "/others/shilpi-hbm.jpg" },
+  { name: "Shilpi FHBM", category: "Milling and Boring Machines", image: "/others/shilpi-fhbm.jpg" },
+  { name: "Shilpi GM", category: "Milling and Boring Machines", image: "/others/shilpi-gm.jpg" },
+  { name: "Shilpi VMC OF", category: "Milling and Boring Machines", image: "/others/shilpi-vmc-of.jpg" },
 
   // Milling Machines
-  { name: "Edge Master", category: "Milling Machines", image: "/others/Edge Master.png" },
-  { name: "PEM", category: "Milling Machines", image: "/others/PEM.png" },
+  { name: "Edge Master", category: "Milling Machines", image: "/others/edge-master.jpg" },
+  { name: "PEM", category: "Milling Machines", image: "/others/pem.jpg" },
 
   // Horizontal Turning and TurnMill Solutions
-  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra 350.jpg" },
-  { name: "SriChakra HDT", category: "Horizontal Turning and TurnMill Solutions", image: "/others/SriChakra-HDT.png" },
-  { name: "SriChakra Large Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/SRI-CHAKRA-LARGE-LATHE.JPG" },
+  { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-350.jpg" },
+  { name: "SriChakra HDT", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-hdt.jpg" },
+  { name: "SriChakra Large Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-large-lathes.jpg" },
   { name: "Floor Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/floor-lathe.jpg" },
 
   // Special Machines
-  { name: "Finning Machines", category: "Special Machines", image: "/others/finning-machine.png" },
+  { name: "Finning Machines", category: "Special Machines", image: "/others/finning-machine.jpg" },
   { name: "Riser Cutting Machines", category: "Special Machines", image: "/others/riser-cutting.jpg" },
-  { name: "Tube Coiling Machines", category: "Special Machines", image: "/others/Tube-Coiling-Machine.jpg" },
-  { name: "Machining Composites", category: "Special Machines", image: "/others/Composite-Machine.png" },
-  { name: "Automobile Assembly Machines", category: "Special Machines" },
+  { name: "Tube Coiling Machines", category: "Special Machines", image: "/others/tube-coiling-machine.jpg" },
+  { name: "Machining Composites", category: "Special Machines", image: "/others/composite-machine.jpg" },
+  { name: "Automobile Assembly Machines", category: "Special Machines", hidden: true },
 
   // Attachments and Accessories
-  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories", image: "/others/PAMH-60.jpg" },
-  { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories", image: "/others/PUMH-A-NC-CNC-Milling-Attachment.jpg" },
-  { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories", image: "/others/PUMH_U45.png" },
-  { name: "PUAMBH: Universal Milling and Boring Head", category: "Attachments and Accessories", image: "/others/PUAMBH.png" },
-  { name: "B25: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/B25-Facing-Attachment.jpg" },
-  { name: "B1400: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/B1500-Facing-Attachment.jpg" },
-  { name: "RMH 50: Ram Type Milling Head", category: "Attachments and Accessories", image: "/others/RAMH-50-Ram-Head.jpg" },
-  { name: "Plano Milling Head", category: "Attachments and Accessories", image: "/others/RUMH-50-Plano-Milling-Head.png" },
-  { name: "UMS Series Spindle Units", category: "Attachments and Accessories", image: "/others/UMS 250.png" },
-  { name: "Cartridge Type Spindle Units", category: "Attachments and Accessories", image: "/others/Cartridge-Type-Spindle-Units.png" },
-  { name: "US Series Slides", category: "Attachments and Accessories", image: "/others/US-Series-Slides.png" },
+  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories", image: "/others/pamh-60.jpg", image2: "/others/pamh-40.jpg" },
+  { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories", image: "/others/pumh-a-nc.jpg" },
+  { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories", image: "/others/pumh-universal.jpg" },
+  { name: "PUAMBH: Universal Milling and Boring Head", category: "Attachments and Accessories", image: "/others/puambh.jpg" },
+  { name: "B25: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/b25-boring-facing.jpg" },
+  { name: "B1400: Boring and Facing Attachment", category: "Attachments and Accessories", image: "/others/b1400-boring-facing.jpg" },
+  { name: "RMH 50: Ram Type Milling Head", category: "Attachments and Accessories", image: "/others/rmh-50.jpg" },
+  { name: "Plano Milling Head", category: "Attachments and Accessories", image: "/others/plano-milling-head.jpg" },
+  { name: "UMS Series Spindle Units", category: "Attachments and Accessories", image: "/others/ums-250.jpg" },
+  { name: "Cartridge Type Spindle Units", category: "Attachments and Accessories", image: "/others/cartridge-type-spindles.jpg" },
+  { name: "US Series Slides", category: "Attachments and Accessories", image: "/others/us-series-slides.jpg" },
 ]
 
 export function MoreProductsPage() {
@@ -86,8 +86,8 @@ export function MoreProductsPage() {
           </div>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {moreProducts.map((product, index) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+          {moreProducts.filter(p => !p.hidden).map((product, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -100,7 +100,7 @@ export function MoreProductsPage() {
                 <DialogTrigger asChild>
                   <Card className="h-full transition-all hover:shadow-lg border-2 hover:border-primary/50 relative overflow-hidden cursor-pointer">
                     {/* Product Image */}
-                    <div className="aspect-video overflow-hidden rounded-t-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                    <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                       {product.image ? (
                         <img
                           src={product.image}
@@ -115,8 +115,8 @@ export function MoreProductsPage() {
                       )}
                     </div>
 
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-base sm:text-lg leading-tight">
+                    <CardHeader className="p-4 pb-2">
+                      <CardTitle className="text-sm font-semibold leading-snug">
                         {product.name}
                       </CardTitle>
                       <CardDescription className="text-xs sm:text-sm">
@@ -124,7 +124,7 @@ export function MoreProductsPage() {
                       </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="pt-0">
+                    <CardContent className="p-4 pt-0">
                       <p className="text-xs text-muted-foreground">
                         Click for more details
                       </p>
@@ -140,13 +140,22 @@ export function MoreProductsPage() {
                   </DialogHeader>
 
                   {/* Enlarged Product Image */}
-                  <div className="mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[400px]">
+                  <div className={`mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[400px] ${product.image2 ? "gap-2 p-2" : ""}`}>
                     {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-contain"
-                      />
+                      <>
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className={`object-contain ${product.image2 ? "w-1/2 h-full" : "w-full h-full"}`}
+                        />
+                        {product.image2 && (
+                          <img
+                            src={product.image2}
+                            alt={product.name}
+                            className="w-1/2 h-full object-contain"
+                          />
+                        )}
+                      </>
                     ) : (
                       <div className="text-center p-8">
                         <div className="text-8xl mb-4">🏭</div>

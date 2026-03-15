@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -11,6 +11,23 @@ import {
   getProductsBySubcategory,
 } from "@/data/products"
 import { ArrowLeft, ChevronRight, Zap, Eye, ArrowUpRight, Play } from "lucide-react"
+
+function VideoThumbnail({ src }: { src: string }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  return (
+    <video
+      ref={ref}
+      src={src}
+      preload="metadata"
+      muted
+      playsInline
+      onLoadedMetadata={() => {
+        if (ref.current) ref.current.currentTime = 1
+      }}
+      className="w-full h-full object-cover pointer-events-none"
+    />
+  )
+}
 
 export function CategoryPage() {
   const { categoryId, subcategoryId } = useParams<{
@@ -181,37 +198,23 @@ export function CategoryPage() {
                         <div className="absolute top-4 left-4 z-20 bg-black/70 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                           Click to watch video
                         </div>
-                        <iframe
+                        <VideoThumbnail
                           src={
                             categoryId === "facing-centering"
-                              ? "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=aa43fc2a-a836-4d5a-aa40-8cb774e8bab9&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                              ? "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_FCM_PRODUCT_VIDEO.mp4"
                               : categoryId === "vertical-turning"
-                                ? "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=5065b403-1c24-4281-a2b6-9288ad0bebc5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
-                                : "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=81f1c5a5-e120-4ede-a2e3-1091bc1b61d9&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                                ? "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_SADAA+CHAKRA_PRODUCT_VIDEO.mp4"
+                                : "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_INSITU_PRODUCT_VIDEO.mp4"
                           }
-                          width="100%"
-                          height="100%"
-                          frameBorder="0"
-                          scrolling="no"
-                          title={
-                            categoryId === "facing-centering"
-                              ? "FCM Product Video"
-                              : categoryId === "vertical-turning"
-                                ? "Sadaa Chakra Video"
-                                : "In-Situ Video"
-                          }
-                          className="rounded-lg pointer-events-none"
                         />
                       </div>
                     ) : (
                       <Link to={`/products/${featuredProduct.id}`} className="group block">
-                        <div className="aspect-video overflow-hidden bg-slate-100">
+                        <div className="aspect-square overflow-hidden bg-slate-100">
                           <img
                             src={featuredProduct.images?.[0]?.url || "/images/placeholder.jpg"}
                             alt={featuredProduct.images?.[0]?.alt || featuredProduct.name}
-                            className={`h-full w-full transition-transform duration-500 group-hover:scale-110 ${
-                              categoryId === "vertical-turning" ? "object-contain" : "object-cover"
-                            }`}
+                            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
                       </Link>
@@ -336,7 +339,7 @@ export function CategoryPage() {
             </p>
           </Card>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start">
             {products.map((product, index) => {
               const isExpanded = expandedProduct === product.id
               return (
@@ -349,13 +352,11 @@ export function CategoryPage() {
                 >
                   <Card className="group flex flex-col overflow-hidden transition-all hover:shadow-xl">
                     <Link to={`/products/${product.id}`}>
-                      <div className="relative aspect-video overflow-hidden bg-muted">
+                      <div className="relative aspect-square overflow-hidden bg-muted">
                         <img
                           src={product.images?.[0]?.url || "/images/placeholder.jpg"}
                           alt={product.images?.[0]?.alt || product.name}
-                          className={`h-full w-full transition-transform duration-500 group-hover:scale-110 ${
-                            categoryId === "vertical-turning" ? "object-contain" : "object-cover"
-                          }`}
+                          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -365,8 +366,8 @@ export function CategoryPage() {
                       </div>
                     </Link>
 
-                    <CardHeader className="flex-shrink-0">
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    <CardHeader className="flex-shrink-0 p-4 pb-2">
+                      <CardTitle className="text-sm font-semibold group-hover:text-primary transition-colors leading-snug">
                         {product.name}
                       </CardTitle>
                       <CardDescription className="line-clamp-2 text-xs">
@@ -374,7 +375,7 @@ export function CategoryPage() {
                       </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="flex-grow">
+                    <CardContent className="flex-grow p-4 pt-0">
                       <button
                         onClick={() => setExpandedProduct(isExpanded ? null : product.id)}
                         className="w-full text-left"
@@ -554,29 +555,18 @@ export function CategoryPage() {
       {/* Video Dialog */}
       <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
         <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-black border-0">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              src={
-                categoryId === "facing-centering"
-                  ? "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=aa43fc2a-a836-4d5a-aa40-8cb774e8bab9&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=1"
-                  : categoryId === "vertical-turning"
-                    ? "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=5065b403-1c24-4281-a2b6-9288ad0bebc5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=1"
-                    : "https://ppmpl1-my.sharepoint.com/personal/nikhila_precitec_co_in/_layouts/15/embed.aspx?UniqueId=81f1c5a5-e120-4ede-a2e3-1091bc1b61d9&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create&autoplay=1"
-              }
-              className="absolute top-0 left-0 w-full h-full"
-              frameBorder="0"
-              scrolling="no"
-              allowFullScreen
-              allow="autoplay; encrypted-media"
-              title={
-                categoryId === "facing-centering"
-                  ? "FCM Product Video"
-                  : categoryId === "vertical-turning"
-                    ? "Sadaa Chakra Product Video"
-                    : "In-Situ Machining Video"
-              }
-            />
-          </div>
+          <video
+            src={
+              categoryId === "facing-centering"
+                ? "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_FCM_PRODUCT_VIDEO.mp4"
+                : categoryId === "vertical-turning"
+                  ? "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_SADAA+CHAKRA_PRODUCT_VIDEO.mp4"
+                  : "https://s3.ap-southeast-1.amazonaws.com/precitec.co.in/videos/PRECITEC_INSITU_PRODUCT_VIDEO.mp4"
+            }
+            controls
+            autoPlay
+            className="w-full aspect-video"
+          />
         </DialogContent>
       </Dialog>
     </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const services = [
   {
     title: "Product Engineering Consultancy Services",
-    description: `Precitec is a leading product engineering consultancy firm in Bangalore, India, specializing in end-to-end product development solutions for diverse industries. With over 40 years of manufacturing excellence since 1978, our experienced engineers and consultants deliver innovative product engineering services across automotive, medical devices, consumer electronics, industrial equipment, and heavy machinery sectors.
+    description: `Precitec is a leading product engineering consultancy firm in Bengaluru, India, specializing in end-to-end product development solutions for diverse industries. With over 45 years of manufacturing excellence since 1978, our experienced engineers and consultants deliver innovative product engineering services across automotive, medical devices, consumer electronics, industrial equipment, and heavy machinery sectors.
 
 Our comprehensive product engineering consultancy services encompass the complete product lifecycle - from initial concept development and feasibility studies to detailed design engineering, prototyping, rigorous testing, and full-scale manufacturing support. We leverage cutting-edge CAD/CAM technologies, advanced simulation tools, and industry 4.0 methodologies to ensure your products are developed with optimal efficiency, cost-effectiveness, and superior quality standards.
 
@@ -16,7 +16,7 @@ Our product engineering services include: conceptual design and feasibility anal
 
 We offer flexible engagement models - from complete turnkey product development solutions to specialized support for specific engineering challenges. Our ISO 9001:2015 certified processes ensure consistent quality, while our agile methodology enables rapid iterations and faster time-to-market for your innovative products.
 
-Partner with Precitec's product engineering consultancy to transform your ideas into market-ready products. Our proven track record in precision engineering, combined with state-of-the-art manufacturing facilities in Bangalore, makes us the ideal choice for businesses seeking reliable, high-quality product development services in India and internationally.`,
+Partner with Precitec's product engineering consultancy to transform your ideas into market-ready products. Our proven track record in precision engineering, combined with state-of-the-art manufacturing facilities in Bengaluru, makes us the ideal choice for businesses seeking reliable, high-quality product development services in India and internationally.`,
     image: "/product_engineering.jpg",
   },
   {
@@ -27,7 +27,7 @@ Our special tooling consultancy services are engineered to solve complex manufac
 
 As specialists in custom tooling design and fabrication, we provide comprehensive services including: special purpose machine tool design, custom jigs and fixtures development, precision cutting tool engineering, inspection and quality control gauges, automated tooling systems, modular tooling solutions, tool reconditioning and maintenance, and tooling optimization for existing production lines.
 
-Our state-of-the-art manufacturing facility in Bangalore is equipped with advanced CNC machining centers, precision grinding machines, and sophisticated measurement equipment to produce tooling with micron-level accuracy. Every special tooling project undergoes rigorous quality checks and performance validation to ensure it meets the demanding standards of modern manufacturing environments.
+Our state-of-the-art manufacturing facility in Bengaluru is equipped with advanced CNC machining centers, precision grinding machines, and sophisticated measurement equipment to produce tooling with micron-level accuracy. Every special tooling project undergoes rigorous quality checks and performance validation to ensure it meets the demanding standards of modern manufacturing environments.
 
 Whether you require simple tooling solutions for specific operations or complex, multi-stage production tooling systems, our expert engineers work closely with your team to understand your unique manufacturing challenges. We analyze your production processes, identify optimization opportunities, and design tooling solutions that deliver measurable improvements in productivity, quality, and cost-efficiency.
 
@@ -45,12 +45,12 @@ export function ServicesPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section
-        className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary/5"
+        className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
         <div className="container relative mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,10 +58,10 @@ export function ServicesPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
               Precision Engineering & Manufacturing Services
             </h1>
-            <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
+            <p className="mt-4 text-lg sm:text-xl text-white/90">
               Specialized CNC machining consultancy, custom machine tool design, and precision manufacturing solutions for industrial applications
             </p>
           </motion.div>

@@ -3,17 +3,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { MachineCard } from "./MachineCard";
 import { categories, products } from "@/data/products";
 
+const CLONE_COUNT = 3;
+
 export const Carousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(320);
+  const [enableTransition, setEnableTransition] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(CLONE_COUNT);
   const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const isPaused = useRef(false);
 
   // Transform data: Map categories to carousel items
-  // We use the first product in each category to provide the cover image
   const items = categories.map((category) => {
-    // Special handling for spms-other category - use image from MoreProductsPage
     if (category.id === "spms-other") {
       return {
         id: category.id,
@@ -21,11 +24,9 @@ export const Carousel: React.FC = () => {
         image: "/Shilpi/SHILPI FHMB HORIZONTAL MILLING AND BORING MACHINES MH SERIES.png",
       };
     }
-
     const representativeProduct = products.find(
       (p) => p.category === category.id
     );
-
     return {
       id: category.id,
       title: category.name,
@@ -35,52 +36,78 @@ export const Carousel: React.FC = () => {
 
   const length = items.length;
 
+  // Extended items: clones of last CLONE_COUNT + real items + clones of first CLONE_COUNT
+  const extendedItems = [
+    ...items.slice(-CLONE_COUNT).map((item, i) => ({ ...item, key: `clone-start-${i}` })),
+    ...items.map((item) => ({ ...item, key: item.id })),
+    ...items.slice(0, CLONE_COUNT).map((item, i) => ({ ...item, key: `clone-end-${i}` })),
+  ];
+
+  // The real index (0-based) for dot indicators
+  const realIndex = (currentIndex - CLONE_COUNT + length) % length;
+
+  // Silently jump position without animation when entering clone territory
+  const jumpToReal = useCallback((idx: number) => {
+    setEnableTransition(false);
+    setCurrentIndex(idx);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setEnableTransition(true);
+      });
+    });
+  }, []);
+
+  const handleTransitionEnd = useCallback(() => {
+    if (currentIndex < CLONE_COUNT) {
+      jumpToReal(currentIndex + length);
+    } else if (currentIndex >= CLONE_COUNT + length) {
+      jumpToReal(currentIndex - length);
+    }
+  }, [currentIndex, length, jumpToReal]);
+
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === length - 1 ? 0 : prev + 1));
-  }, [length]);
+    setCurrentIndex((prev) => prev + 1);
+  }, []);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === 0 ? length - 1 : prev - 1));
-  }, [length]);
+    setCurrentIndex((prev) => prev - 1);
+  }, []);
 
   // Calculate card width based on viewport
   useEffect(() => {
     const updateCardWidth = () => {
       if (containerRef.current) {
         const width = containerRef.current.offsetWidth;
-        // Responsive card widths
         if (width < 640) {
-          setCardWidth(Math.min(300, width - 40)); // Mobile
+          setCardWidth(Math.min(300, width - 40));
         } else if (width < 1024) {
-          setCardWidth(280); // Tablet
+          setCardWidth(280);
         } else {
-          setCardWidth(320); // Desktop
+          setCardWidth(320);
         }
       }
     };
-
     updateCardWidth();
     window.addEventListener("resize", updateCardWidth);
     return () => window.removeEventListener("resize", updateCardWidth);
   }, []);
 
-  // Adjust index if items change
+  // Auto-scroll every 3.5s, pauses on hover
   useEffect(() => {
-    if (currentIndex >= length) {
-      setCurrentIndex(Math.max(0, length - 1));
-    }
-  }, [length, currentIndex]);
+    const interval = setInterval(() => {
+      if (!isPaused.current) {
+        setCurrentIndex((prev) => prev + 1);
+      }
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
 
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
-        prevSlide();
-      } else if (e.key === "ArrowRight") {
-        nextSlide();
-      }
+      if (e.key === "ArrowLeft") prevSlide();
+      else if (e.key === "ArrowRight") nextSlide();
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextSlide, prevSlide]);
@@ -89,21 +116,14 @@ export const Carousel: React.FC = () => {
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
-
   const handleTouchMove = (e: React.TouchEvent) => {
     touchEndX.current = e.touches[0].clientX;
   };
-
   const handleTouchEnd = () => {
-    const swipeThreshold = 50;
     const diff = touchStartX.current - touchEndX.current;
-
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
     }
   };
 
@@ -132,25 +152,28 @@ export const Carousel: React.FC = () => {
       <div
         ref={containerRef}
         className="overflow-hidden w-full py-8 sm:py-12"
+        onMouseEnter={() => { isPaused.current = true; }}
+        onMouseLeave={() => { isPaused.current = false; }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         <div
-          className="flex transition-transform duration-500 ease-out"
+          ref={trackRef}
+          className="flex"
           style={{
-            transform: `translateX(calc(50% - ${
-              currentIndex * (cardWidth + 24)
-            }px - ${cardWidth / 2}px))`,
+            transition: enableTransition ? "transform 500ms ease-out" : "none",
+            transform: `translateX(calc(50% - ${currentIndex * (cardWidth + 24)}px - ${cardWidth / 2}px))`,
           }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {items.map((item, index) => {
+          {extendedItems.map((item, index) => {
             const isActive = index === currentIndex;
             const distance = Math.abs(index - currentIndex);
 
             return (
               <div
-                key={item.id}
+                key={item.key}
                 className="flex-shrink-0 px-3 transition-all duration-500"
                 style={{
                   width: `${cardWidth + 24}px`,
@@ -171,19 +194,15 @@ export const Carousel: React.FC = () => {
         </div>
       </div>
 
-      {/* Dots Navigation */}
+      {/* Dots Navigation — based on real index */}
       <div className="flex justify-center gap-2 mt-6">
         {items.map((_, idx) => (
           <button
             key={idx}
-            onClick={() => setCurrentIndex(idx)}
+            onClick={() => setCurrentIndex(idx + CLONE_COUNT)}
             className={`
               h-2 rounded-full transition-all duration-300
-              ${
-                idx === currentIndex
-                  ? "w-8 bg-primary"
-                  : "w-2 bg-gray-300 hover:bg-gray-400"
-              }
+              ${idx === realIndex ? "w-8 bg-primary" : "w-2 bg-gray-300 hover:bg-gray-400"}
             `}
             aria-label={`Go to slide ${idx + 1}`}
           />

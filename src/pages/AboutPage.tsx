@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, Users, Factory, TrendingUp } from "lucide-react"
+import { Award, Users, Factory, TrendingUp, Target, Eye, CheckCircle2, Wrench, Globe, Building2 } from "lucide-react"
 
 const teamMembers = [
   {
@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: "S. Y. Rao",
     designation: "Founder",
-    image: null,
+    image: "/SYR.png",
   },
   {
     name: "H S Nikhila",
@@ -23,16 +23,6 @@ const teamMembers = [
     designation: "Executive Director",
     image: "/Ravi.jpg",
   },
-  {
-    name: "M K Krishnaswamy",
-    designation: "Chief Consultant for Design",
-    image: null,
-  },
-  {
-    name: "G Ananda",
-    designation: "Directors and Business Advisor",
-    image: null,
-  },
 ]
 
 const milestones = [
@@ -42,7 +32,7 @@ const milestones = [
     description: "Founded by CMTI veteran engineers pioneering advanced CNC machine tool manufacturing in India",
   },
   {
-    year: "40+",
+    year: "45+",
     title: "Years of Manufacturing Excellence",
     description: "Four decades of innovation in precision machining equipment and custom special purpose machine design",
   },
@@ -57,7 +47,7 @@ const highlights = [
   {
     icon: Factory,
     title: "Advanced CNC Manufacturing Facility",
-    description: "Modern precision engineering plant in Bangalore with high-capacity production capabilities for industrial-grade machining equipment",
+    description: "Modern precision engineering plant in Bengaluru with high-capacity production capabilities for industrial-grade machining equipment",
   },
   {
     icon: Users,
@@ -81,44 +71,30 @@ export function AboutPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section
-        className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary/5"
+        className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
         <div className="container relative mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center"
+            className="text-center max-w-3xl mx-auto"
           >
-            <div className="mb-8 flex justify-center">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="rounded-2xl bg-white p-6 shadow-xl border-2 border-primary/10"
-              >
-                <img
-                  src="/MiniPrecitecLogo.svg"
-                  alt="Precitec Logo"
-                  className="h-20 sm:h-24 md:h-32 w-auto"
-                />
-              </motion.div>
-            </div>
-            <h1 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
               Leading CNC Machine Tool Manufacturer
             </h1>
-            <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Precision Engineering & Custom Machining Solutions Since 1978 | Bangalore, India
+            <p className="mt-4 text-lg sm:text-xl text-white/90">
+              Precision Engineering & Custom Machining Solutions Since 1978 | Bengaluru, India
             </p>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Company Overview */}
+      {/* What We Are */}
       <motion.section
         className="container mx-auto px-4 sm:px-6 py-12 sm:py-16"
         initial={{ opacity: 0, y: 30 }}
@@ -126,22 +102,147 @@ export function AboutPage() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-2 shadow-xl bg-gradient-to-br from-white to-primary/5">
-            <CardContent className="p-6 sm:p-8 md:p-12">
-              <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  <span className="font-semibold text-foreground">Precitec</span> is a leading precision machine tool manufacturer in Bangalore, India, specializing in high-performance CNC machines and special purpose machining equipment. Our state-of-the-art manufacturing facility combines advanced engineering expertise with cutting-edge production technology to deliver industrial-grade precision machinery for demanding manufacturing applications across automotive, aerospace, and heavy engineering sectors.
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary mb-3 tracking-wide uppercase">Who We Are</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Built on Precision. Driven by Excellence.</h2>
+          </div>
+
+          {/* What We Are + Mission + Vision */}
+          <div className="grid gap-6 lg:grid-cols-3 mb-6">
+            <div className="lg:col-span-3">
+              <Card className="border-2 shadow-lg bg-gradient-to-br from-white to-primary/5">
+                <CardContent className="p-6 sm:p-8">
+                  <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-foreground">Precitec</span> is a leading precision machine tool manufacturer in Bangalore, India, specializing in high-performance CNC machines and special purpose machining equipment. Our state-of-the-art manufacturing facility combines advanced engineering expertise with cutting-edge production technology to deliver industrial-grade precision machinery for demanding manufacturing applications across automotive, aerospace, and heavy engineering sectors.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+            >
+              <Card className="h-full border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Target className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">Mission</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    To create robust and customized machining systems that solve real industrial challenges with precision and expertise.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
+              <Card className="h-full border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Eye className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">Vision</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    To become the most trusted partner for advanced machining solutions globally.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
+              <Card className="h-full border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Globe className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">History</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Founded in <span className="font-semibold text-foreground">1978</span> by veteran engineers <span className="font-semibold text-foreground">Mr. H. K. Sridhara</span> and <span className="font-semibold text-foreground">Mr. S. Y. Rao</span> from the Central Machine Tool Institute (CMTI), Precitec brings over four decades of specialized experience in custom machine tool design and manufacturing excellence.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* What We Do */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Card className="border-2 border-primary/20 shadow-lg bg-gradient-to-r from-primary/5 to-transparent mb-6">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Factory className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">What We Do</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Precitec as a specialist CNC machine manufacturer, we produce precision metal cutting machines, CNC turning centers, multi-axis machining centers, and specialized grinding equipment for automotive manufacturing, mass production facilities, and heavy engineering operations. We have developed unique expertise as a premier manufacturer of embedded finning machines specifically engineered for heat exchanger production industries, delivering unmatched accuracy and productivity in tube finning operations.
                 </p>
-                <p>
-                  Founded in 1978 by veteran engineers <span className="font-semibold text-foreground">Mr. H. K. Sridhara</span> and <span className="font-semibold text-foreground">Mr. S. Y. Rao</span> from the Central Machine Tool Institute (CMTI), Precitec brings over four decades of specialized experience in custom machine tool design, precision engineering, and manufacturing excellence. Our comprehensive capabilities span from initial concept development and machine design to full-scale production, installation, and ongoing technical support for complex machining solutions deployed across India and international markets.
-                </p>
-                <p>
-                  As a specialist CNC machine manufacturer, Precitec produces precision metal cutting machines, CNC turning centers, multi-axis machining centers, and specialized grinding equipment for automotive manufacturing, mass production facilities, and heavy engineering operations. We have developed unique expertise as a premier manufacturer of embedded finning machines specifically engineered for heat exchanger production industries, delivering unmatched accuracy and productivity in tube finning operations.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Capabilities */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Card className="border-2 shadow-lg">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Wrench className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Capabilities</h3>
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {[
+                    "Concept Development",
+                    "Machine Design",
+                    "Full Scale Production",
+                    "Installation",
+                    "After Sales Support",
+                    "Preventive Maintenance",
+                    "Retrofits",
+                    "Process Engineering & Turnkey Tooling Packages",
+                    "Operator Upskilling & On-site Process Training",
+                    "Across India and International Markets",
+                  ].map((cap, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <span className="text-sm text-muted-foreground">{cap}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -250,7 +351,7 @@ export function AboutPage() {
               Veteran engineers and industry specialists driving precision manufacturing innovation
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -291,7 +392,7 @@ export function AboutPage() {
         </div>
       </motion.section>
 
-      {/* Certifications */}
+      {/* Certifications & Memberships */}
       <motion.section
         className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 py-12 sm:py-16"
         initial={{ opacity: 0 }}
@@ -301,34 +402,76 @@ export function AboutPage() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
-                  <Award className="h-10 w-10 text-primary" />
-                </div>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                International Quality Certifications
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+                Certifications & Memberships
               </h2>
-              <p className="text-lg sm:text-xl text-slate-300 mb-8">
-                ISO 9001:2015 Certified Precision Machine Manufacturer
+              <p className="text-lg text-white/80">
+                Recognized for quality and trusted by leading industry bodies
               </p>
-              <div className="inline-flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-sm px-6 py-4 border-2 border-white/20">
-                <Award className="h-6 w-6 text-primary" />
-                <span className="text-white font-semibold">
-                  Certified Quality Management for Precision Engineering
-                </span>
-              </div>
-              <p className="mt-6 text-slate-400 max-w-2xl mx-auto">
-                Our ISO 9001:2015 certification validates our commitment to world-class precision manufacturing standards, rigorous quality control processes, and exceptional customer service in CNC machine tool production.
-              </p>
-            </motion.div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Certification */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="rounded-2xl bg-white border border-white/20 p-6 sm:p-8"
+              >
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                    <Award className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Certification</h3>
+                    <p className="text-muted-foreground text-sm">Quality Management</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 rounded-xl bg-primary/10 px-4 py-3 border border-primary/20">
+                  <Award className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-foreground font-semibold">ISO 9001:2015</span>
+                </div>
+                <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+                  Our ISO 9001:2015 certification validates our commitment to world-class precision manufacturing standards and rigorous quality control processes.
+                </p>
+              </motion.div>
+
+              {/* Memberships */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="rounded-2xl bg-white border border-white/20 p-6 sm:p-8"
+              >
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                    <Building2 className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Memberships</h3>
+                    <p className="text-muted-foreground text-sm">Industry Associations</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    { abbr: "FKCCI", full: "Federation of Karnataka Chambers of Commerce and Industries" },
+                    { abbr: "AMTTF", full: "Advanced Machine Tool Testing Facility" },
+                    { abbr: "IMTMA", full: "Indian Machine Tools Manufacturers' Association" },
+                    { abbr: "PIA", full: "Peenya Industries Association" },
+                    { abbr: "KASSIA", full: "Karnataka Small Scale Industries Association" },
+                  ].map((m, i) => (
+                    <div key={i} className="flex items-center gap-3 rounded-lg bg-slate-50 px-4 py-2.5 border border-slate-200">
+                      <span className="text-primary font-bold text-sm w-16 shrink-0 bg-primary/10 rounded px-2 py-0.5 text-center">{m.abbr}</span>
+                      <span className="text-muted-foreground text-xs leading-snug">{m.full}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </motion.section>

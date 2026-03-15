@@ -50,6 +50,7 @@ export default {
       fontFamily: {
         sans: ["Inter", "Roboto", "system-ui", "sans-serif"],
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],

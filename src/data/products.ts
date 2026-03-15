@@ -234,7 +234,7 @@ export const products: Product[] = [
     images: [
       {
         id: "fc-40-main",
-        url: "/FCM/FC-40.jpeg",
+        url: "/FCM/fc-40.jpg",
         alt: "FC 40 Facing and Centering Machine",
         caption: "Main view of FC 40",
       },
@@ -374,7 +374,7 @@ export const products: Product[] = [
     images: [
       {
         id: "fcm-80-main",
-        url: "/FCM/FCM 80-SC-500 edited.png",
+        url: "/FCM/fcm-80.jpg",
         alt: "FCM 80 Facing and Centering Machine",
         caption: "FCM 80 Front View",
       },
@@ -507,7 +507,7 @@ export const products: Product[] = [
     images: [
       {
         id: "fcm-100-main",
-        url: "/FCM/FCM100-800-25C 2S EDITED.png",
+        url: "/FCM/fcm-100.jpg",
         alt: "FCM 100 Facing and Centering Machine",
         caption: "FCM 100 - Large Capacity Model",
       },
@@ -640,7 +640,7 @@ export const products: Product[] = [
     images: [
       {
         id: "fcm-150-main",
-        url: "/FCM/FCM 150-NC-800w.png",
+        url: "/FCM/fcm-150.jpg",
         alt: "FCM 150 Heavy-Duty Facing and Centering Machine",
         caption: "FCM 150 - Heavy Duty Configuration",
       },
@@ -686,7 +686,7 @@ export const products: Product[] = [
     images: [
       {
         id: "db-40-main",
-        url: "/FCM/DBM40-Arudra.png",
+        url: "/FCM/db-40.jpg",
         alt: "DB 40 Double Ended Boring Machine",
         caption: "DB 40 - Compact Drilling Solution",
       },
@@ -732,7 +732,7 @@ export const products: Product[] = [
     images: [
       {
         id: "db-50-main",
-        url: "/FCM/DB50.png",
+        url: "/FCM/db-50.jpg",
         alt: "DB 50 Double Ended Boring Machine",
         caption: "DB 50 - Enhanced Capacity Model",
       },
@@ -848,12 +848,32 @@ export const products: Product[] = [
           "630 TC-CT": "3.6m X 2.6m X 2.4m"
         }
       ],
+      "C-Axis & Live Spindle": [
+        {
+          "parameter": "Milling Spindle Speed Range (RPM)",
+          "500 TM-CT": "10-4000",
+          "630 TM-CT": "10-4000"
+        },
+        {
+          "parameter": "Milling Spindle Power (kW/Nm)",
+          "500 TM-CT": "5.5/28",
+          "630 TM-CT": "7.5/40"
+        },
+        {
+          "parameter": "CNC System",
+          "500 TM-CT": "Fanuc OiTF, Siemens 828D, 840DSL",
+          "630 TM-CT": "Fanuc OiTF, Siemens 828D, 840DSL"
+        }
+      ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
         },
         {
           "description": "TC-CT : Turning Center - Chuck-Turret"
+        },
+        {
+          "description": "TM-CT : Turn Mill - Chuck Turret"
         }
       ]
     },
@@ -946,12 +966,29 @@ export const products: Product[] = [
           "800 TC-TL": "Siemens 840DSL"
         }
       ],
-      "Models": [
+      "C-Axis & Live Spindle": [
         {
-          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
+          "parameter": "Milling Spindle Speed Range (RPM)",
+          "800 TM-TR": "-"
         },
         {
-          "description": "TC-TR : Turning Center - Table Ram type"
+          "parameter": "Milling Spindle Power (kW/Nm)",
+          "800 TM-TR": "11/60"
+        },
+        {
+          "parameter": "CNC System",
+          "800 TM-TR": "Fanuc OiTF, Siemens 828D, 840DSL"
+        }
+      ],
+      "Models": [
+        {
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
+        },
+        {
+          "description": "TC-TR : Turning Center Table Ram type"
+        },
+        {
+          "description": "TM-CT : Turn Mill - Chuck Turret"
         }
       ]
     },
@@ -985,62 +1022,62 @@ export const products: Product[] = [
       "Working Range": [
         {
           "parameter": "Max. Dia For Facing & OD Turning (mm)",
-          "1200 TC-TR/ TC-TL": "1400",
-          "1600 TC-TR/ TC-TL": "2050"
+          "1200 TC-TR/ TM-TR": "1400",
+          "1600 TC-TR/ TM-TR": "2050"
         },
         {
           "parameter": "Max. Swing (mm)",
-          "1200 TC-TR/ TC-TL": "1450",
-          "1600 TC-TR/ TC-TL": "2200"
+          "1200 TC-TR/ TM-TR": "1450",
+          "1600 TC-TR/ TM-TR": "2200"
         },
         {
           "parameter": "Day Light (mm)",
-          "1200 TC-TR/ TC-TL": "1100",
-          "1600 TC-TR/ TC-TL": "1100"
+          "1200 TC-TR/ TM-TR": "1100",
+          "1600 TC-TR/ TM-TR": "1100"
         }
       ],
       "Table Range": [
         {
           "parameter": "Table Dia (mm)",
-          "1200 TC-TR/ TC-TL": "1200",
-          "1600 TC-TR/ TC-TL": "1600"
+          "1200 TC-TR/ TM-TR": "1200",
+          "1600 TC-TR/ TM-TR": "1600"
         },
         {
           "parameter": "Speed Range (RPM)",
-          "1200 TC-TR/ TC-TL": "2-350",
-          "1600 TC-TR/ TC-TL": "2-250"
+          "1200 TC-TR/ TM-TR": "2-350",
+          "1600 TC-TR/ TM-TR": "2-250"
         },
         {
           "parameter": "No of speed ranges",
-          "1200 TC-TR/ TC-TL": "2",
-          "1600 TC-TR/ TC-TL": "2"
+          "1200 TC-TR/ TM-TR": "2",
+          "1600 TC-TR/ TM-TR": "2"
         },
         {
           "parameter": "Table Spindle Motor (kW)",
-          "1200 TC-TR/ TC-TL": "30 (37/45)",
-          "1600 TC-TR/ TC-TL": "30 (37/45)"
+          "1200 TC-TR/ TM-TR": "30 (37/45)",
+          "1600 TC-TR/ TM-TR": "30 (37/45)"
         }
       ],
       "Axes": [
         {
           "parameter": "X Axis Stroke",
-          "1200 TC-TR/ TC-TL": "-100, +1100",
-          "1600 TC-TR/ TC-TL": "-100, +1350"
+          "1200 TC-TR/ TM-TR": "-100, +1100",
+          "1600 TC-TR/ TM-TR": "-100, +1350"
         },
         {
           "parameter": "Z Axis Stroke",
-          "1200 TC-TR/ TC-TL": "1000 (1200/1400)",
-          "1600 TC-TR/ TC-TL": "1000 (1200/1400)"
+          "1200 TC-TR/ TM-TR": "1000 (1200/1400)",
+          "1600 TC-TR/ TM-TR": "1000 (1200/1400)"
         },
         {
           "parameter": "Cutting Feed Rate (mm/min)",
-          "1200 TC-TR/ TC-TL": "0.5-5000",
-          "1600 TC-TR/ TC-TL": "0.5-5000"
+          "1200 TC-TR/ TM-TR": "0.5-5000",
+          "1600 TC-TR/ TM-TR": "0.5-5000"
         },
         {
           "parameter": "Ram Size (mm)",
-          "1200 TC-TR/ TC-TL": "230X230 (250X250)",
-          "1600 TC-TR/ TC-TL": "230X230 (250X250)"
+          "1200 TC-TR/ TM-TR": "230X230 (250X250)",
+          "1600 TC-TR/ TM-TR": "230X230 (250X250)"
         }
       ],
       "C-Axis & Live Spindle": [
@@ -1051,24 +1088,24 @@ export const products: Product[] = [
         },
         {
           "parameter": "Milling Spindle Power (kW/Nm)",
-          "1200 TM-TR": "11",
-          "1600 TM-TR": "11"
+          "1200 TM-TR": "11/150\n15/240",
+          "1600 TM-TR": "11/150\n15/240"
         },
         {
           "parameter": "CNC System",
-          "1200 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D",
-          "1600 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D"
+          "1200 TM-TR": "Fanuc OiTF, Siemens 828D, 840DSL",
+          "1600 TM-TR": "Fanuc OiTF, Siemens 828D, 840DSL"
         }
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
         },
         {
-          "description": "TC-TR : Turning Center - Table Ram type"
+          "description": "TC-TR : Turning Center Table Ram type"
         },
         {
-          "description": "TM-TR : Turn-Mill Centers - Table Ram type"
+          "description": "TM-TR : Turn-Mill Centers Table Ram type"
         }
       ]
     },
@@ -1125,62 +1162,62 @@ export const products: Product[] = [
       "Working Range": [
         {
           "parameter": "Max. Dia For Facing & OD Turning (mm)",
-          "2000 TC-TR/ TC-TL": "2300",
-          "2500 TC-TR/ TC-TL": "2800"
+          "2000 TC-TR/ TM-TR": "2300",
+          "2500 TC-TR/ TM-TR": "2800"
         },
         {
           "parameter": "Max. Swing (mm)",
-          "2000 TC-TR/ TC-TL": "2500",
-          "2500 TC-TR/ TC-TL": "2900"
+          "2000 TC-TR/ TM-TR": "2500",
+          "2500 TC-TR/ TM-TR": "2900"
         },
         {
           "parameter": "Day Light (mm)",
-          "2000 TC-TR/ TC-TL": "1400",
-          "2500 TC-TR/ TC-TL": "1400"
+          "2000 TC-TR/ TM-TR": "1400",
+          "2500 TC-TR/ TM-TR": "1400"
         }
       ],
       "Table Range": [
         {
           "parameter": "Table Dia (mm)",
-          "2000 TC-TR/ TC-TL": "2000",
-          "2500 TC-TR/ TC-TL": "2500"
+          "2000 TC-TR/ TM-TR": "2000",
+          "2500 TC-TR/ TM-TR": "2500"
         },
         {
           "parameter": "Speed Range (RPM)",
-          "2000 TC-TR/ TC-TL": "2-220",
-          "2500 TC-TR/ TC-TL": "2-190"
+          "2000 TC-TR/ TM-TR": "2-220",
+          "2500 TC-TR/ TM-TR": "2-190"
         },
         {
           "parameter": "No of speed ranges",
-          "2000 TC-TR/ TC-TL": "2",
-          "2500 TC-TR/ TC-TL": "2"
+          "2000 TC-TR/ TM-TR": "2",
+          "2500 TC-TR/ TM-TR": "2"
         },
         {
           "parameter": "Table Spindle Motor (kW)",
-          "2000 TC-TR/ TC-TL": "45 (50/60)",
-          "2500 TC-TR/ TC-TL": "45 (50/60)"
+          "2000 TC-TR/ TM-TR": "45 (50/60)",
+          "2500 TC-TR/ TM-TR": "45 (50/60)"
         }
       ],
       "Axes": [
         {
           "parameter": "X Axis Stroke",
-          "2000 TC-TR/ TC-TL": "-100, +1450",
-          "2500 TC-TR/ TC-TL": "-100, +1650"
+          "2000 TC-TR/ TM-TR": "-100, +1450",
+          "2500 TC-TR/ TM-TR": "-100, +1650"
         },
         {
           "parameter": "Z Axis Stroke",
-          "2000 TC-TR/ TC-TL": "1200 (1300/1400)",
-          "2500 TC-TR/ TC-TL": "1300 (1400/1500)"
+          "2000 TC-TR/ TM-TR": "1200 (1300/1400)",
+          "2500 TC-TR/ TM-TR": "1300 (1400/1500)"
         },
         {
           "parameter": "Cutting Feed Rate (mm/min)",
-          "2000 TC-TR/ TC-TL": "0.5-5000",
-          "2500 TC-TR/ TC-TL": "0.5-2000"
+          "2000 TC-TR/ TM-TR": "0.5-5000",
+          "2500 TC-TR/ TM-TR": "0.5-2000"
         },
         {
           "parameter": "Ram Size (mm)",
-          "2000 TC-TR/ TC-TL": "230X230 (250X250)",
-          "2500 TC-TR/ TC-TL": "250X250 (280X280)"
+          "2000 TC-TR/ TM-TR": "230X230 (250X250)",
+          "2500 TC-TR/ TM-TR": "250X250 (280X280)"
         }
       ],
       "C-Axis & Live Spindle": [
@@ -1191,24 +1228,24 @@ export const products: Product[] = [
         },
         {
           "parameter": "Milling Spindle Power (kW/Nm)",
-          "2000 TM-TR": "11",
-          "2500 TM-TR": "11"
+          "2000 TM-TR": "11/150\n15/240",
+          "2500 TM-TR": "11/150\n15/240"
         },
         {
           "parameter": "CNC System",
-          "2000 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D",
-          "2500 TM-TR": "Fanuc OiTF, Siemens 840DSL, 828D"
+          "2000 TM-TR": "Fanuc OiTF, Siemens 828D, 840DSL",
+          "2500 TM-TR": "Fanuc OiTF, Siemens 828D, 840DSL"
         }
       ],
       "Models": [
         {
-          "description": "TC-TL : Turning Center - Table-Linear-Tooling"
+          "description": "TC-TL : Turning Center - Turning-Linear-Tooling"
         },
         {
-          "description": "TC-TR : Turning Center - Table Ram type"
+          "description": "TC-TR : Turning Center Table Ram type"
         },
         {
-          "description": "TM-TR : Turn-Mill Centers - Table Ram type"
+          "description": "TM-TR : Turn-Mill Centers Table Ram type"
         }
       ]
     },
@@ -1260,7 +1297,7 @@ export const products: Product[] = [
     images: [
       {
         id: "rotaface-mini-350-main",
-        url: "/flange_facers/Rota face MINI.jpeg",
+        url: "/flange_facers/rotaface-mini-350.jpg",
         alt: "Rotaface Mini 350 Compact Flange Facer",
         caption: "Rotaface Mini 350",
       },
@@ -1386,9 +1423,15 @@ export const products: Product[] = [
     images: [
       {
         id: "rotaface-1000-main",
-        url: "/flange_facers/ROTO FACE 1000I.png",
+        url: "/flange_facers/rotaface-500-1550-1.jpg",
         alt: "Rotaface 500/850/1000/1250/1550 Flange Facer",
         caption: "Rotaface Series",
+      },
+      {
+        id: "rotaface-1000-2",
+        url: "/flange_facers/rotaface-500-1550-2.jpg",
+        alt: "Rotaface 500/850/1000/1250/1550 Flange Facer",
+        caption: "Rotaface Series - View 2",
       },
     ],
   },
@@ -1596,7 +1639,7 @@ export const products: Product[] = [
     images: [
       {
         id: "portabore-75-main",
-        url: "/portabore/portabore-75.png",
+        url: "/portabore/portabore-75.jpg",
         alt: "PortaBore 75 Portable Boring Machine",
         caption: "PortaBore 75",
       },
@@ -1705,7 +1748,7 @@ export const products: Product[] = [
     images: [
       {
         id: "portabore-50-main",
-        url: "/portabore/portabore50.jpg",
+        url: "/portabore/portabore-50.jpg",
         alt: "PortaBore 50 Portable Boring Machine",
         caption: "PortaBore 50",
       },
@@ -1785,7 +1828,7 @@ export const products: Product[] = [
     images: [
       {
         id: "portamill-2500-main",
-        url: "/portamill/portamill-gantry.png",
+        url: "/portamill/portamill-gantry.jpg",
         alt: "PortaMill 2500 Portable Milling Machine",
         caption: "PortaMill 2500",
       },
@@ -1897,7 +1940,7 @@ export const products: Product[] = [
     images: [
       {
         id: "special-machines-main",
-        url: "https://placehold.co/800x600/dc2626/fff?text=Custom+Solutions",
+        url: "/custom/custom-solutions.jpg",
         alt: "Special Machines and Solutions - Custom Equipment",
         caption: "Custom Solutions",
       },

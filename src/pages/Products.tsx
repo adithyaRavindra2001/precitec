@@ -105,8 +105,8 @@ export function Products() {
                     })}
                   </div>
                 ) : isOtherProducts ? (
-                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                    {moreProducts.slice(0, 4).map((product, index) => (
+                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                    {moreProducts.filter(p => !p.hidden).slice(0, 4).map((product, index) => (
                       <motion.div
                         key={index}
                         whileHover={{ y: -4 }}
@@ -115,7 +115,7 @@ export function Products() {
                         <Dialog>
                           <DialogTrigger asChild>
                             <Card className="h-full transition-all hover:shadow-lg cursor-pointer">
-                              <div className="aspect-video overflow-hidden rounded-t-lg bg-muted flex items-center justify-center">
+                              <div className="aspect-square overflow-hidden rounded-t-lg bg-muted flex items-center justify-center">
                                 {product.image ? (
                                   <img
                                     src={product.image}
@@ -126,8 +126,8 @@ export function Products() {
                                   <div className="text-4xl">🏭</div>
                                 )}
                               </div>
-                              <CardHeader>
-                                <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardHeader className="p-4 pb-2">
+                                <CardTitle className="text-sm font-semibold">{product.name}</CardTitle>
                                 <CardDescription className="line-clamp-2 text-xs">
                                   {product.category}
                                 </CardDescription>
@@ -174,7 +174,7 @@ export function Products() {
                     ))}
                   </div>
                 ) : (
-                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                     {categoryProducts.slice(0, 4).map((product) => (
                       <motion.div
                         key={product.id}
@@ -183,15 +183,15 @@ export function Products() {
                       >
                         <Link to={`/products/${product.id}`}>
                           <Card className="h-full transition-all hover:shadow-lg">
-                            <div className="aspect-video overflow-hidden rounded-t-lg bg-muted">
+                            <div className="aspect-square overflow-hidden rounded-t-lg bg-muted">
                               <img
                                 src={product.images?.[0]?.url || "/images/placeholder.jpg"}
                                 alt={product.images?.[0]?.alt || product.name}
                                 className="h-full w-full object-contain transition-transform hover:scale-105"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                            <CardHeader className="p-4 pb-2">
+                              <CardTitle className="text-sm font-semibold">{product.name}</CardTitle>
                               <CardDescription className="line-clamp-2 text-xs">
                                 {product.description}
                               </CardDescription>

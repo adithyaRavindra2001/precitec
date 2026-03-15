@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { ChevronDown, Wrench, Cog, Zap, Menu, X } from "lucide-react"
 import { categories, getProductsByCategory } from "@/data/products"
 import { motion, AnimatePresence } from "framer-motion"
@@ -25,6 +25,8 @@ export function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
   const [menuCloseTimeout, setMenuCloseTimeout] = useState<number | null>(null)
+  const { pathname } = useLocation()
+  const isProductsActive = pathname.startsWith("/products")
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
@@ -34,20 +36,30 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Logo />
+        <div className="flex items-center gap-3">
+          <Logo />
+          <img
+            src="/iso-logo.png"
+            alt="ISO 9001:2015 Certified"
+            className="h-10 w-auto object-contain"
+          />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-medium text-muted-foreground">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.href}
-              className="relative transition-colors hover:text-foreground group"
-            >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+            return (
+              <Link
+                key={item.label}
+                to={item.href}
+                className={`relative transition-colors hover:text-foreground group ${isActive ? "text-foreground" : ""}`}
+              >
+                {item.label}
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+              </Link>
+            )
+          })}
 
           {/* Desktop Products Mega Menu */}
           <div
@@ -65,11 +77,11 @@ export function SiteHeader() {
             }}
           >
             <button
-              className="relative flex items-center gap-1.5 transition-colors hover:text-foreground group"
+              className={`relative flex items-center gap-1.5 transition-colors hover:text-foreground group ${isProductsActive ? "text-foreground" : ""}`}
             >
               Products
               <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} />
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${isProductsActive ? "w-full" : "w-0 group-hover:w-full"}`} />
             </button>
 
             <AnimatePresence>
@@ -325,22 +337,25 @@ export function SiteHeader() {
               className="absolute top-16 left-0 right-0 bg-white border-b shadow-lg lg:hidden overflow-hidden"
             >
               <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    onClick={closeMobileMenu}
-                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+                  return (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      onClick={closeMobileMenu}
+                      className={`text-base font-medium transition-colors py-2 ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                })}
 
                 {/* Mobile Products Accordion */}
                 <div className="border-t pt-4">
                   <button
                     onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
-                    className="flex items-center justify-between w-full text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                    className={`flex items-center justify-between w-full text-base font-medium transition-colors py-2 ${isProductsActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
                   >
                     Products
                     <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />

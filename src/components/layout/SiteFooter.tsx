@@ -46,9 +46,8 @@ export function SiteFooter() {
                 </a>
               </p>
               <p className="mt-2">
-                <strong>Phone:</strong>
+                <strong>Phone:</strong> +91 70220 24562
               </p>
-              <p className="pl-2">+91 70220 24562</p>
             </address>
           </div>
 

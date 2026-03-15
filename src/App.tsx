@@ -1,6 +1,7 @@
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SocialFloat } from "@/components/layout/SocialFloat";
 import { LandingPage } from "@/pages/LandingPage";
 import { Products } from "@/pages/Products";
 import { ProductDetailPage } from "@/pages/ProductDetailPage";
@@ -19,6 +20,7 @@ function Layout() {
         <Outlet />
       </main>
       <SiteFooter />
+      <SocialFloat />
     </div>
   );
 }

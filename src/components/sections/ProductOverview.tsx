@@ -26,9 +26,6 @@ export function ProductOverview() {
 
         <Carousel />
 
-        <div className="mt-4 sm:mt-8 text-center text-muted-foreground text-xs sm:text-sm">
-          <p>Swipe or use arrow keys to navigate.</p>
-        </div>
       </div>
     </motion.section>
   );

@@ -19,11 +19,11 @@ export function HeroImageCarousel({
   // Handle empty images array
   if (!images || images.length === 0) {
     return (
-      <div className="aspect-video w-full overflow-hidden rounded-xl bg-muted shadow-xl">
+      <div className="aspect-square w-full max-w-md mx-auto overflow-hidden rounded-xl bg-muted shadow-xl">
         <img
           src={PLACEHOLDER_IMAGE}
           alt={productName}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
       </div>
     );
@@ -51,26 +51,18 @@ export function HeroImageCarousel({
     );
   };
 
-  // Use object-contain for PortaMill 2500 to show full image
-  const isPortaMill2500 = productName.includes("PortaMill 2500");
-  const objectFitClass = isPortaMill2500 ? "object-contain" : "object-cover";
-
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted shadow-xl group">
+    <div className="relative aspect-square w-full max-w-md mx-auto overflow-hidden rounded-xl bg-muted shadow-xl group">
       {/* Main Image */}
       <img
         src={getImageUrl(currentImage)}
         alt={currentImage.alt || productName}
-        className={`h-full w-full ${objectFitClass}`}
+        className="h-full w-full object-contain"
         onError={() => handleImageError(currentImage.id)}
       />
 
-      {/* Image Caption */}
-      {currentImage.caption && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-          <p className="text-sm text-white">{currentImage.caption}</p>
-        </div>
-      )}
+      {/* Bottom shadow overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
       {/* Show controls only if multiple images */}
       {images.length > 1 && (

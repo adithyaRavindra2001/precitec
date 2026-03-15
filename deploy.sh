@@ -49,7 +49,8 @@ echo "☁️  Uploading to S3 bucket: $BUCKET_NAME..."
 aws s3 sync dist/ s3://$BUCKET_NAME/ \
   --delete \
   --cache-control "public, max-age=31536000, immutable" \
-  --exclude "index.html"
+  --exclude "index.html" \
+  --exclude "videos/*"
 
 # Upload index.html with no cache
 aws s3 cp dist/index.html s3://$BUCKET_NAME/index.html \

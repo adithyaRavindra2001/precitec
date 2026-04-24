@@ -884,12 +884,6 @@ export const products: Product[] = [
         alt: "Sadaa Chakra 500 Vertical Turning Lathe",
         caption: "Sadaa Chakra 500 - Front View",
       },
-      {
-        id: "sadaa-chakra-500-side",
-        url: "/images/VTL/VTL-630.JPG",
-        alt: "Sadaa Chakra 500 Vertical Turning Lathe - Side View",
-        caption: "Sadaa Chakra 500 - Side View",
-      },
     ],
   },
   {

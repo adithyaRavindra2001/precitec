@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { MachineCard } from "./MachineCard";
 import { categories, products } from "@/data/products";
 
-const CLONE_COUNT = 3;
+const CLONE_COUNT = 1;
 
 export const Carousel: React.FC = () => {
   const [cardWidth, setCardWidth] = useState(320);

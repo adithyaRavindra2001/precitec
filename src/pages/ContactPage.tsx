@@ -141,11 +141,19 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground mb-2">
                         A-353, B, 8th Main Road, 2nd Stage,<br />
                         Peenya Industrial Estate,<br />
                         Bengaluru, Karnataka 560058
                       </p>
+                      <a
+                        href="https://maps.app.goo.gl/cLRrivXiF44qdhbi9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-primary hover:underline font-medium"
+                      >
+                        View on Google Maps →
+                      </a>
                     </div>
                   </CardContent>
                 </Card>

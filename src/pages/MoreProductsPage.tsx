@@ -19,7 +19,6 @@ export const moreProducts = [
   // Horizontal Turning and TurnMill Solutions
   { name: "SriChakra 350", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-350.jpg" },
   { name: "SriChakra HDT", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-hdt.jpg" },
-  { name: "SriChakra Large Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/srichakra-large-lathes.jpg" },
   { name: "Floor Lathes", category: "Horizontal Turning and TurnMill Solutions", image: "/others/floor-lathe.jpg" },
 
   // Special Machines
@@ -30,7 +29,7 @@ export const moreProducts = [
   { name: "Automobile Assembly Machines", category: "Special Machines", hidden: true },
 
   // Attachments and Accessories
-  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories", image: "/others/pamh-60.jpg", image2: "/others/pamh-40.jpg" },
+  { name: "PAMH 40/50/60: Right Angle Milling Attachments", category: "Attachments and Accessories", image: "/others/pamh-60.jpg" },
   { name: "PUMH_A-NC A Axis CNC Milling Attachment", category: "Attachments and Accessories", image: "/others/pumh-a-nc.jpg" },
   { name: "PUMH: Universal Milling Attachments", category: "Attachments and Accessories", image: "/others/pumh-universal.jpg" },
   { name: "PUAMBH: Universal Milling and Boring Head", category: "Attachments and Accessories", image: "/others/puambh.jpg" },
@@ -140,22 +139,13 @@ export function MoreProductsPage() {
                   </DialogHeader>
 
                   {/* Enlarged Product Image */}
-                  <div className={`mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[400px] ${product.image2 ? "gap-2 p-2" : ""}`}>
+                  <div className="mt-4 rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[400px]">
                     {product.image ? (
-                      <>
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className={`object-contain ${product.image2 ? "w-1/2 h-full" : "w-full h-full"}`}
-                        />
-                        {product.image2 && (
-                          <img
-                            src={product.image2}
-                            alt={product.name}
-                            className="w-1/2 h-full object-contain"
-                          />
-                        )}
-                      </>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain"
+                      />
                     ) : (
                       <div className="text-center p-8">
                         <div className="text-8xl mb-4">🏭</div>

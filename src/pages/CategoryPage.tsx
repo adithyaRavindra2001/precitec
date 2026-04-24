@@ -3,14 +3,85 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
 import {
   getCategoryById,
   getSubcategoryById,
   getProductsByCategory,
   getProductsBySubcategory,
+  type Subcategory,
+  type Product,
 } from "@/data/products"
-import { ArrowLeft, ChevronRight, Zap, Eye, ArrowUpRight, Play } from "lucide-react"
+import { ArrowLeft, ChevronRight, Zap, Eye, ArrowUpRight, Play, X } from "lucide-react"
+
+function SubcategoryProductSlider({
+  subcategory,
+  products,
+  categoryId,
+}: {
+  subcategory: Subcategory
+  products: Product[]
+  categoryId: string
+}) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      className="mb-12"
+    >
+      {/* Subcategory header */}
+      <div className="mb-4 flex items-end justify-between">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-1">{subcategory.series}</p>
+          <h3 className="text-2xl font-bold text-foreground">{subcategory.name}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{products.length} machine{products.length !== 1 ? "s" : ""}</p>
+        </div>
+        <Link
+          to={`/products/category/${categoryId}/${subcategory.id}`}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+        >
+          View all <ChevronRight className="h-4 w-4" />
+        </Link>
+      </div>
+
+      {/* Slider */}
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto scroll-smooth pb-3 no-scrollbar"
+          style={{ scrollSnapType: "x mandatory" }}
+        >
+          {products.map((product) => (
+            <Link
+              key={product.id}
+              to={`/products/${product.id}`}
+              className="flex-shrink-0 w-56 sm:w-64 rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg hover:border-primary/40 transition-all group/card"
+              style={{ scrollSnapAlign: "start" }}
+            >
+              <div className="aspect-square overflow-hidden bg-slate-50">
+                <img
+                  src={product.images?.[0]?.url || "/images/placeholder.jpg"}
+                  alt={product.images?.[0]?.alt || product.name}
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover/card:scale-105"
+                />
+              </div>
+              <div className="p-3">
+                <p className="text-sm font-semibold text-foreground leading-snug group-hover/card:text-primary transition-colors line-clamp-2">
+                  {product.name}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{product.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  )
+}
 
 function VideoThumbnail({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null)
@@ -259,62 +330,31 @@ export function CategoryPage() {
         </div>
       </motion.section>
 
-      {/* Show subcategories if we're on a category page without subcategory */}
+      {/* Show subcategory product sliders if we're on a category page without subcategory */}
       {!subcategoryId && category.subcategories && category.subcategories.length > 0 && (
-        <motion.section
-          className="container mx-auto px-6 py-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground">Browse CNC Machine Series</h2>
+        <section className="container mx-auto px-6 py-16">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold text-foreground">Browse by Series</h2>
             <p className="mt-2 text-muted-foreground">
-              Explore our specialized precision machining equipment series with advanced CNC capabilities
+              Explore our specialized machining series — click any machine to view full specifications
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {category.subcategories.map((sub, index) => {
-              const subProducts = getProductsBySubcategory(categoryId!, sub.id)
-              return (
-                <motion.div
-                  key={sub.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                >
-                  <Link to={`/products/category/${categoryId}/${sub.id}`}>
-                    <Card className="group h-full overflow-hidden transition-all hover:shadow-2xl border-2 hover:border-primary/50">
-                      <CardHeader className="bg-gradient-to-br from-slate-50 to-white">
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                          {sub.name}
-                        </CardTitle>
-                        <CardDescription className="text-sm font-medium text-primary">
-                          {sub.series}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="pt-6">
-                        <p className="text-sm text-muted-foreground">
-                          {subProducts.length} product{subProducts.length !== 1 ? "s" : ""}
-                        </p>
-                        <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-                          View Products
-                          <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-2" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              )
-            })}
-          </div>
-        </motion.section>
+          {category.subcategories.map((sub) => {
+            const subProducts = getProductsBySubcategory(categoryId!, sub.id)
+            return (
+              <SubcategoryProductSlider
+                key={sub.id}
+                subcategory={sub}
+                products={subProducts}
+                categoryId={categoryId!}
+              />
+            )
+          })}
+        </section>
       )}
 
       {/* Products Grid with Expandable Cards */}
-      <motion.section
+      {(!category.subcategories || category.subcategories.length === 0 || subcategoryId) && <motion.section
         className="container mx-auto px-6 py-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -467,7 +507,7 @@ export function CategoryPage() {
             })}
           </div>
         )}
-      </motion.section>
+      </motion.section>}
 
       {/* CTA Section */}
       <motion.section
@@ -520,7 +560,7 @@ export function CategoryPage() {
                         <Zap className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold">40+ Years Precision Engineering</p>
+                        <p className="font-semibold">47+ Years Precision Engineering</p>
                         <p className="text-sm text-slate-400">Veteran CNC machine tool manufacturing expertise</p>
                       </div>
                     </div>
@@ -555,6 +595,10 @@ export function CategoryPage() {
       {/* Video Dialog */}
       <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
         <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-black border-0">
+          <DialogClose className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/40 focus:outline-none focus:ring-2 focus:ring-white">
+            <X className="h-5 w-5" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
           <video
             src={
               categoryId === "facing-centering"

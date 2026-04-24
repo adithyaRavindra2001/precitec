@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const services = [
   {
     title: "Product Engineering Consultancy Services",
-    description: `Precitec is a leading product engineering consultancy firm in Bengaluru, India, specializing in end-to-end product development solutions for diverse industries. With over 45 years of manufacturing excellence since 1978, our experienced engineers and consultants deliver innovative product engineering services across automotive, medical devices, consumer electronics, industrial equipment, and heavy machinery sectors.
+    description: `Precitec is a leading product engineering consultancy firm in Bengaluru, India, specializing in end-to-end product development solutions for diverse industries. With over 47 years of manufacturing excellence since 1978, our experienced engineers and consultants deliver innovative product engineering services across automotive, medical devices, consumer electronics, industrial equipment, and heavy machinery sectors.
 
 Our comprehensive product engineering consultancy services encompass the complete product lifecycle - from initial concept development and feasibility studies to detailed design engineering, prototyping, rigorous testing, and full-scale manufacturing support. We leverage cutting-edge CAD/CAM technologies, advanced simulation tools, and industry 4.0 methodologies to ensure your products are developed with optimal efficiency, cost-effectiveness, and superior quality standards.
 

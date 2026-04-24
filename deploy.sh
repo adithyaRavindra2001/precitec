@@ -26,6 +26,7 @@ export AWS_SECRET_ACCESS_KEY=$(grep "^secret-access-key=" "$CREDS_FILE" | cut -d
 
 BUCKET_NAME="precitec.co.in"
 REGION="ap-southeast-1"  # Singapore region (adjust if your bucket is in a different region)
+CLOUDFRONT_DISTRIBUTION_ID="E2MT8TZC3E7GUO"
 
 echo "🚀 Starting deployment to S3..."
 echo ""
@@ -59,13 +60,16 @@ aws s3 cp dist/index.html s3://$BUCKET_NAME/index.html \
 echo "✅ Upload complete!"
 echo ""
 
-# Step 3: Show website URL
-echo "🌐 Your website is live at:"
-echo "   http://$BUCKET_NAME.s3-website-$REGION.amazonaws.com"
+# Step 3: Invalidate CloudFront cache
+echo "🔄 Invalidating CloudFront cache..."
+aws cloudfront create-invalidation \
+  --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
+  --paths "/*"
+
+echo "✅ Cache invalidation triggered!"
 echo ""
-echo "⚠️  Next steps:"
-echo "   1. Set up CloudFront distribution for HTTPS and better performance"
-echo "   2. Configure custom domain in CloudFront"
-echo "   3. Update DNS to point to CloudFront distribution"
+
+# Step 4: Show website URL
+echo "🌐 Your website is live at: https://precitec.co.in"
 echo ""
 echo "✨ Deployment successful! ✨"

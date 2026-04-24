@@ -64,6 +64,21 @@ export function SiteFooter() {
           </div>
         </div>
 
+        <div className="mt-6 sm:mt-8">
+          <h3 className="text-base sm:text-lg font-semibold mb-3">Find Us</h3>
+          <div className="w-full overflow-hidden rounded-lg" style={{ height: "250px" }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3281109537475!2d77.50179109999999!3d13.014765499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1d6daecc89%3A0x59e50892a8e186bc!2sPrecitec%20Precision%20Machineries%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1776065353088!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-4 text-xs sm:text-sm text-center">
           <p>
             &copy; {new Date().getFullYear()} PRECITEC Machines. All rights

@@ -13,7 +13,7 @@ export function IsoIdentityBanner() {
           <Settings size={40} className="opacity-90 md:w-12 md:h-12" />
         </motion.div>
 
-        <div className="max-w-3xl text-center md:text-left">
+        <div className="max-w-3xl text-center">
           <h2 className="mb-2 text-lg sm:text-xl font-semibold uppercase md:text-2xl">
             Since 1978 — An ISO 9001:2015 Certified Company
           </h2>

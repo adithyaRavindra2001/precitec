@@ -28,7 +28,7 @@ export function Testimonials() {
 
         {/* Header */}
         <motion.div
-          className="mb-10 sm:mb-14"
+          className="mb-10 sm:mb-14 text-center"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}

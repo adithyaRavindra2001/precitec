@@ -1,7 +1,7 @@
 import { CountUpStat } from "./CountUpStat"
 
 const stats = [
-  { value: 45, label: "Years of Industry Experience" },
+  { value: 47, label: "Years of Industry Experience" },
   { value: 800, label: "Machines Manufactured" },
   { value: 6, label: "Events & Exhibitions" },
   { value: 2, label: "Awards & Recognitions" },

@@ -32,9 +32,9 @@ const milestones = [
     description: "Founded by CMTI veteran engineers pioneering advanced CNC machine tool manufacturing in India",
   },
   {
-    year: "45+",
+    year: "47+",
     title: "Years of Manufacturing Excellence",
-    description: "Four decades of innovation in precision machining equipment and custom special purpose machine design",
+    description: "47+ years of innovation in precision machining equipment and custom special purpose machine design",
   },
   {
     year: "50+",

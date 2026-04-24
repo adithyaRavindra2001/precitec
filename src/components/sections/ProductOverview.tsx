@@ -12,7 +12,7 @@ export function ProductOverview() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-6 sm:mb-8 mx-auto max-w-3xl">
           <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
             Complete CNC Machine Portfolio
           </p>
@@ -20,7 +20,7 @@ export function ProductOverview() {
             Precision CNC Machining Equipment
           </h2>
           <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground px-2">
-            Explore our comprehensive range of CNC turning centers, machining centers, grinding machines, and specialized finning equipment with advanced configurations and automation capabilities.
+            Precitec offers a complete portfolio of vertical turning and turn-mill lathes (VTL), facing and centering machines (FCM), milling and boring machines, in-situ machining solutions, and special purpose machines (SPMs) for metal cutting and specialized applications—developed for precision-critical and heavy-duty industrial requirements.
           </p>
         </div>
 
